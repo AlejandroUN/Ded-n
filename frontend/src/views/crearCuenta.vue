@@ -16,7 +16,7 @@
                 <input type="text" v-model="new_user" placeholder="Nombre usuario nuevo">
             </div>
             <div>
-                <input type="password" v-model="password" placeholder="Contraseña nueva" minlength="8" maxlength="20">
+                <input type="password" v-model="password" placeholder="Contraseña nueva" minlength="8" maxlength="20" v-on:keypress="isImprimible(event)">
             </div>
             <div>
                 <form>
@@ -115,7 +115,20 @@
                     else{
                         return false
                     }
+                },
+
+                isImprimible: function(evt){
+                    evt= (evt) ? evt : window.event;
+                    var charCode = (evt.which) ? evt.which : evt.keyCode;
+                     if (charCode > 3 && (charCode < 32 || charCode > 126))  {
+                            evt.preventDefault();
+                        } else {
+                            return true;
+                        }
+
                 }
+
+
                 
             }
         }
