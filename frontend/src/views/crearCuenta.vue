@@ -6,8 +6,8 @@
         </div>
         <div class="container">
             <div>
-                <input type="text" v-model="nombres" placeholder="Nombres">
-                <input type="text" v-model="apellidos" placeholder="Apellidos">
+                <input type="text" v-model="nombres" placeholder="Nombres y Apellidos" maxlength="50">
+
             </div>
             <div>
                 <input type="text" v-model="email" placeholder="Correo electrónico">
@@ -16,30 +16,51 @@
                 <input type="text" v-model="new_user" placeholder="Nombre usuario nuevo">
             </div>
             <div>
-                <input type="password" v-model="password" placeholder="Contraseña nueva">
+                <input type="password" v-model="password" placeholder="Contraseña nueva" minlength="8" maxlength="20" v-on:keypress="isImprimible(event)">
             </div>
             <div>
                 <form>
                     <div><label>Fecha de nacimiento:</label></div>
-                    <div><input type="date" v-model="born"></div>
+                    <div><input type="date" :max="today" v-model="born" ></div>
                 </form>
             </div>
             <div>
-                <div><label>Genero:</label></div>
+                <div><label>Genero y orientación sexual:</label></div>
                 <div>
                     <select v-model="gender">
-                        <option disabled value=""></option>
+                        <option>Hombre cisgenero</option>
+                        <option>Mujer cisgenero</option>
+                        <option>Hombre transgenero</option>
+                        <option>Mujer transgenero</option>
                         <option>Hombre</option>
                         <option>Mujer</option>
-                        <option>Otros</option>
+                        <option>Persona no binaria</option>
+                        <option>Genero fluido</option>
+                        <option>Intersexual</option>
+                        <option>Otro</option>
+                        <option>Prefiero no contestar</option>
                         
                     </select>
+                    <input v-show="otroGenero()" type="text" v-model="nuevoGenero" placeholder="Ingrese genero">
+                    <select v-model="orientacion">
+                        <option>Heterosexual</option>
+                        <option>Homosexual</option>
+                        <option>Bisexual</option>
+                        <option>Pansexual</option>
+                        <option>Asexual</option>
+                        <option>Antrosexual</option>
+                        <option>Demisexual</option>
+                        <option>Otro</option>
+                        <option>Prefiero no contestar</option>
+                       
+                    </select>
+                     <input v-show="otraOrientacion()" type="text" v-model="nuevaOrientacion" placeholder="Ingrese orientación">
                 </div>
             </div>
             <div>
-                <button>Crear cuenta</button>
+                <button v-on:click="checked">Crear cuenta</button>
             </div>
-            {{nombres}} - {{apellidos}} - {{email}} - {{new_user}} - {{password}} - {{born}} - {{gender}}
+            {{nombres}} - {{apellidos}} - {{email}} - {{new_user}} - {{password}} - {{born}} - {{gender}} - {{orientacion}} - {{today}}
         </div>
     </div>
    </template>
@@ -50,21 +71,69 @@
             data() {
                 return {
                     nombres: "",
-                    apellidos: "",
                     email: "",
                     new_user: "",
                     password: "",
                     born: new Date().toISOString().substr(0, 10),
+                    today: new Date().toISOString().substr(0, 10),
                     gender: "",
+                    orientacion: "",
+                    nuevoGenero:"",
+                    nuevaOrientacion:"",
+
+
                 }
             },
-            mounted() {
-
-            },
             methods: {
+                checked(){
+                    var dateMax = new Date();
+                    dateMax.setMonth(dateMax.getMonth()-168);
+                    var dateBorn= new Date(this.born);
+                   
+                    if(!this.email.includes("@gmail.com")){
+                        alert("El correo indicado no es gmail")
+                    }else if(this.password.length < 8){
+                        alert("La contraseña debe tener más de 8 caracteres")
+                    }else if(dateMax < dateBorn){
+                        alert("El usuario es menor de 14 años, no puede registrarse")
+                    }
+                    
+                },
+                otroGenero(){
+                    if(this.gender == "Otro" ){
+                        return true
+                    }
+                    else{
+                        return false
+                    }
 
+                },
+                otraOrientacion(){
+                    if(this.orientacion == "Otro"){
+                        return true
+                    }
+                    else{
+                        return false
+                    }
+                },
+
+                isImprimible: function(evt){
+                    evt= (evt) ? evt : window.event;
+                    var charCode = (evt.which) ? evt.which : evt.keyCode;
+                     if (charCode > 3 && (charCode < 32 || charCode > 126))  {
+                            evt.preventDefault();
+                        } else {
+                            return true;
+                        }
+
+                }
+
+
+                
             }
         }
 
         
     </script>
+
+
