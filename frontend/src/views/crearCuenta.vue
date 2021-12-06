@@ -6,17 +6,33 @@
         </div>
         <div class="container">
             <div>
-                <input type="text" v-model="nombres" placeholder="Nombres y Apellidos" maxlength="50">
+                <input 
+                type="text" 
+                name="nombres" 
+                v-model="nombres" 
+                placeholder="Nombres y Apellidos" maxlength="50">
 
             </div>
             <div>
-                <input type="text" v-model="email" placeholder="Correo electrónico">
+                <input 
+                type="text" 
+                name="email" 
+                v-model="email" 
+                placeholder="Correo electrónico">
             </div>
             <div>
-                <input type="text" v-model="new_user" placeholder="Nombre usuario nuevo">
+                <input 
+                type="text" 
+                name="new_user" 
+                v-model="new_user" 
+                placeholder="Nombre usuario nuevo">
             </div>
             <div>
-                <input type="password" v-model="password" placeholder="Contraseña nueva" minlength="8" maxlength="20" v-on:keypress="isImprimible(event)">
+                <input 
+                type="password" 
+                name="password" 
+                v-model="password" 
+                placeholder="Contraseña nueva" minlength="8" maxlength="20" v-on:keypress="isImprimible(event)">
             </div>
             <div>
                 <form>
@@ -60,13 +76,14 @@
             <div>
                 <button v-on:click="checked">Crear cuenta</button>
             </div>
-            {{nombres}} - {{apellidos}} - {{email}} - {{new_user}} - {{password}} - {{born}} - {{gender}} - {{orientacion}} - {{today}}
+            {{nombres}} - {{email}} - {{new_user}} - {{password}} - {{born}} - {{gender}} - {{orientacion}} - {{today}}
         </div>
     </div>
    </template>
        
 
     <script>
+        import AuthenticationService from '@/services/AuthenticationService'
         export default {
             data() {
                 return {
@@ -80,12 +97,10 @@
                     orientacion: "",
                     nuevoGenero:"",
                     nuevaOrientacion:"",
-
-
                 }
             },
-            methods: {
-                checked(){
+            methods: {                
+                async checked(){
                     var dateMax = new Date();
                     dateMax.setMonth(dateMax.getMonth()-168);
                     var dateBorn= new Date(this.born);
@@ -98,6 +113,14 @@
                         alert("El usuario es menor de 14 años, no puede registrarse")
                     }
                     
+                    try{
+                    	await AuthenticationService.register({ // eslint-disable-line no-mixed-spaces-and-tabs
+                        	email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
+                        	password: this.password // eslint-disable-line no-mixed-spaces-and-tabs     
+                    	}) // eslint-disable-line no-mixed-spaces-and-tabs
+					} catch(error){
+						this.error = error.response.data.error
+					}                   
                 },
                 otroGenero(){
                     if(this.gender == "Otro" ){
@@ -126,10 +149,7 @@
                             return true;
                         }
 
-                }
-
-
-                
+                }                
             }
         }
 
