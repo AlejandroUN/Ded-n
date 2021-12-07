@@ -38,7 +38,9 @@
                         	email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
                         	password: this.password // eslint-disable-line no-mixed-spaces-and-tabs     
                     	}) // eslint-disable-line no-mixed-spaces-and-tabs
+                        this.$router.push({ path: "/entrarPerfil" });
 					} catch(error){
+                        
 						this.error = error.response.data.error
 					}
                 }
