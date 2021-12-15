@@ -1,4 +1,5 @@
 const AuthenticationController = require('../controllers/AuthenticationController')
+const TestsController = require('../controllers/TestsController')
 // const AuthenticationControllerPolicy = require('../policies/AuthenticationControllerPolicy')
 
 // The purpose of this file is to do somehting when
@@ -17,4 +18,10 @@ module.exports = (app) => {
 
   app.post('/login',
     AuthenticationController.login)
+
+  app.post('/TestMejoramientoPersonal',
+  	TestsController.saveTestMejoramientoPersonal)
+
+  app.post('/TestEmpresarial',
+  	TestsController.saveTestEmpresarial)
 }
