@@ -6,6 +6,7 @@ import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
 import allport from '../views/allport.vue'
+import kostick from '../views/kostick.vue'
 
 const routes = [
   {
@@ -42,7 +43,12 @@ const routes = [
     path: '/allport',
     name: 'TestAllport',
     component: allport
-  }
+  },
+  {
+    path: '/kostick',
+    name: 'TestKostick',
+    component: kostick
+  },
 ]
 
 const router = createRouter({
