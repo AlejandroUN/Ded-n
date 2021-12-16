@@ -6,16 +6,16 @@
             <h2>Entra a tu perfil</h2>
         </div>
         <div class="container">
-            <button>Personal</button>
+            <button><router-link to="/kostick"> Personal</router-link></button>
         </div>
         <div class="container">
-            <button>Aprender arte/técnica</button>
+            <button><router-link to="/testMaestros"> Aprender arte/técnica</router-link></button>
         </div>
         <div class="container">
-            <button>Contactos profesionales</button>
+            <button><router-link to="/testProfesionales"> Contactos Profesionales</router-link></button>
         </div>
         <div class="container">
-            <button>Mejoramiento personal</button>
+            <button><router-link to="/allport"> Mejoramiento personal</router-link></button>
         </div>
         <div class="container">
             <button>Empresas/empleados</button>

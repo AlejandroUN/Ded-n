@@ -7,6 +7,8 @@ import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
 import allport from '../views/allport.vue'
 import kostick from '../views/kostick.vue'
+import encProf from '../views/encuestaContProfesionales.vue'
+import encArteTecnica from '../views/encuestaArteTecnica.vue'
 
 const routes = [
   {
@@ -48,6 +50,18 @@ const routes = [
     path: '/kostick',
     name: 'TestKostick',
     component: kostick
+  },
+
+  {
+    path: '/testMaestros',
+    name: 'testMaestros',
+    component: encArteTecnica
+  },
+
+  {
+    path: '/testProfesionales',
+    name: 'testProfesionales',
+    component: encProf
   },
 ]
 
