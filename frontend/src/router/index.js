@@ -5,6 +5,7 @@ import crearCuenta from '../views/crearCuenta.vue'
 import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
+import allport from '../views/allport.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/recuperarContrasena',
     name: 'recuperarContrasena',
     component: recuperarContrasena
+  },
+  {
+    path: '/allport',
+    name: 'TestAllport',
+    component: allport
   }
 ]
 
