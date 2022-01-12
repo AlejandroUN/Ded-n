@@ -20,6 +20,12 @@
         <div class="container">
             <button>Empresas/empleados</button>
         </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <button><router-link to="/encuestaPsicometrica">Ver encuestas disponibles</router-link></button>
+        </div>
     </div>
 
 </template>

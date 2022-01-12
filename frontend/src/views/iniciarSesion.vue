@@ -11,7 +11,7 @@
             <router-link to="/recuperarContrasena">He olvidado mi contraseña</router-link>
             <br>
 
-            <button v-on:click="login">Entrar</button>
+            <router-link to="/entrarPerfil"><button v-on:click="login">Entrar</button></router-link>|
 
         </aside>
 
