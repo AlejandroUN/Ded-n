@@ -1,52 +1,83 @@
 <template>
-    
+  <div id="app">
+    <header>
+      <h1>Hola</h1>
+    </header>
 
-    <div id="app">
-        
-        <header>
-            <h1>¿Has olvidado tu contraseña? </h1>
-            <p>Ingresa el correo</p>
-        </header>
+    <div
+      class="modal modal-signin position-static d-block bg-secondary py-5"
+      tabindex="-1"
+      role="dialog"
+      id="modalSignin"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Recupera tu contraseña</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-        <section>
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-4"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Correo electrónico</label>
+              </div>
 
-            <input type="text" placeholder="Correo electrónico" v-model="correo">
+              <button
+                class="mb-2 btn btn-sm rounded-4 btn-primary"
+                type="submit"
+              >
+                Cancelar
+              </button>
 
-
-
-            <br>
-
-            <button v-on:click="recuperar()">Recuperar</button>
-            <p></p>
-        </section>
-        
-
-            <footer>
-                Dedún app
-            </footer>
-
+              <button
+                class="mb-2 btn btn-sm rounded-4 btn-primary left"
+                type="submit"
+                v-on:click="recuperar()"
+              >
+                Recuperar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
-    <script>
-        export default {
 
-            data() {
-                return {
-                    correo: '',
-                    toLogCorreo: '',
+<script>
+export default {
+  data() {
+    return {
+      correo: "",
+      toLogCorreo: "",
+    };
+  },
+  methods: {
+    recuperar() {
+      if (this.correo != "") {
+        this.toLogCorreo = this.correo;
+      }
+      console.log("Error de texto");
+    },
+  },
+};
+</script>
 
-                }
-            },
-            methods: {
-                recuperar() {
-                    if (this.correo != '') {
-                        this.toLogCorreo = this.correo;
-                    }
-                    console.log('Error de texto')
-                }
-
-            }
-        }
-
-
-    </script>
+<style>
+.left {
+  margin-left: 20px !important;
+}
+</style>
