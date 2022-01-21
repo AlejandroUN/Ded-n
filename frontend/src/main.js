@@ -7,6 +7,8 @@ import router from './router'
 
 //sync(store, router)
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 createApp(App)
 //	.use(store)
 	.use(router)
