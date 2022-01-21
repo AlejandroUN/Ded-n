@@ -18,17 +18,14 @@
         </div>
       </div>
       <div class="col-md-10 mx-auto col-lg-5 font">
-        <form class="p-4 p-md-5 border rounded-3 bg-light fondo2">
-          
-
-
-          
-            <router-link to="/IniciarSesion">
+        <form class="p-4 p-md-5 border rounded-3 bg-light">
+          <router-link to="/IniciarSesion">
             <button class="w-100 btn btn-sm btn-primary color" type="submit">
               Iniciar Sesión
             </button>
-          </router-link> <router-view/>
-          
+          </router-link>
+          <router-view />
+
           <hr class="my-4" />
           <router-link to="/crearCuenta">
             <button class="w-100 btn btn-sm btn-primary color" type="submit">
@@ -39,50 +36,44 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
-        import AuthenticationService from '@/services/AuthenticationService'
-        import Swal from 'sweetalert2'
-        export default {
-            data() {
-                return {
-                    email: "",
-                    password: "",                                       
-                }
-            },
-            methods: {
-                async login() {   
-                  
-					try{
-                    	await AuthenticationService.login({ // eslint-disable-line no-mixed-spaces-and-tabs
-                        	email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
-                        	password: this.password // eslint-disable-line no-mixed-spaces-and-tabs     
-                    	}) // eslint-disable-line no-mixed-spaces-and-tabs
-                        
-                        this.$router.replace({ path: "/entrarPerfil" });
-					} catch(error){
-                        
-						this.error = error.response.data.error
-                        Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: this.error,
-                                })
-					}
-                }
-            }
-        }
-    </script>
+import AuthenticationService from "@/services/AuthenticationService";
+import Swal from "sweetalert2";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        await AuthenticationService.login({
+          // eslint-disable-line no-mixed-spaces-and-tabs
+          email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
+          password: this.password, // eslint-disable-line no-mixed-spaces-and-tabs
+        }); // eslint-disable-line no-mixed-spaces-and-tabs
+
+        this.$router.replace({ path: "/entrarPerfil" });
+      } catch (error) {
+        this.error = error.response.data.error;
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: this.error,
+        });
+      }
+    },
+  },
+};
+</script>
 
 <style>
 .font {
   font-family: AvantGarde !important;
-}
-
-.fondo2 {
-  background-color: #e1f7f7;
 }
 
 .color {

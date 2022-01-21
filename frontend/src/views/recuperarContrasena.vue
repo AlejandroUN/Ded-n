@@ -1,18 +1,36 @@
 <template>
   <div id="app">
-    <header>
-      <h1>Hola</h1>
+    <header class="margin font">
+      <img src="../assets/logo.png" height="50" />
+      <nav class="nav justify-content-center float-md-end right">
+        <router-link to="/"
+          ><button
+            class="w-100 btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            Inicio
+          </button></router-link
+        >
+        <router-link to=""
+          ><button
+            class="w-100 btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            ¡Dónanos!
+          </button></router-link
+        >
+      </nav>
     </header>
 
     <div
-      class="modal modal-signin position-static d-block bg-secondary py-5"
+      class="modal modal-signin position-static d-block py-5 bg"
       tabindex="-1"
       role="dialog"
       id="modalSignin"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content rounded-5 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0">
+          <div class="modal-header p-5 pb-4 border-bottom-0 fondo2 font">
             <!-- <h5 class="modal-title">Modal title</h5> -->
             <h2 class="fw-bold mb-0">Recupera tu contraseña</h2>
             <button
@@ -23,8 +41,8 @@
             ></button>
           </div>
 
-          <div class="modal-body p-5 pt-0">
-            <form class="">
+          <div class="modal-body p-5 pt-0 fondo2">
+            <form class="font">
               <div class="form-floating mb-3">
                 <input
                   type="email"
@@ -34,21 +52,23 @@
                 />
                 <label for="floatingInput">Correo electrónico</label>
               </div>
-
-              <button
-                class="mb-2 btn btn-sm rounded-4 btn-primary"
-                type="submit"
-              >
-                Cancelar
-              </button>
-
-              <button
-                class="mb-2 btn btn-sm rounded-4 btn-primary left"
-                type="submit"
-                v-on:click="recuperar()"
-              >
-                Recuperar
-              </button>
+              <router-link to="">
+                <button
+                  class="mb-2 btn btn-sm rounded-4 btn-primary floatr color"
+                  type="submit"
+                >
+                  Recuperar
+                </button>
+              </router-link>
+              <router-link to="/iniciarSesion">
+                <button
+                  class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
+                  type="submit"
+                  v-on:click="recuperar()"
+                >
+                  Cancelar
+                </button>
+              </router-link>
             </form>
           </div>
         </div>
@@ -77,7 +97,51 @@ export default {
 </script>
 
 <style>
-.left {
-  margin-left: 20px !important;
+.right {
+  margin-right: 20px !important;
+}
+.floatr {
+  float: right !important;
+}
+.bg {
+  background-color: #008b8f;
+}
+.color {
+  background-color: #f08240 !important;
+  border-color: #f08240 !important;
+}
+
+.color:hover {
+  background-color: #008b8f !important;
+  border-color: #008b8f !important;
+}
+
+.color2 {
+  background-color: #faefe8 !important;
+  border-color: #faefe8 !important;
+  color: black !important;
+}
+
+.color2:hover {
+  background-color: #803d14 !important;
+  border-color: #803d14 !important;
+  color: white !important;
+}
+
+.fondo2 {
+  background-color: #faefe8;
+}
+
+.margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.font {
+  font-family: AvantGarde !important;
+}
+
+.boton {
+  padding-top: 100% !important;
 }
 </style>
