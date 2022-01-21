@@ -1,6 +1,44 @@
 <template>
     
     <div id="app">
+      <header class="margin font">
+      <img src="../assets/logo.png" height="50" />
+      <nav class="nav justify-content-center float-md-end right">
+        <router-link to="/"
+          ><button
+            class="w-100 btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            Inicio
+          </button></router-link
+        >
+        <router-link to=""
+          ><button
+            class=" btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            ¡Dónanos!
+          </button></router-link
+        >
+      </nav>
+    </header>
+      
+
+
+    <div
+      class="modal modal-signin position-static d-block py-5 bg"
+      tabindex="-1"
+      role="dialog"
+      id="modalSignin"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0 fondo2 font">
+            
+            <h2 class="fw-bold mb-0">Inicia tu sesión</h2>
+            
+          </div>
+          <div class="modal-body p-5 pt-0 fondo2">
         
         <div class="form-floating mb-3">
             <input
@@ -26,21 +64,23 @@
           </div>
           
             <button
-              class="w-100 btn btn-lg btn-primary color"
+              class=" mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
               type="submit"
               v-on:click="login"
             >
-              Iniciar Sesión
-            </button> |
+              Entrar
+            </button> 
             <small class="text-muted"
             ><router-link to="/recuperarContrasena"
               >¿Has olvidado tu contraseña?</router-link
             ></small
           >
-
-        
-
+          </div>
+        </div>
+      </div>
     </div>
+    </div>
+    
 
 </template>
     <script>
