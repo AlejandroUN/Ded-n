@@ -129,8 +129,15 @@ export default {
         try {
           await AuthenticationService.register({
             // eslint-disable-line no-mixed-spaces-and-tabs
+            name: this.nombres,
             email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
+            nick: this.new_user,
             password: this.password, // eslint-disable-line no-mixed-spaces-and-tabs
+            birth: this.born,
+            gender: this.gender,
+            orientation: this.orientacion,
+            newgender: this.nuevoGenero,
+            neworientation: this.nuevaOrientacion            
           }); // eslint-disable-line no-mixed-spaces-and-tabs
           this.$router.push({ path: "/entrarPerfil" });
         } catch (error) {
