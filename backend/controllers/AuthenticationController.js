@@ -20,7 +20,7 @@ module.exports = {
       })
     } catch (err) {
       res.status(400).send({
-        error: 'This email account is already in use.'
+        error: 'La cuenta de correo electrónico ya se encuantra en uso'
       })
     }
   },
@@ -35,14 +35,14 @@ module.exports = {
 
       if (!user) {
         return res.status(403).send({
-          error: 'The login information for email was incorrect'
+          error: 'Usuario no encontrado'
         })
       }
 
       const isPasswordValid = password === user.password
       if (!isPasswordValid) {
         return res.status(403).send({
-          error: 'The login information for password was incorrect'
+          error: 'Contraseña incorrecta'
         })
       }
 
@@ -53,7 +53,7 @@ module.exports = {
       })
     } catch (err) {
       res.status(500).send({
-        error: 'An error has occured trying to log in'
+        error: 'Error al iniciar sesión'
       })
     }
   }
