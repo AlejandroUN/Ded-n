@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import iniciarSesion from '../views/iniciarSesion.vue'
 import crearCuenta from '../views/crearCuenta.vue'
 import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
@@ -15,11 +14,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/iniciarSesion',
-    name: 'iniciarSesion',
-    component: iniciarSesion
   },
   {
     path: '/crearCuenta',

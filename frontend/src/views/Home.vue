@@ -3,7 +3,9 @@
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
         <div class="col-lg-10 fs-4 font">
-          <center class="pb"><img src="../assets/logo.png" height="100" /></center>
+          <center class="pb">
+            <img src="../assets/logo.png" height="100" />
+          </center>
           <p class="f_tamano">
             Dedún es una plataforma para relacionar personas según sus intereses
             y su psicología. Está llamada a ser la herramienta por defecto para
@@ -35,15 +37,26 @@
             />
             <label for="floatingPassword">Contraseña</label>
           </div>
-          <button class="w-100 btn btn-lg btn-primary color" type="submit">
-            Iniciar Sesión
-          </button>
-
-          <small class="text-muted">¿Has olvidado tu contraseña?</small>
+          <router-link to="/entrarPerfil">
+            <button
+              class="w-100 btn btn-lg btn-primary color"
+              type="submit"
+              v-on:click="login"
+            >
+              Iniciar Sesión
+            </button> </router-link
+          >|
+          <small class="text-muted"
+            ><router-link to="/recuperarContrasena"
+              >¿Has olvidado tu contraseña?</router-link
+            ></small
+          >
           <hr class="my-4" />
-          <button class="w-100 btn btn-sm btn-primary color" type="submit">
-            Crear cuenta
-          </button>
+          <router-link to="/crearCuenta">
+            <button class="w-100 btn btn-sm btn-primary color" type="submit">
+              Crear cuenta
+            </button>
+          </router-link>
         </form>
       </div>
     </div>
@@ -83,11 +96,28 @@
 </template>
 
 <script>
+import AuthenticationService from "@/services/AuthenticationService";
 export default {
   data() {
-    return {};
+    return {
+      email: "",
+      password: "",
+    };
   },
-  methods: {},
+  methods: {
+    async login() {
+      try {
+        await AuthenticationService.login({
+          // eslint-disable-line no-mixed-spaces-and-tabs
+          email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
+          password: this.password, // eslint-disable-line no-mixed-spaces-and-tabs
+        }); // eslint-disable-line no-mixed-spaces-and-tabs
+        this.$router.push({ path: "/entrarPerfil" });
+      } catch (error) {
+        this.error = error.response.data.error;
+      }
+    },
+  },
 };
 </script>
 
@@ -119,5 +149,3 @@ export default {
   text-align: justify;
 }
 </style>
-
-
