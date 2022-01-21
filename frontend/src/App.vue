@@ -1,11 +1,14 @@
 <template>
-  <div id="nav">
+  <div>
+    <!--<div id="nav">
 
     <router-link to="/"> Inicio</router-link> |
     <router-link to="/iniciarSesion">Iniciar Sesion </router-link>|
     <router-link to="/crearCuenta">Crear cuenta</router-link>
+  </div>-->
+    <router-view />
+    <footer>Dedún app</footer>
   </div>
-  <router-view/>
 </template>
 
 <style>
@@ -15,8 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
   
   color: #2c3e50;
-}
 
+  background-color: #FAEFE8;
+}
+/*
 #nav {
   padding: 19px;
 }
@@ -27,6 +32,23 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #879e34;
+  color: #008B8F;
+}*/
+
+body{
+  margin: 0; 
+  padding: 0;
+  background-color: #FAEFE8;
+  min-height: 100vh;
 }
+
+/*Esto hace que se puedea bajar en la pagina pero sin que el scrollbar sea visible*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+  float: bottom;;
+}
+
 </style>
