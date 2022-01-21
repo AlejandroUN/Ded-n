@@ -8,6 +8,7 @@ import allport from '../views/allport.vue'
 import kostick from '../views/kostick.vue'
 import encProf from '../views/encuestaContProfesionales.vue'
 import encArteTecnica from '../views/encuestaArteTecnica.vue'
+import iniciarSesion from '../views//iniciarSesion.vue'
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     path: '/crearCuenta',
     name: 'crearCuenta',
     component: crearCuenta
+  },
+  {
+    path: '/iniciarSesion',
+    name: 'iniciarSesion',
+    component: iniciarSesion
   },
   {
     path: '/encuestaPsicometrica',

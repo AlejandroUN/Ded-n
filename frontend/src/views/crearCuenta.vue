@@ -98,6 +98,7 @@
 
 <script>
 import AuthenticationService from "@/services/AuthenticationService";
+import Swal from 'sweetalert2'
 export default {
   data() {
     return {
@@ -120,11 +121,26 @@ export default {
       var dateBorn = new Date(this.born);
 
       if (!this.email.includes("@gmail.com")) {
-        alert("El correo indicado no es gmail");
+        Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: "El correo indicado no es gmail",
+                                })
       } else if (this.password.length < 8) {
         alert("La contraseña debe tener más de 8 caracteres");
+         
+        Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: "La contraseña debe tener más de 8 caracteres",
+                                })
       } else if (dateMax < dateBorn) {
-        alert("El usuario es menor de 14 años, no puede registrarse");
+        
+        Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: "El usuario es menor de 14 años, no puede registrarse",
+                                })
       } else {
         try {
           await AuthenticationService.register({
@@ -140,8 +156,18 @@ export default {
             neworientation: this.nuevaOrientacion            
           }); // eslint-disable-line no-mixed-spaces-and-tabs
           this.$router.push({ path: "/entrarPerfil" });
+          Swal.fire({
+                        icon: 'success',
+                        title: 'Creado',
+                        text: "El usuario ha sido registrado correctamente",
+                                })
         } catch (error) {
           this.error = error.response.data.error;
+          Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: this.error,
+                                })
         }
       }
     },

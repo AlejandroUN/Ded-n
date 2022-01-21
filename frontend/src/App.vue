@@ -27,7 +27,9 @@
 </template>
 
 <style>
-
+html{
+  background-color: #faefe8;
+}
 .fondo {
   background-color: #faefe8;
 }
