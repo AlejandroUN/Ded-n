@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fondo">
     <!--<div id="nav">
 
     <router-link to="/"> Inicio</router-link> |
@@ -7,11 +7,14 @@
     <router-link to="/crearCuenta">Crear cuenta</router-link>
   </div>-->
     <router-view />
-    <footer>Dedún app</footer>
+    <footer >Dedún app</footer>
   </div>
 </template>
 
 <style>
 
+.fondo{
+    background-color: #FAEFE8;
+  }
 
 </style>
