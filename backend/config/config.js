@@ -2,7 +2,7 @@ module.exports = {
   port: 8081,
   db: {
     user: 'root',
-    password: 'mysql',
+    password: 'admin',
     database: 'dedun',
     options: {
       dialect: 'mysql',
