@@ -27,7 +27,7 @@
               class="w-100 btn btn-lg btn-primary color_fuente color2"
               type="submit"
             >
-              Dónanos
+              ¡Dónanos!
             </button></router-link
           >
         </nav>
