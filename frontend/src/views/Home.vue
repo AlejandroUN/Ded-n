@@ -1,11 +1,40 @@
 <template>
-  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
+  <div class="container col-xl-12 col-xxl-8 py-3">
+    <div class="row align-items-center g-lg-5">
+      <header class="font">
+        <img class="float-md-start" src="../assets/logo.png" height="50" />
+
+        <nav class="nav justify-content-center float-md-end">
+          
+          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" class="margen_izquierda"
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2 margen_izquierda"
+              type="submit"
+            >
+              Test MBTI
+            </button></a>
+
+          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes" class="margen_izquierda">
+          <button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Test Big Five
+            </button></a>
+
+          <router-link to=""
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              ¡Dónanos!
+            </button></router-link
+          >
+        </nav>
+      </header>
+
       <div class="col-lg-7 text-center text-lg-start">
         <div class="col-lg-10 fs-4 font">
-          <center class="pb">
-            <img src="../assets/logo.png" height="100" />
-          </center>
           <p class="f_tamano">
             Dedún es una plataforma para relacionar personas según sus intereses
             y su psicología. Está llamada a ser la herramienta por defecto para
@@ -72,8 +101,12 @@ export default {
 </script>
 
 <style>
-.font {
-  font-family: AvantGarde !important;
+
+
+
+@font-face {
+  font-family: AvGard;
+  src: url(AVGARDN_2.TTF);
 }
 
 .color {
@@ -91,7 +124,11 @@ export default {
 }
 
 .f_tamano {
-  font-size: 23px;
+  font-size: 18px;
   text-align: justify;
+}
+
+.margen_izquierda{
+  padding-right: 5px !important;
 }
 </style>

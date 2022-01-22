@@ -1,13 +1,44 @@
 <template>
   <div class="container">
+
     <main>
-      <div class="py-5 text-center">
-        <img
-          class="d-block mx-auto mb-4"
-          src="../assets/logo.png"
-          alt=""
-          height="100"
-        />        
+
+      <div class="row align-items-center g-lg-5">
+      <header class="font">
+
+
+        <router-link to="/">
+        <img class="float-md-start" src="../assets/logo.png" height="50" />
+        </router-link>
+
+        <nav class="nav justify-content-center float-md-end">
+          
+          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" class="margen_izquierda"
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2 margen_izquierda"
+              type="submit"
+            >
+              Test MBTI
+            </button></a>
+
+          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes" class="margen_izquierda">
+          <button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Test Big Five
+            </button></a>
+
+          <router-link to=""
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Dónanos
+            </button></router-link
+          >
+        </nav>
+      </header>
       </div>
 
       <div class="row g-5 contenedor">
@@ -15,49 +46,18 @@
           <h4 class="mb-3">Crear cuenta</h4>
           <form class="needs-validation" novalidate="">
             <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="firstName" class="form-label">Nombres</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="firstName"
-                  placeholder="Nombres"
-                  value=""
-                  required=""
-                />
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-
-              <div class="col-sm-6">
-                <label for="lastName" class="form-label">Apellidos</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="lastName"
-                  placeholder="Apellidos"
-                  value=""
-                  required=""
-                />
-                <div class="invalid-feedback">Valid last name is required.</div>
-              </div>
-
-              <div class="col-12">
-                <label for="username" class="form-label"
-                  >Nombre de usuario</label
+              <div class="col-sm-12">
+                <label for="firstName" class="form-label"
+                  >Nombres y Apellidos</label
                 >
-                <div class="input-group has-validation">
-                  <span class="input-group-text">@</span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username"
-                    placeholder="Username"
-                    required=""
-                  />
-                  <div class="invalid-feedback">Your username is required.</div>
-                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  v-model="nombres"
+                  maxlength="50"
+                  id="firstName"
+                  placeholder="Nombres y Apellidos"
+                />
               </div>
 
               <div class="col-12">
@@ -65,12 +65,10 @@
                 <input
                   type="email"
                   class="form-control"
+                  v-model="email"
                   id="email"
                   placeholder="you@example.com"
-                />                
-                <div class="invalid-feedback">
-                  Please enter a valid email address for shipping updates.
-                </div>
+                />
               </div>
 
               <div class="form-group col-12">
@@ -83,12 +81,15 @@
                   type="password"
                   placeholder="Contraseña"
                   v-model="password"
+                  v-on:keypress="isImprimible(event)"
+                  minlength="8"
+                  maxlength="20"
                   required
                 />
               </div>
 
               <div class="form-group col-12">
-                <label class="custom-label col-md-3 display" for="cPassword"
+                <label class="custom-label col-md-6 display" for="cPassword"
                   >Confirmar Contrase&ntilde;a</label
                 >
                 <input
@@ -97,6 +98,7 @@
                   type="password"
                   placeholder="Confirmar Contraseña"
                   v-model="cPassword"
+                  v-on:keypress="isImprimible(event)"
                   required
                   :class="{
                     'is-invalid': cPassword !== '' && cPassword !== password,
@@ -113,54 +115,73 @@
               </div>
 
               <div class="col-md-6">
-                <label for="country" class="form-label">Genero</label>
-                <select class="form-select" id="country" required="">
+                <label class="form-label">Genero</label>
+                <select
+                  class="form-select"
+                  id="country"
+                  required=""
+                  v-model="gender"
+                >
                   <option value="">Elegir...</option>
                   <option>Hombre</option>
                   <option>Mujer</option>
-                  <option>Hombre cisgenero</option>
-                  <option>Mujer cisgenero</option>
-                  <option>Hombre transgenero</option>
-                  <option>Mujer transgenero</option>
-                  <option>Persona no binaria</option>
-                  <option>Genero fluido</option>
-                  <option>Intersexual</option>
-                  <option>Prefiero no contestar</option>
+                  <option>Otro</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please select a valid gender.
+
+                <div class="form-group col-6" v-show="otroGenero()">
+                  <label class="custom-label col-md-12 display"
+                    >¿Que otro?</label
+                  >
+                  <input
+                    class="form-control col-12 col-sm-10 col-md-7"
+                    type="text"
+                    v-model="nuevoGenero"
+                    placeholder="Ingrese genero"
+                  />
                 </div>
               </div>
 
               <div class="col-md-6">
                 <label for="state" class="form-label">Orientación sexual</label>
-                <select class="form-select" id="state" required="">
+                <select class="form-select" v-model="orientacion">
                   <option value="">Elegir...</option>
                   <option>Heterosexual</option>
                   <option>Homosexual</option>
                   <option>Bisexual</option>
-                  <option>Pansexual</option>
-                  <option>Asexual</option>
-                  <option>Antrosexual</option>
-                  <option>Demisexual</option>
                   <option>Otro</option>
-                  <option>Prefiero no contestar</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please provide a orientation.
+
+                <div class="form-group col-6" v-show="otraOrientacion()">
+                  <label class="custom-label col-md-12 display">¿Cual?</label>
+                  <input
+                    class="form-control col-12 col-sm-10 col-md-7 display"
+                    type="text"
+                    v-model="nuevaOrientacion"
+                    placeholder="Ingrese orientación"
+                  />
                 </div>
-              </div>              
+              </div>
             </div>
 
             <hr class="my-4" />
-            
-            <button class="boton_grande w-100 btn btn-primary btn-lg" type="submit">
+
+            <button
+              v-on:click="checked"
+              class="boton_grande w-100 btn btn-primary btn-lg"
+              type="submit"
+            >
               Crear cuenta
             </button>
           </form>
         </div>
       </div>
     </main>
+<!--
+    <div>
+      {{ nombres }} - {{ email }} - {{ new_user }} - {{ password }} -
+      {{ born }} - {{ gender }} - {{ orientacion }} - {{ today }}
+    </div>
+      //-->
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <p class="mb-1">© 2017–2021 Company Name</p>
@@ -273,7 +294,7 @@
 
 <script>
 import AuthenticationService from "@/services/AuthenticationService";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 export default {
   data() {
     return {
@@ -281,6 +302,7 @@ export default {
       email: "",
       new_user: "",
       password: "",
+      cPassword:"",
       born: new Date().toISOString().substr(0, 10),
       today: new Date().toISOString().substr(0, 10),
       gender: "",
@@ -295,27 +317,36 @@ export default {
       dateMax.setMonth(dateMax.getMonth() - 168);
       var dateBorn = new Date(this.born);
 
+      
+
       if (!this.email.includes("@gmail.com")) {
         Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: "El correo indicado no es gmail",
-                                })
-      } else if (this.password.length < 8) {
+          icon: "error",
+          title: "Error",
+          text: "El correo indicado no es gmail",
+        });
+      }
+      else if( this.password !== this.cPassword ){
+          Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Las contraseñas no coinciden",
+        });
+        }
+       else if (this.password.length < 8) {
         alert("La contraseña debe tener más de 8 caracteres");
-         
+
         Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: "La contraseña debe tener más de 8 caracteres",
-                                })
+          icon: "error",
+          title: "Error",
+          text: "La contraseña debe tener más de 8 caracteres",
+        });
       } else if (dateMax < dateBorn) {
-        
         Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: "El usuario es menor de 14 años, no puede registrarse",
-                                })
+          icon: "error",
+          title: "Error",
+          text: "El usuario es menor de 14 años, no puede registrarse",
+        });
       } else {
         try {
           await AuthenticationService.register({
@@ -332,17 +363,17 @@ export default {
           }); // eslint-disable-line no-mixed-spaces-and-tabs
           this.$router.push({ path: "/entrarPerfil" });
           Swal.fire({
-                        icon: 'success',
-                        title: 'Creado',
-                        text: "El usuario ha sido registrado correctamente",
-                                })
+            icon: "success",
+            title: "Creado",
+            text: "El usuario ha sido registrado correctamente",
+          });
         } catch (error) {
           this.error = error.response.data.error;
           Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: this.error,
-                                })
+            icon: "error",
+            title: "Error",
+            text: this.error,
+          });
         }
       }
     },
@@ -375,12 +406,17 @@ export default {
 </script>
 
 <style scoped>
-body {  
-  font-family: AvGard;  
+.boton_grande:hover {
+  background-color: #008b8f !important;
+  border-color: #008b8f !important;
 }
 
-.boton_grande{
-  background-color: #008b8f ;
+* {
+  font-family: AvGard;
+}
+
+.boton_grande {
+  background-color: #008b8f;
 }
 
 @font-face {
@@ -393,12 +429,8 @@ body {
   src: url(AVGARDDO_2.TTF);
 }
 
-
 @font-face {
   font-family: AvGard;
   src: url(AVGARDN_2.TTF);
 }
-  
-
-  
 </style>
