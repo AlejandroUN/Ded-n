@@ -20,6 +20,7 @@ import bigFive6 from '../views/bigFive6.vue'
 import bigFive7 from '../views/bigFive7.vue'
 import bigFive8 from '../views/bigFive8.vue'
 import bigFive9 from '../views/bigFive9.vue'
+import MBTI from '../views/MBTI.vue'
 
 const routes = [
   {
