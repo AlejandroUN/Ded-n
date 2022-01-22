@@ -28,6 +28,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/MBTI',
+    name: 'MBTI',
+    component: MBTI
+  },
+  {
     path: '/crearCuenta',
     name: 'crearCuenta',
     component: crearCuenta
