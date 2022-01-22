@@ -101,8 +101,12 @@ export default {
 </script>
 
 <style>
-.font {
-  font-family: AvantGarde !important;
+
+
+
+@font-face {
+  font-family: AvGard;
+  src: url(AVGARDN_2.TTF);
 }
 
 .color {
@@ -120,7 +124,7 @@ export default {
 }
 
 .f_tamano {
-  font-size: 23px;
+  font-size: 18px;
   text-align: justify;
 }
 

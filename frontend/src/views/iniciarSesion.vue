@@ -1,4 +1,5 @@
 <template>
+
   <div class="container col-xl-12 col-xxl-8 py-3">
     <div class="row align-items-center g-lg-5">
       <header class=" font">
