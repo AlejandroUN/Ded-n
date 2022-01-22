@@ -1,81 +1,47 @@
 <template>
-  <div id="app">
-    <header class="margin font">
-      <img src="../assets/logo.png" height="50" />
-      <nav class="nav justify-content-center float-md-end right">
+  <div class="container col-xl-12 col-xxl-8 py-3">
+    <div class="row align-items-center g-lg-5">
+      <header class="font">
         <router-link to="/"
-          ><button
-            class="w-100 btn btn-lg btn-primary color_fuente color2"
-            type="submit"
+          ><img src="../assets/logo.png" height="50"
+        /></router-link>
+        <!--<img src="../assets/logo.png" height="50"/>-->
+        <nav class="nav justify-content-center float-md-end right">
+          <router-link to="/"
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Inicio
+            </button></router-link
           >
-            Inicio
-          </button></router-link
-        >
-        <router-link to=""
-          ><button
-            class="w-100 btn btn-lg btn-primary color_fuente color2"
-            type="submit"
+          <router-link to=""
+            ><button
+              class="btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              ¡Dónanos!
+            </button></router-link
           >
-            ¡Dónanos!
-          </button></router-link
-        >
-      </nav>
-    </header>
-    <div class="fondo2 font bot_margin">
-      <center class="top_margin blanco"><h1>Entra a tu perfil</h1></center>
+        </nav>
+      </header>
 
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row mb-2">
-          <div class="col-md-6">
-            <center>
-              <img
-                class="bd-placeholder-img rounded-circle"
-                width="160"
-                height="160"
-                role="img"
-                aria-label="Placeholder: 140x140"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-                src="https://image.freepik.com/foto-gratis/mejores-amigos-abrazandose-mientras-promueven-diversidad_23-2148529062.jpg"
-              />
-            </center>
+     
+          <router-link to="">
+            <button class="w-100 btn btn-lg btn-primary">
+              Iniciar Sesión
+            </button>
+          </router-link>
+          <router-link to="">
+            <button class="w-100 btn btn-lg btn-primary">
+              Crear cuenta
+            </button>
+          </router-link>
+       
 
-            <center class="top_margin">
-              <router-link to=""
-                ><button class="btn btn-lg btn-primary color3" type="submit">
-                  Personal
-                </button></router-link
-              >
-            </center>
-          </div>
 
-          <!-- /.col-lg-4 -->
-          <div class="col-md-6">
-            <center>
-              <img
-                class="bd-placeholder-img rounded-circle"
-                width="160"
-                height="160"
-                role="img"
-                aria-label="Placeholder: 140x140"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-                src="https://argentinosenirlanda.ie/wp-content/uploads/2017/04/Pr%C3%A1cticas-profesionales-en-Irlanda.jpg"
-              />
-            </center>
 
-            <center class="top_margin">
-              <router-link to="/introBigFive"
-                ><button class="btn btn-lg btn-primary color3" type="submit">
-                  Profesional
-                </button></router-link
-              >
-            </center>
-          </div>
-        </div>
-        <!-- /.row -->
-      </div>
+
     </div>
   </div>
 </template>
@@ -118,7 +84,7 @@ export default {
   color: white !important;
 }
 
-.blanco{
+.blanco {
   color: white;
 }
 </style>
