@@ -160,6 +160,8 @@
           </form>
         </div>
       </div>
+      {{ nombres }} - {{ email }} - {{ new_user }} - {{ password }} -
+      {{ born }} - {{ gender }} - {{ orientacion }} - {{ today }}
     </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
@@ -302,7 +304,6 @@ export default {
                         text: "El correo indicado no es gmail",
                                 })
       } else if (this.password.length < 8) {
-        alert("La contraseña debe tener más de 8 caracteres");
          
         Swal.fire({
                         icon: 'error',
