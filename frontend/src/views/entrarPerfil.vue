@@ -66,7 +66,7 @@
             </center>
 
             <center class="top_margin">
-              <router-link to="/testMaestros"
+              <router-link to="/introBigFive"
                 ><button class="btn btn-lg btn-primary color3" type="submit">
                   Profesional
                 </button></router-link
