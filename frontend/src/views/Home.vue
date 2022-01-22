@@ -6,15 +6,15 @@
 
         <nav class="nav justify-content-center float-md-end">
           
-          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
+          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" class="margen_izquierda"
             ><button
-              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              class="w-100 btn btn-lg btn-primary color_fuente color2 margen_izquierda"
               type="submit"
             >
               Test MBTI
             </button></a>
 
-          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes">
+          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes" class="margen_izquierda">
           <button
               class="w-100 btn btn-lg btn-primary color_fuente color2"
               type="submit"
@@ -122,5 +122,9 @@ export default {
 .f_tamano {
   font-size: 23px;
   text-align: justify;
+}
+
+.margen_izquierda{
+  padding-right: 5px !important;
 }
 </style>
