@@ -1,8 +1,11 @@
 <template>
   <div class="container col-xl-12 col-xxl-8 py-3">
-    <div class="row align-items-center">
-      <header class="margin font">
-        <img src="../assets/logo.png" height="50" />
+    <div class="row align-items-center g-lg-5">
+      <header class="font">
+        <router-link to="/"
+          ><img src="../assets/logo.png" height="50"
+        /></router-link>
+        <!--<img src="../assets/logo.png" height="50"/>-->
         <nav class="nav justify-content-center float-md-end right">
           <router-link to="/"
             ><button
@@ -14,7 +17,7 @@
           >
           <router-link to=""
             ><button
-              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              class="btn btn-lg btn-primary color_fuente color2"
               type="submit"
             >
               ¡Dónanos!
@@ -23,20 +26,21 @@
         </nav>
       </header>
 
+     
+          <router-link to="">
+            <button class="w-100 btn btn-lg btn-primary">
+              Iniciar Sesión
+            </button>
+          </router-link>
+          <router-link to="">
+            <button class="w-100 btn btn-lg btn-primary">
+              Crear cuenta
+            </button>
+          </router-link>
+       
 
-      <div class="row">
-        <div class="contenedor float-none"><router-link to="/"
-          ><button class="boton7">
-            <img src="../assets/corazon.png" height="100" /></button
-        ></router-link></div>
 
-        <div class="contenedor float-none"><router-link to="/"
-          ><button class="boton7">
-            <img src="../assets/corazon.png" height="100" /></button
-        ></router-link></div>
-      </div>
 
-      
     </div>
   </div>
 </template>
@@ -81,20 +85,5 @@ export default {
 
 .blanco {
   color: white;
-}
-
-.boton7 {
-  padding-top: 50% !important;
-  padding-bottom: 50% !important;
-  border: 5px !important;
-  width: 500% !important;
-  background-color: #7dbdbc !important;
-}
-
-.contenedor{
-  align-items: center !important;
-  display: flex !important;
-  justify-content: center !important;
-  height: 1% !important;
 }
 </style>
