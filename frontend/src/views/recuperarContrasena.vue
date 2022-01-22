@@ -30,7 +30,7 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content rounded-5 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0 fondo2 font">
+          <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
             <!-- <h5 class="modal-title">Modal title</h5> -->
             <h2 class="fw-bold mb-0">Recupera tu contraseña</h2>
             <button
@@ -41,7 +41,7 @@
             ></button>
           </div>
 
-          <div class="modal-body p-5 pt-0 fondo2">
+          <div class="modal-body p-5 pt-0 fondo3">
             <form class="font">
               <div class="form-floating mb-3">
                 <input

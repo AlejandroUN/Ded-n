@@ -33,12 +33,12 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content rounded-5 shadow">
-          <div class="modal-header p-5 pb-4 border-bottom-0 fondo2 font">
+          <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
             
             <h2 class="fw-bold mb-0">Inicia tu sesión</h2>
             
           </div>
-          <div class="modal-body p-5 pt-0 fondo2">
+          <div class="modal-body p-5 pt-0 fondo3">
         
         <div class="form-floating mb-3">
             <input
@@ -119,3 +119,9 @@
             }
         }
     </script>
+
+    <style >
+    .fondo3 {
+  background-color: #FAEFE8 !important;
+}
+    </style>
