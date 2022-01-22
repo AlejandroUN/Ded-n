@@ -2,7 +2,9 @@
     
     <div id="app">
       <header class="margin font">
-      <img src="../assets/logo.png" height="50" />
+        
+      <img src="../assets/logo.png" height="50" />      
+
       <nav class="nav justify-content-center float-md-end right">
         <router-link to="/"
           ><button

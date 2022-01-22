@@ -1,13 +1,44 @@
 <template>
   <div class="container">
+
     <main>
-      <div class="py-5 text-center">
-        <img
-          class="d-block mx-auto mb-4"
-          src="../assets/logo.png"
-          alt=""
-          height="100"
-        />
+
+      <div class="row align-items-center g-lg-5">
+      <header class="font">
+
+
+        <router-link to="/">
+        <img class="float-md-start" src="../assets/logo.png" height="50" />
+        </router-link>
+
+        <nav class="nav justify-content-center float-md-end">
+          
+          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" class="margen_izquierda"
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2 margen_izquierda"
+              type="submit"
+            >
+              Test MBTI
+            </button></a>
+
+          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes" class="margen_izquierda">
+          <button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Test Big Five
+            </button></a>
+
+          <router-link to=""
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              Dónanos
+            </button></router-link
+          >
+        </nav>
+      </header>
       </div>
 
       <div class="row g-5 contenedor">
@@ -380,7 +411,7 @@ export default {
   border-color: #008b8f !important;
 }
 
-.contenedor {
+* {
   font-family: AvGard;
 }
 
