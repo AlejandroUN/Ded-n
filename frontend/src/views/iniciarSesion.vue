@@ -1,4 +1,5 @@
 <template>
+
   <div class="container col-xl-12 col-xxl-8 py-3">
     <div class="row align-items-center g-lg-5">
       <header class=" font">
@@ -15,19 +16,25 @@
               Inicio
             </button></router-link
           >
-          <router-link to=""
+
+            
+          
+   
+
+          <router-link to="/contacta"
             ><button
               class="btn btn-lg btn-primary color_fuente color2"
               type="submit"
             >
               ¡Dónanos!
             </button></router-link
+
           >
         </nav>
       </header>
 
       <div
-        class="modal modal-signin position-static d-block py-5 bg"
+        class="modal modal-signin position-static d-block py-5 bg iniciar_sesion_blue_container"
         tabindex="-1"
         role="dialog"
         id="modalSignin"
@@ -124,6 +131,9 @@ export default {
 </script>
 
 <style>
+.iniciar_sesion_blue_container{
+  background-color: #008b8f !important;
+}
 .fondo3 {
   background-color: #faefe8 !important;
 }
