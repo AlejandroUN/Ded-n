@@ -28,7 +28,7 @@
       </header>
 
       <div
-        class="modal modal-signin position-static d-block py-5 bg"
+        class="modal modal-signin position-static d-block py-5 bg iniciar_sesion_blue_container"
         tabindex="-1"
         role="dialog"
         id="modalSignin"
@@ -125,6 +125,9 @@ export default {
 </script>
 
 <style>
+.iniciar_sesion_blue_container{
+  background-color: #008b8f !important;
+}
 .fondo3 {
   background-color: #faefe8 !important;
 }

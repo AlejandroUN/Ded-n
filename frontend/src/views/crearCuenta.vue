@@ -1,44 +1,52 @@
 <template>
   <div class="container">
-
     <main>
-
       <div class="row align-items-center g-lg-5">
-      <header class="font">
+        <header class="font">
+          <router-link to="/">
+            <img class="float-md-start" src="../assets/logo.png" height="50" />
+          </router-link>
 
-
-        <router-link to="/">
-        <img class="float-md-start" src="../assets/logo.png" height="50" />
-        </router-link>
-
-        <nav class="nav justify-content-center float-md-end">
-          
-          <a href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator" class="margen_izquierda"
-            ><button
-              class="w-100 btn btn-lg btn-primary color_fuente color2 margen_izquierda"
-              type="submit"
+          <nav class="nav justify-content-center float-md-end">
+            <a
+              href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
+              class="margen_izquierda"
+              ><button
+                class="
+                  w-100
+                  btn btn-lg btn-primary
+                  color_fuente
+                  color2
+                  margen_izquierda
+                "
+                type="submit"
+              >
+                Test MBTI
+              </button></a
             >
-              Test MBTI
-            </button></a>
 
-          <a href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes" class="margen_izquierda">
-          <button
-              class="w-100 btn btn-lg btn-primary color_fuente color2"
-              type="submit"
+            <a
+              href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes"
+              class="margen_izquierda"
             >
-              Test Big Five
-            </button></a>
+              <button
+                class="w-100 btn btn-lg btn-primary color_fuente color2"
+                type="submit"
+              >
+                Test Big Five
+              </button></a
+            >
 
-          <router-link to=""
-            ><button
-              class="w-100 btn btn-lg btn-primary color_fuente color2"
-              type="submit"
+            <router-link to=""
+              ><button
+                class="w-100 btn btn-lg btn-primary color_fuente color2"
+                type="submit"
+              >
+                Dónanos
+              </button></router-link
             >
-              Dónanos
-            </button></router-link
-          >
-        </nav>
-      </header>
+          </nav>
+        </header>
       </div>
 
       <div class="row g-5 contenedor">
@@ -57,6 +65,18 @@
                   maxlength="50"
                   id="firstName"
                   placeholder="Nombres y Apellidos"
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="username" class="form-label"
+                  >Nombre de Usuario
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  v-model="new_user"
+                  placeholder="Nombre de Usuario"
                 />
               </div>
 
@@ -176,7 +196,7 @@
         </div>
       </div>
     </main>
-<!--
+    <!--
     <div>
       {{ nombres }} - {{ email }} - {{ new_user }} - {{ password }} -
       {{ born }} - {{ gender }} - {{ orientacion }} - {{ today }}
@@ -192,104 +212,6 @@
       </ul>
     </footer>
   </div>
-
-  <!--
-  <div id="app">
-    <div class="container">
-      <h2>Crea tu cuenta</h2>
-    </div>
-    <div class="container">
-      <div>
-        <input
-          type="text"
-          name="nombres"
-          v-model="nombres"
-          placeholder="Nombres y Apellidos"
-          maxlength="50"
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          name="email"
-          v-model="email"
-          placeholder="Correo electrónico"
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          name="new_user"
-          v-model="new_user"
-          placeholder="Nombre usuario nuevo"
-        />
-      </div>
-      <div>
-        <input
-          type="password"
-          name="password"
-          v-model="password"
-          placeholder="Contraseña nueva"
-          minlength="8"
-          maxlength="20"
-          v-on:keypress="isImprimible(event)"
-        />
-      </div>
-      <div>
-        <form>
-          <div><label>Fecha de nacimiento:</label></div>
-          <div><input type="date" :max="today" v-model="born" /></div>
-        </form>
-      </div>
-      <div>
-        <div><label>Genero y orientación sexual:</label></div>
-        <div>
-          <select v-model="gender">
-            <option>Hombre cisgenero</option>
-            <option>Mujer cisgenero</option>
-            <option>Hombre transgenero</option>
-            <option>Mujer transgenero</option>
-            <option>Hombre</option>
-            <option>Mujer</option>
-            <option>Persona no binaria</option>
-            <option>Genero fluido</option>
-            <option>Intersexual</option>
-            <option>Otro</option>
-            <option>Prefiero no contestar</option>
-          </select>
-          <input
-            v-show="otroGenero()"
-            type="text"
-            v-model="nuevoGenero"
-            placeholder="Ingrese genero"
-          />
-          <select v-model="orientacion">
-            <option>Heterosexual</option>
-            <option>Homosexual</option>
-            <option>Bisexual</option>
-            <option>Pansexual</option>
-            <option>Asexual</option>
-            <option>Antrosexual</option>
-            <option>Demisexual</option>
-            <option>Otro</option>
-            <option>Prefiero no contestar</option>
-          </select>
-          <input
-            v-show="otraOrientacion()"
-            type="text"
-            v-model="nuevaOrientacion"
-            placeholder="Ingrese orientación"
-          />
-        </div>
-      </div>
-      <div>
-        <button v-on:click="checked">Crear cuenta</button>
-      </div>
-      {{ nombres }} - {{ email }} - {{ new_user }} - {{ password }} -
-      {{ born }} - {{ gender }} - {{ orientacion }} - {{ today }}
-    </div>
-  </div>
-  //-->
 </template>
 
 <script>
@@ -302,7 +224,7 @@ export default {
       email: "",
       new_user: "",
       password: "",
-      cPassword:"",
+      cPassword: "",
       born: new Date().toISOString().substr(0, 10),
       today: new Date().toISOString().substr(0, 10),
       gender: "",
@@ -317,23 +239,19 @@ export default {
       dateMax.setMonth(dateMax.getMonth() - 168);
       var dateBorn = new Date(this.born);
 
-      
-
       if (!this.email.includes("@gmail.com")) {
         Swal.fire({
           icon: "error",
           title: "Error",
           text: "El correo indicado no es gmail",
         });
-      }
-      else if( this.password !== this.cPassword ){
-          Swal.fire({
+      } else if (this.password !== this.cPassword) {
+        Swal.fire({
           icon: "error",
           title: "Error",
           text: "Las contraseñas no coinciden",
         });
-        }
-       else if (this.password.length < 8) {
+      } else if (this.password.length < 8) {
         alert("La contraseña debe tener más de 8 caracteres");
 
         Swal.fire({

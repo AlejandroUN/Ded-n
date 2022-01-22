@@ -9,12 +9,18 @@ import kostick from '../views/kostick.vue'
 import encProf from '../views/encuestaContProfesionales.vue'
 import encArteTecnica from '../views/encuestaArteTecnica.vue'
 import iniciarSesion from '../views//iniciarSesion.vue'
+import MBTI from '../views/MBTI.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/MBTI',
+    name: 'MBTI',
+    component: MBTI
   },
   {
     path: '/crearCuenta',
