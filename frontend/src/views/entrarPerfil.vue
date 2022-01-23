@@ -26,16 +26,18 @@
         </nav>
       </header>
 
-      <div class="padding_top">
+      <div class="padding_top row margin_left">
         <router-link to="">
-          <button class="w-50"><img src="../assets/corazon.png" height="100"
+          <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="100"
         /></button>
         </router-link>
         <router-link to="">
-          <button class="w-50"><img src="../assets/llave.png" height="100"
+          <button class="w-50 general_padding color4"><img src="../assets/llave.png" height="100"
         /></button>
         </router-link>
       </div>
+
+
     </div>
   </div>
 </template>
@@ -88,5 +90,26 @@ export default {
 
 .boton {
   padding-left: 20% !important;
+}
+
+.margin_left{
+  margin-left: 25% !important;
+}
+
+.general_padding{
+  padding: 5% !important;
+  border: none !important;
+}
+
+.color4 {
+  background-color: #7DBDBC!important;
+  border-color: #7DBDBC!important;
+  color: black !important;
+}
+
+.color4:hover {
+  background-color: #008B8F !important;
+  border-color: #008B8F !important;
+  color: white !important;
 }
 </style>
