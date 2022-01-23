@@ -1,5 +1,5 @@
 <template>
-  <div class="fondo">
+  <div id = "app" class="fondo">
     <!--<div id="nav">
 
     <router-link to="/"> Inicio</router-link> |
@@ -28,6 +28,16 @@
     </div>
   </div>
 </template>
+
+<script>
+
+export default {
+  name: 'app',
+  components: {
+    
+  }
+}
+</script>
 
 <style>
 html {
