@@ -77,20 +77,20 @@
         <label><h2><b>Me irrito fácilmente</b></h2></label>
         <br>
         <br>
-            <input class="regular-radio" type="radio" id="Uno4" value=1 v-model="resp4">
-            <label class="one" for="Uno4"> <FONT SIZE=5>Muy en desacuerdo</FONT></label>
+            <input type="radio" id="Uno4" value=5 v-model="resp4">
+            <label for="Uno4"> Muy en desacuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Dos4" value=2 v-model="resp4">
-            <label class="one" for="Dos4"> <FONT SIZE=5>Moderadamente en desacuerdo</FONT></label>
+            <input type="radio" id="Dos4" value=4 v-model="resp4">
+            <label for="Dos4"> Moderadamente en desacuerdo</label>
             <br>
             <input class="regular-radio" type="radio" id="Tres4" value=3 v-model="resp4">
             <label class="one" for="Tres4"> <FONT SIZE=5>Neutro</FONT></label>
             <br>
-            <input class="regular-radio" type="radio" id="Cuarto4" value=4 v-model="resp4">
-            <label class="one" for="Cuarto4"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
+            <input type="radio" id="Cuarto4" value=2 v-model="resp4">
+            <label for="Cuarto4"> Moderadamente en acuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Cinco4" value=5 v-model="resp4">
-            <label class="one" for="Cinco4"> <FONT SIZE=5>Muy de acuerdo</FONT></label>
+            <input type="radio" id="Cinco4" value=1 v-model="resp4">
+            <label for="Cinco4"> Muy de acuerdo</label>
             <br>
             <br>
     </div>

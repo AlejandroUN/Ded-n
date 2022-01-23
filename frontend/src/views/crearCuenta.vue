@@ -241,9 +241,7 @@ export default {
           title: "Error",
           text: "El correo indicado no es gmail",
         });
-      } else if (this.password.length < 8) {      
-        alert("La contraseña debe tener más de 8 caracteres");
-
+      } else if (this.password.length < 8) {
         Swal.fire({
           icon: "error",
           title: "Error",

@@ -16,18 +16,22 @@
             <input class="regular-radio" type="radio" id="Uno1" value=1 v-model="resp1">
             <label class="one" for="Uno1"> <FONT SIZE=5>Muy en desacuerdo</FONT></label>
             <br>
-            <input class="regular-radio" type="radio" id="Dos1" value=2 v-model="resp1">
-            <label class="one" for="Dos1"> <FONT SIZE=5>Moderadamente en desacuerdo</FONT></label>
+            <input type="radio" id="Uno1" value=5 v-model="resp1">
+            <label for="Uno1"> Muy en desacuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Tres1" value=3 v-model="resp1">
-            <label class="one" for="Tres1"> <FONT SIZE=5>Neutro</FONT></label>
+            <input type="radio" id="Dos1" value=4 v-model="resp1">
+            <label for="Dos1"> Moderadamente en desacuerdo</label>
             <br>
             <input class="regular-radio" type="radio" id="Cuarto1" value=4 v-model="resp1">
             <label class="one" for="Cuarto1"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
             <br>
-            <input class="regular-radio" type="radio" id="Cinco1" value=5 v-model="resp1">
-            <label class="one" for="Cinco1"> <FONT SIZE=5>Muy de acuerdo</FONT></label>
-            
+            <input type="radio" id="Cuarto1" value=2 v-model="resp1">
+            <label for="Cuarto1"> Moderadamente en acuerdo</label>
+            <br>
+            <input type="radio" id="Cinco1" value=1 v-model="resp1">
+            <label for="Cinco1"> Muy de acuerdo</label>
+            <br>
+            <br>
 
        
         
@@ -72,20 +76,20 @@
         <label><h2><b>Dejo mis pertenencias por ahí</b></h2></label>
         <br>
         <br>
-            <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp3">
-            <label class="one" for="Uno3"> <FONT SIZE=5>Muy en desacuerdo</FONT></label>
+            <input type="radio" id="Uno3" value=5 v-model="resp3">
+            <label for="Uno3"> Muy en desacuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Dos3" value=2 v-model="resp3">
-            <label class="one" for="Dos3"> <FONT SIZE=5>Moderadamente en desacuerdo</FONT></label>
+            <input type="radio" id="Dos3" value=4 v-model="resp3">
+            <label for="Dos3"> Moderadamente en desacuerdo</label>
             <br>
             <input class="regular-radio" type="radio" id="Tres3" value=3 v-model="resp3">
             <label class="one" for="Tres3"> <FONT SIZE=5>Neutro</FONT></label>
             <br>
-            <input class="regular-radio" type="radio" id="Cuarto3" value=4 v-model="resp3">
-            <label class="one" for="Cuarto3"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
+            <input type="radio" id="Cuarto3" value=2 v-model="resp3">
+            <label for="Cuarto3"> Moderadamente en acuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Cinco3" value=5 v-model="resp3">
-            <label class="one" for="Cinco3"> <FONT SIZE=5>Muy de acuerdo</FONT></label>
+            <input type="radio" id="Cinco3" value=1 v-model="resp3">
+            <label for="Cinco3"> Muy de acuerdo</label>
             <br>
             <br>
     </div>
@@ -115,20 +119,20 @@
         <label><h2><b>Tengo dificultad para comprender ideas abstractas</b></h2></label>
         <br>
         <br>
-            <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp5">
-            <label class="one" for="Uno5"> <FONT SIZE=5>Muy en desacuerdo</FONT></label>
+            <input type="radio" id="Uno5" value=5 v-model="resp5">
+            <label for="Uno5"> Muy en desacuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Dos5" value=2 v-model="resp5">
-            <label class="one" for="Dos5"> <FONT SIZE=5>Moderadamente en desacuerdo</FONT></label>
+            <input type="radio" id="Dos5" value=4 v-model="resp5">
+            <label for="Dos5"> Moderadamente en desacuerdo</label>
             <br>
             <input class="regular-radio" type="radio" id="Tres5" value=3 v-model="resp5">
             <label class="one" for="Tres5"> <FONT SIZE=5>Neutro</FONT></label>
             <br>
-            <input class="regular-radio" type="radio" id="Cuarto5" value=4 v-model="resp5">
-            <label class="one" for="Cuarto5"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
+            <input type="radio" id="Cuarto5" value=2 v-model="resp5">
+            <label for="Cuarto5"> Moderadamente en acuerdo</label>
             <br>
-            <input class="regular-radio" type="radio" id="Cinco5" value=5 v-model="resp5">
-            <label class="one" for="Cinco5"> <FONT SIZE=5>Muy de acuerdo</FONT></label>
+            <input type="radio" id="Cinco5" value=1 v-model="resp5">
+            <label for="Cinco5"> Muy de acuerdo</label>
             <br>
             <br>
     </div>
