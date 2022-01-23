@@ -77,19 +77,19 @@
         <label><b>Me irrito fácilmente</b></label>
         <br>
         <br>
-            <input type="radio" id="Uno4" value=1 v-model="resp4">
+            <input type="radio" id="Uno4" value=5 v-model="resp4">
             <label for="Uno4"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos4" value=2 v-model="resp4">
+            <input type="radio" id="Dos4" value=4 v-model="resp4">
             <label for="Dos4"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres4" value=3 v-model="resp4">
             <label for="Tres4"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto4" value=4 v-model="resp4">
+            <input type="radio" id="Cuarto4" value=2 v-model="resp4">
             <label for="Cuarto4"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco4" value=5 v-model="resp4">
+            <input type="radio" id="Cinco4" value=1 v-model="resp4">
             <label for="Cinco4"> Muy de acuerdo</label>
             <br>
             <br>

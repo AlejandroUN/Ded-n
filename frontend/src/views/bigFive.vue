@@ -193,7 +193,7 @@ export default {
       else {
         try {          
           BfService.BigFive({          
-            email: this.email,
+            email: "Predeterminado",
             res1: this.resp1,
             res2: this.resp2,
             res3: this.resp3,

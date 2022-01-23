@@ -5,19 +5,19 @@
         <label><b>Me mantengo en segundo plano</b></label>
             <br>
             <br>
-            <input type="radio" id="Uno1" value=1 v-model="resp1">
+            <input type="radio" id="Uno1" value=5 v-model="resp1">
             <label for="Uno1"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos1" value=2 v-model="resp1">
+            <input type="radio" id="Dos1" value=4 v-model="resp1">
             <label for="Dos1"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres1" value=3 v-model="resp1">
             <label for="Tres1"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto1" value=4 v-model="resp1">
+            <input type="radio" id="Cuarto1" value=2 v-model="resp1">
             <label for="Cuarto1"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco1" value=5 v-model="resp1">
+            <input type="radio" id="Cinco1" value=1 v-model="resp1">
             <label for="Cinco1"> Muy de acuerdo</label>
             <br>
             <br>
@@ -56,19 +56,19 @@
         <label><b>Hago un lío con las cosas</b></label>
         <br>
         <br>
-            <input type="radio" id="Uno3" value=1 v-model="resp3">
+            <input type="radio" id="Uno3" value=5 v-model="resp3">
             <label for="Uno3"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos3" value=2 v-model="resp3">
+            <input type="radio" id="Dos3" value=4 v-model="resp3">
             <label for="Dos3"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres3" value=3 v-model="resp3">
             <label for="Tres3"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto3" value=4 v-model="resp3">
+            <input type="radio" id="Cuarto3" value=2 v-model="resp3">
             <label for="Cuarto3"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco3" value=5 v-model="resp3">
+            <input type="radio" id="Cinco3" value=1 v-model="resp3">
             <label for="Cinco3"> Muy de acuerdo</label>
             <br>
             <br>
@@ -99,19 +99,19 @@
         <label><b>No me interesan las ideas abstractas</b></label>
         <br>
         <br>
-            <input type="radio" id="Uno5" value=1 v-model="resp5">
+            <input type="radio" id="Uno5" value=5 v-model="resp5">
             <label for="Uno5"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos5" value=2 v-model="resp5">
+            <input type="radio" id="Dos5" value=4 v-model="resp5">
             <label for="Dos5"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres5" value=3 v-model="resp5">
             <label for="Tres5"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto5" value=4 v-model="resp5">
+            <input type="radio" id="Cuarto5" value=2 v-model="resp5">
             <label for="Cuarto5"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco5" value=5 v-model="resp5">
+            <input type="radio" id="Cinco5" value=1 v-model="resp5">
             <label for="Cinco5"> Muy de acuerdo</label>
             <br>
             <br>

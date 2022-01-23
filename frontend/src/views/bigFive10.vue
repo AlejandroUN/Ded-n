@@ -5,19 +5,19 @@
         <label><b>Estoy callado con los extraños</b></label>
             <br>
             <br>
-            <input type="radio" id="Uno1" value=1 v-model="resp1">
+            <input type="radio" id="Uno1" value=5 v-model="resp1">
             <label for="Uno1"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos1" value=2 v-model="resp1">
+            <input type="radio" id="Dos1" value=4 v-model="resp1">
             <label for="Dos1"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres1" value=3 v-model="resp1">
             <label for="Tres1"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto1" value=4 v-model="resp1">
+            <input type="radio" id="Cuarto1" value=2 v-model="resp1">
             <label for="Cuarto1"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco1" value=5 v-model="resp1">
+            <input type="radio" id="Cinco1" value=1 v-model="resp1">
             <label for="Cinco1"> Muy de acuerdo</label>
             <br>
             <br>
@@ -77,19 +77,19 @@
         <label><b>A menudo me siento triste</b></label>
         <br>
         <br>
-            <input type="radio" id="Uno4" value=1 v-model="resp4">
+            <input type="radio" id="Uno4" value=5 v-model="resp4">
             <label for="Uno4"> Muy en desacuerdo</label>
             <br>
-            <input type="radio" id="Dos4" value=2 v-model="resp4">
+            <input type="radio" id="Dos4" value=4 v-model="resp4">
             <label for="Dos4"> Moderadamente en desacuerdo</label>
             <br>
             <input type="radio" id="Tres4" value=3 v-model="resp4">
             <label for="Tres4"> Neutro</label>
             <br>
-            <input type="radio" id="Cuarto4" value=4 v-model="resp4">
+            <input type="radio" id="Cuarto4" value=2 v-model="resp4">
             <label for="Cuarto4"> Moderadamente en acuerdo</label>
             <br>
-            <input type="radio" id="Cinco4" value=5 v-model="resp4">
+            <input type="radio" id="Cinco4" value=1 v-model="resp4">
             <label for="Cinco4"> Muy de acuerdo</label>
             <br>
             <br>

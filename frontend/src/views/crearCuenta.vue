@@ -252,8 +252,6 @@ export default {
           text: "Las contraseñas no coinciden",
         });
       } else if (this.password.length < 8) {
-        alert("La contraseña debe tener más de 8 caracteres");
-
         Swal.fire({
           icon: "error",
           title: "Error",
