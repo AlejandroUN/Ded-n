@@ -1,17 +1,17 @@
-const { TestMejoramientoPersonal } = require('../models')
+const { BancoDeRespuestasBF } = require('../models')
 const { TestEmpresarial } = require('../models')
 
 module.exports = {
-	async saveTestMejoramientoPersonal (req, res) {
+	async BigFive (req, res) {
 	  try {
-		const test = await TestMejoramientoPersonal.create(req.body)
+		const test = await BancoDeRespuestasBF.create(req.body)
 		const testJson = test.toJSON()
 		res.send({
 			test: testJson,		  
 		})
 	  } catch (err) {
 		res.status(400).send({
-		  error: 'Problem saving the testMejoramientoPersonal'
+		  error: 'Problem saving the Big Five test'
 		})
 	  }
 	},async saveTestEmpresarial (req, res) {		
@@ -25,6 +25,6 @@ module.exports = {
 			res.status(400).send({
 			  error: 'Problem saving the testEmpresarial'
 			})
-		  }
+		}
 	  }
 	}

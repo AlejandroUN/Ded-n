@@ -24,6 +24,10 @@ import MBTI from '../views/MBTI.vue'
 import MBTI2 from '../views/MBTI2.vue'
 import MBTI3 from '../views/MBTI3.vue'
 import MBTI4 from '../views/MBTI4.vue'
+import ayuda from '../views/ayuda.vue'
+import privacidad from '../views/privacidad.vue'
+import nosotros from '../views/nosotros.vue'
+
 
 const routes = [
   {
@@ -145,6 +149,18 @@ const routes = [
   {path: '/bigFive10',
   name: 'bigFive10',
   component: bigFive10
+  },
+  {path: '/ayuda',
+  name: 'ayuda',
+  component: ayuda
+  },
+  {path: '/nosotros',
+  name: 'nosotros',
+  component: nosotros
+  },
+  {path: '/privacidad',
+  name: 'privacidad',
+  component: privacidad
   },
 
 
