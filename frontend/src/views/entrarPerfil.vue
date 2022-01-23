@@ -1,6 +1,6 @@
 <template>
   <div class="container col-xl-12 col-xxl-8 py-3">
-    <div class="row align-items-center g-lg-5">
+    <div class="row align-items-center">
       <header class="font">
         <router-link to="/"
           ><img src="../assets/logo.png" height="50"
@@ -26,22 +26,16 @@
         </nav>
       </header>
 
-     
-          <router-link to="">
-            <button class="w-100 btn btn-lg btn-primary">
-              Iniciar Sesión
-            </button>
-          </router-link>
-          <router-link to="">
-            <button class="w-100 btn btn-lg btn-primary">
-              Crear cuenta
-            </button>
-          </router-link>
-       
-
-
-
-
+      <div class="padding_top">
+        <router-link to="">
+          <button class="w-50"><img src="../assets/corazon.png" height="100"
+        /></button>
+        </router-link>
+        <router-link to="">
+          <button class="w-50"><img src="../assets/llave.png" height="100"
+        /></button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -86,5 +80,13 @@ export default {
 
 .blanco {
   color: white;
+}
+
+.padding_top {
+  padding-top: 5% !important;
+}
+
+.boton {
+  padding-left: 20% !important;
 }
 </style>
