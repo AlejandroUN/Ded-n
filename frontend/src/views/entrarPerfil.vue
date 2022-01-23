@@ -28,11 +28,11 @@
 
       <div class="padding_top row margin_left">
         <router-link to="">
-          <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="100"
+          <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
         /></button>
         </router-link>
         <router-link to="">
-          <button class="w-50 general_padding color4"><img src="../assets/llave.png" height="100"
+          <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
         /></button>
         </router-link>
       </div>
@@ -102,14 +102,31 @@ export default {
 }
 
 .color4 {
-  background-color: #7DBDBC!important;
-  border-color: #7DBDBC!important;
+  background-color: #50E6FA!important;
+  border-color: #50E6FA!important;
   color: black !important;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
 }
 
 .color4:hover {
-  background-color: #008B8F !important;
-  border-color: #008B8F !important;
+  background-color: #4C757A !important;
+  border-color: #4C757A !important;
   color: white !important;
 }
+
+.color5 {
+  background-color: #41BBCC!important;
+  border-color: #41BBCC!important;
+  color: black !important;
+  border-bottom-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+}
+
+.color5:hover {
+  background-color: #4C757A !important;
+  border-color: #4C757A !important;
+  color: white !important;
+}
+
 </style>
