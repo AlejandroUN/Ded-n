@@ -51,42 +51,41 @@
 
       <div class="row g-5 contenedor">
         <div class="col-md-7 col-lg-6 offset-md-3">
+          <br />
+          <br />
           <h4 class="mb-3">Crear cuenta</h4>
-          <form class="needs-validation" novalidate="">
+          
             <div class="row g-3">
               <div class="col-sm-12">
-                <label for="firstName" class="form-label"
-                  >Nombres y Apellidos</label
-                >
+                <label class="form-label">Nombres y Apellidos</label>
                 <input
                   type="text"
                   class="form-control"
+                  name="nombres"
                   v-model="nombres"
                   maxlength="50"
-                  id="firstName"
                   placeholder="Nombres y Apellidos"
                 />
               </div>
 
               <div class="col-12">
-                <label for="username" class="form-label"
-                  >Nombre de Usuario
-                </label>
+                <label class="form-label">Nombre de Usuario </label>
                 <input
                   type="text"
                   class="form-control"
+                  name="new_user"
                   v-model="new_user"
                   placeholder="Nombre de Usuario"
                 />
               </div>
 
               <div class="col-12">
-                <label for="email" class="form-label">Email </label>
+                <label class="form-label">Email </label>
                 <input
                   type="email"
                   class="form-control"
+                  name="email"
                   v-model="email"
-                  id="email"
                   placeholder="you@example.com"
                 />
               </div>
@@ -96,26 +95,27 @@
                   >Contrase&ntilde;a</label
                 >
                 <input
-                  id="password"
                   class="form-control col-12 col-sm-10 col-md-7"
                   type="password"
-                  placeholder="Contraseña"
+                  name="password"
                   v-model="password"
-                  v-on:keypress="isImprimible(event)"
+                  placeholder="Contraseña"
                   minlength="8"
                   maxlength="20"
-                  required
+                  v-on:keypress="isImprimible(event)"
                 />
               </div>
+              
+
 
               <div class="form-group col-12">
-                <label class="custom-label col-md-6 display" for="cPassword"
-                  >Confirmar Contrase&ntilde;a</label
-                >
-                <input
-                  id="cPassword"
+                <label class="custom-label col-md-6 display">
+                  Confirmar Contrase&ntilde;a
+                  </label>
+                <input                  
                   class="form-control col-12 col-sm-10 col-md-7"
                   type="password"
+                  name="cpassword"
                   placeholder="Confirmar Contraseña"
                   v-model="cPassword"
                   v-on:keypress="isImprimible(event)"
@@ -126,6 +126,7 @@
                   }"
                 />
               </div>
+              
 
               <div>
                 <form>
@@ -136,13 +137,8 @@
 
               <div class="col-md-6">
                 <label class="form-label">Genero</label>
-                <select
-                  class="form-select"
-                  id="country"
-                  required=""
-                  v-model="gender"
-                >
-                  <option value="">Elegir...</option>
+                <select class="form-select" v-model="gender">
+                  
                   <option>Hombre</option>
                   <option>Mujer</option>
                   <option>Otro</option>
@@ -162,9 +158,9 @@
               </div>
 
               <div class="col-md-6">
-                <label for="state" class="form-label">Orientación sexual</label>
+                <label class="form-label">Orientación sexual</label>
                 <select class="form-select" v-model="orientacion">
-                  <option value="">Elegir...</option>
+                  
                   <option>Heterosexual</option>
                   <option>Homosexual</option>
                   <option>Bisexual</option>
@@ -181,18 +177,18 @@
                   />
                 </div>
               </div>
+              <hr class="my-4" />
+
+              <button
+                class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
+                type="submit"
+                v-on:click="checked"
+              >
+              Crear
+              </button>
+
             </div>
-
-            <hr class="my-4" />
-
-            <button
-              v-on:click="checked"
-              class="boton_grande w-100 btn btn-primary btn-lg"
-              type="submit"
-            >
-              Crear cuenta
-            </button>
-          </form>
+          
         </div>
       </div>
     </main>
@@ -245,21 +241,23 @@ export default {
           title: "Error",
           text: "El correo indicado no es gmail",
         });
-      } else if (this.password !== this.cPassword) {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Las contraseñas no coinciden",
-        });
       } else if (this.password.length < 8) {
-        alert("La contraseña debe tener más de 8 caracteres");
-
         Swal.fire({
           icon: "error",
           title: "Error",
           text: "La contraseña debe tener más de 8 caracteres",
         });
-      } else if (dateMax < dateBorn) {
+      } 
+
+      else if (this.password !== this.cPassword) {
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Las contraseñas no coinciden",
+        });        
+      }
+      
+      else if (dateMax < dateBorn) {
         Swal.fire({
           icon: "error",
           title: "Error",
@@ -291,6 +289,8 @@ export default {
             icon: "success",
             title: "Creado",
             text: "El usuario ha sido registrado correctamente",
+            showCloseButton: true,
+            showCancelButton: true,
           });
         } catch (error) {
           this.error = error.response.data.error;
@@ -331,7 +331,7 @@ export default {
 </script>
 
 <style scoped>
-.boton_grande:hover {
+.botoncito:hover {
   background-color: #008b8f !important;
   border-color: #008b8f !important;
 }
@@ -340,8 +340,9 @@ export default {
   font-family: AvGard;
 }
 
-.boton_grande {
-  background-color: #008b8f;
+.botoncito {
+  background-color: #f08240;
+  border-color: aliceblue;
 }
 
 @font-face {

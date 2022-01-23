@@ -1,8 +1,11 @@
 <template>
     
     <div id="app">
+      <div class="container col-xl-12 col-xxl-8 py-3">
       <header class="margin font">
+        <router-link to="/">
       <img src="../assets/logo.png" height="50" />
+        </router-link>
       <nav class="nav justify-content-center float-md-end right">
         <router-link to="/"
           ><button
@@ -12,14 +15,7 @@
             Inicio
           </button></router-link
         >
-        <router-link to="/contacta"
-          ><button
-            class=" btn btn-lg btn-primary color_fuente color2"
-            type="submit"
-          >
-            ¡Dónanos!
-          </button></router-link
-        >
+        
       </nav>
     </header>
       
@@ -41,6 +37,7 @@
           
         </div>
       </div>
+    </div>
     </div>
     </div>
     

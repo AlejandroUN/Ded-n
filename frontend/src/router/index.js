@@ -2,12 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 //import routerv from 'vue-router'
 import Home from '../views/Home.vue'
 import crearCuenta from '../views/crearCuenta.vue'
-import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
-import allport from '../views/allport.vue'
-import kostick from '../views/kostick.vue'
-import encProf from '../views/encuestaContProfesionales.vue'
 import introBigFive from '../views/introBigFive.vue'
 import iniciarSesion from '../views/iniciarSesion.vue'
 import contactanos from '../views/contactanos.vue'
@@ -22,6 +18,9 @@ import bigFive7 from '../views/bigFive7.vue'
 import bigFive8 from '../views/bigFive8.vue'
 import bigFive9 from '../views/bigFive9.vue'
 import MBTI from '../views/MBTI.vue'
+import MBTI2 from '../views/MBTI2.vue'
+import MBTI3 from '../views/MBTI3.vue'
+import MBTI4 from '../views/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
@@ -29,6 +28,7 @@ import 'es6-promise/auto'
 //import Vue from 'vue'
 
 //Vue.use(router)
+
 
 const routes = [
   {
@@ -42,6 +42,21 @@ const routes = [
     component: MBTI
   },
   {
+    path: '/MBTI2',
+    name: 'MBTI2',
+    component: MBTI2
+  },
+  {
+    path: '/MBTI3',
+    name: 'MBTI3',
+    component: MBTI3
+  },
+  {
+    path: '/MBTI4',
+    name: 'MBTI4',
+    component: MBTI4
+  },
+  {
     path: '/crearCuenta',
     name: 'crearCuenta',
     component: crearCuenta
@@ -50,11 +65,6 @@ const routes = [
     path: '/iniciarSesion',
     name: 'iniciarSesion',
     component: iniciarSesion
-  },
-  {
-    path: '/encuestaPsicometrica',
-    name: 'encuestaPsicometrica',
-    component: encuestaPsicometrica
   },
   {
     path: '/entrarPerfil',
@@ -66,27 +76,11 @@ const routes = [
     name: 'rec}uperarContrasena',
     component: recuperarContrasena
   },
-  {
-    path: '/allport',
-    name: 'TestAllport',
-    component: allport
-  },
-  {
-    path: '/kostick',
-    name: 'TestKostick',
-    component: kostick
-  },
-
+  
   {
     path: '/introBigFive',
     name: 'introBigFive',
     component: introBigFive
-  },
-
-  {
-    path: '/testProfesionales',
-    name: 'testProfesionales',
-    component: encProf
   },
   {path: '/contacta',
     name: 'contacta',
