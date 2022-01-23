@@ -21,9 +21,13 @@ import bigFive7 from '../views/bigFive7.vue'
 import bigFive8 from '../views/bigFive8.vue'
 import bigFive9 from '../views/bigFive9.vue'
 import MBTI from '../views/MBTI.vue'
+import MBTI2 from '../views/MBTI2.vue'
+import MBTI3 from '../views/MBTI3.vue'
+import MBTI4 from '../views/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
+
 
 const routes = [
   {
@@ -35,6 +39,21 @@ const routes = [
     path: '/MBTI',
     name: 'MBTI',
     component: MBTI
+  },
+  {
+    path: '/MBTI2',
+    name: 'MBTI2',
+    component: MBTI2
+  },
+  {
+    path: '/MBTI3',
+    name: 'MBTI3',
+    component: MBTI3
+  },
+  {
+    path: '/MBTI4',
+    name: 'MBTI4',
+    component: MBTI4
   },
   {
     path: '/crearCuenta',
