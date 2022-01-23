@@ -20,7 +20,7 @@ module.exports = (app) => {
     AuthenticationController.login)
 
   app.post('/bigFive', 
-    TestsController.guardarBigFive)
+    TestsController.BigFive)
 
   app.post('/TestEmpresarial',
   	TestsController.saveTestEmpresarial)

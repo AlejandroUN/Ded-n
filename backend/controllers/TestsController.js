@@ -2,7 +2,7 @@ const { BancoDeRespuestasBF } = require('../models')
 const { TestEmpresarial } = require('../models')
 
 module.exports = {
-	async guardarBigFive (req, res) {
+	async BigFive (req, res) {
 	  try {
 		const test = await BancoDeRespuestasBF.create(req.body)
 		const testJson = test.toJSON()

@@ -1,8 +1,8 @@
 import Api from '@/services/Api'
 
 export default {
-    guardarBigFive(answers){
+    BigFive(answers){
         console.log('Servicio BF')
-        return Api().post('guardarBigFive', answers)
+        return Api().post('BigFive', answers)
     }
 }

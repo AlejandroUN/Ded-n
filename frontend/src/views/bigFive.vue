@@ -191,14 +191,14 @@ export default {
         });
       }
       else {
-        try {
-        await BfService.guardarBigFive({
-          email: this.email,
-          res1: this.resp1,
-          res2: this.resp2,
-          res3: this.resp3,
-          res4: this.resp4,
-          res5: this.resp5,      
+        try {          
+          BfService.BigFive({          
+            email: this.email,
+            res1: this.resp1,
+            res2: this.resp2,
+            res3: this.resp3,
+            res4: this.resp4,
+            res5: this.resp5,      
         }); 
         this.$router.push({ path: "/bigFive2" });
                 
