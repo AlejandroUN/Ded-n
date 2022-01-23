@@ -42,54 +42,363 @@
         <div class="float-none cajitaMIBT" role="document">
           <div class="modal-content rounded-5 shadow">
             <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
-              <h2 class="fw-bold mb-0">Test MBTI - Relaciones Personales</h2>
+              <h2 class="fw-bold mb-0">Test MBTI</h2>
             </div>
 
             <div class="modal-body p-5 pt-0 fondo3">
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Normalmente no sueles iniciar las conversaciones</label
+                >
 
-              <div class="form-floating mb-3">
-                <label for="floatingInput">Correo electronico</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                  v-model="email"
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios1"
+                    value="0"
+                    checked
+                    v-model="ext_intro_1"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios"
+                    id="exampleRadios2"
+                    value="1"
+                    v-model="ext_intro_1"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
               </div>
 
               <div class="form-group mb-3">
-                <label class="custom-label col-md-12">¿Cual?</label>
-                <input
-                  class="form-control col-12"
-                  placeholder="name@example.com"
-                  v-model="email"
-                />                
+                <label class="custom-label col-md-12 questions">
+                  Para ti, un libro, película o videojuego interesante
+                  normalmente es mejor que un evento social</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios1"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_2"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios1"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_2"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
               </div>
 
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="floatingPassword"
-                  placeholder="Password"
-                  v-model="password"
-                />
-                <label for="floatingPassword">Contraseña</label>
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Eres una persona relativamente reservada y callada.</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios2"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_3"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios2"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_3"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
               </div>
 
-              <button
-                class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
-                type="submit"
-                v-on:click="login"
-              >
-                Entrar
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Los eventos sociales te resultan agotadores</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios3"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_4"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios3"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_4"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  En general, te resulta difícil relajarte cuando hablas delante
+                  de muchas personas</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios5"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_5"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios5"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_5"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Si la sala está llena te quedas cerca de las paredes y evitas
+                  estar en el centro</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios6"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_6"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios6"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_6"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  No tomas la iniciativa frecuentemente en situaciones
+                  sociales</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios7"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_7"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios7"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_7"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  No sientes que necesitas la aprovación de otros</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios8"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_8"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios8"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_8"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Se te hace raro que personas que no conoces bien sean muy
+                  amigables contigo</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios9"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_9"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios9"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_9"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group mb-3">
+                <label class="custom-label col-md-12 questions">
+                  Piensas bien lo que vas a decir antes de hablar</label
+                >
+
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios10"
+                    id="exampleRadios"
+                    value="0"
+                    checked
+                    v-model="ext_intro_10"
+                  />
+                  <label class="form-check-label" for="exampleRadios1">
+                    De acuerdo
+                  </label>
+                </div>
+                <div class="form-check col-9">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="exampleRadios10"
+                    id="exampleRadios"
+                    value="1"
+                    v-model="ext_intro_10"
+                  />
+                  <label class="form-check-label" for="exampleRadios2">
+                    En desacuerdo
+                  </label>
+                </div>
+              </div>
+
+              <br><br>
+
+              <router-link to="/MBTI2">
+              <button class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
+                Siguiente
               </button>
-              <small class="text-muted"
-                ><router-link to="/recuperarContrasena"
-                  >¿Has olvidado tu contraseña?</router-link
-                ></small
-              >
+              </router-link>
+
             </div>
           </div>
         </div>
@@ -99,43 +408,30 @@
 </template>
 
 <script>
-import AuthenticationService from "@/services/AuthenticationService";
-import Swal from "sweetalert2";
 export default {
   data() {
     return {
-      email: "",
-      password: "",
+      ext_intro_1: "",
+      ext_intro_2: "",
+      ext_intro_3: "",
+      ext_intro_4: "",
+      ext_intro_5: "",
+      ext_intro_6: "",
+      ext_intro_7: "",
+      ext_intro_8: "",
+      ext_intro_9: "",
+      ext_intro_10: "",
     };
   },
-  methods: {
-    async login() {
-      try {
-        await AuthenticationService.login({
-          // eslint-disable-line no-mixed-spaces-and-tabs
-          email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
-          password: this.password, // eslint-disable-line no-mixed-spaces-and-tabs
-        }); // eslint-disable-line no-mixed-spaces-and-tabs
-        this.$router.push({ path: "/entrarPerfil" });
-        Swal.fire({
-          icon: "success",
-          title: "Login",
-          text: "El usuario ha entrado correctamente",
-        });
-      } catch (error) {
-        this.error = error.response.data.error;
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: this.error,
-        });
-      }
-    },
-  },
+  methods: {},
 };
 </script>
 
 <style>
+.questions {
+  font-size: 150%;
+}
+
 * {
   font-family: AvGard;
 }
@@ -146,6 +442,8 @@ export default {
 }
 
 .cajitaMIBT {
+  padding-bottom: 70px;
+  padding-top: 70px;
   padding-left: 105px;
   padding-right: 105px;
 }
