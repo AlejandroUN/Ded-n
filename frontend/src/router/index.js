@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+//import routerv from 'vue-router'
 import Home from '../views/Home.vue'
 import crearCuenta from '../views/crearCuenta.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
@@ -23,6 +24,10 @@ import MBTI4 from '../views/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
+import 'es6-promise/auto'
+//import Vue from 'vue'
+
+//Vue.use(router)
 
 
 const routes = [
@@ -68,7 +73,7 @@ const routes = [
   },
   {
     path: '/recuperarContrasena',
-    name: 'recuperarContrasena',
+    name: 'rec}uperarContrasena',
     component: recuperarContrasena
   },
   
@@ -137,8 +142,9 @@ const routes = [
   name: 'privacidad',
   component: privacidad
   },
-
-
+//  {path: '*',
+//	redirect: 'iniciarSesion'
+//  }
 ]
 
 const router = createRouter({
