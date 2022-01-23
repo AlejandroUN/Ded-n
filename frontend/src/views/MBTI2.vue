@@ -396,7 +396,7 @@
               </button>
               </router-link>
 
-              <router-link to="/MBTI4">
+              <router-link to="/MBTI3">
               <button class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
                 Siguiente
               </button>
