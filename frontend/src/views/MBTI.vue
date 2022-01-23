@@ -290,7 +290,7 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  No sientes que necesitas la aprovación de otros</label
+                  No sientes que necesitas la aprobación de otros</label
                 >
 
                 <div class="form-check col-9">
