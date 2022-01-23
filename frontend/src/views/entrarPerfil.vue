@@ -110,22 +110,22 @@ export default {
 }
 
 .color4:hover {
-  background-color: #4C757A !important;
-  border-color: #4C757A !important;
+  background-color: #41BBCC !important;
+  border-color: #41BBCC !important;
   color: white !important;
 }
 
 .color5 {
-  background-color: #41BBCC!important;
-  border-color: #41BBCC!important;
+  background-color: #E88F4A!important;
+  border-color: #E88F4A!important;
   color: black !important;
   border-bottom-left-radius: 15px !important;
   border-bottom-right-radius: 15px !important;
 }
 
 .color5:hover {
-  background-color: #4C757A !important;
-  border-color: #4C757A !important;
+  background-color: #9C4E13 !important;
+  border-color: #9C4E13 !important;
   color: white !important;
 }
 
