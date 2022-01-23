@@ -2,7 +2,33 @@
   <div id="app" class="mto1 mt-1 ml-5">
    <div class="container col-xl-10 col-xxl-8 px-4 py-5">   
   
-  
+    <header class="margin font">
+        <router-link to="/">
+      <img src="../assets/logo.png" height="50" />
+        </router-link>
+      <nav class="nav justify-content-center float-md-end right">
+        <router-link to="/"
+          ><button
+            class="w-100 btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            Inicio
+          </button></router-link
+        >
+
+        <router-link to="/entrarPerfil"
+          ><button
+            class="w-100 btn btn-lg btn-primary color_fuente color2"
+            type="submit"
+          >
+            Perfiles
+          </button></router-link
+        >
+        
+      </nav>
+    </header>
+    <hr>
+    <br>
 
     <H1>TEST Big Five</H1>
     <p>
@@ -59,7 +85,7 @@
    
     <br />
     <div>
-      <router-link to="/bigFive"><button>Empezar prueba</button></router-link>
+      <router-link to="/bigFive"><button class="mb-10 btn btn-sm rounded-4  floatr center color">Empezar prueba</button></router-link>
     </div>
 
   </div>
@@ -73,11 +99,7 @@ export default {
   data() {
     return {
     
-      resp1:"",
-      resp2:"",
-      resp3:"",
-      resp4:"",
-      resp5:"",
+     
      
     };
   },

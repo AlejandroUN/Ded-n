@@ -22,7 +22,7 @@
               Test Big Five
             </button></a>
 
-          <router-link to=""
+          <router-link to="/contacta"
             ><button
               class="w-100 btn btn-lg btn-primary color_fuente color2"
               type="submit"
