@@ -1,12 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import crearCuenta from '../views/crearCuenta.vue'
-import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
-import allport from '../views/allport.vue'
-import kostick from '../views/kostick.vue'
-import encProf from '../views/encuestaContProfesionales.vue'
 import introBigFive from '../views/introBigFive.vue'
 import iniciarSesion from '../views/iniciarSesion.vue'
 import contactanos from '../views/contactanos.vue'
@@ -66,11 +62,6 @@ const routes = [
     component: iniciarSesion
   },
   {
-    path: '/encuestaPsicometrica',
-    name: 'encuestaPsicometrica',
-    component: encuestaPsicometrica
-  },
-  {
     path: '/entrarPerfil',
     name: 'entrarPerfil',
     component: entrarPerfil
@@ -80,27 +71,11 @@ const routes = [
     name: 'recuperarContrasena',
     component: recuperarContrasena
   },
-  {
-    path: '/allport',
-    name: 'TestAllport',
-    component: allport
-  },
-  {
-    path: '/kostick',
-    name: 'TestKostick',
-    component: kostick
-  },
-
+  
   {
     path: '/introBigFive',
     name: 'introBigFive',
     component: introBigFive
-  },
-
-  {
-    path: '/testProfesionales',
-    name: 'testProfesionales',
-    component: encProf
   },
   {path: '/contacta',
     name: 'contacta',
