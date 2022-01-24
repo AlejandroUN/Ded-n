@@ -184,7 +184,7 @@
 
 <script>
 import BfService from "@/services/BFService";
-import pythonScriptsService from "@/services/pythonScriptsService";
+//import pythonScriptsService from "@/services/pythonScriptsService";
 import Swal from "sweetalert2";
 //const {spawn} = require('child_process');
 
@@ -193,7 +193,8 @@ export default {
   data() {
     
     return {
-      
+      email: "",
+      id: "",
       resp:{
         resp1: "",
         resp2: "",
@@ -215,16 +216,21 @@ export default {
         });
        }
        else{	
-			try{
-			await pythonScriptsService.bigFiveP({})
-			}catch (error) {
-				this.error = error.response.data.error;
-				Swal.fire({
-					icon: "error",
-					title: "Error",
-					text: this.error,
-				});
-			}
+		//	try{
+		//		console.log(this.$store.state.user.email)
+		//		console.log(this.$store.state.user.id)
+		//	await pythonScriptsService.bigFiveP({
+		//		email: this.$store.state.user.email, 
+		//		id: this.$store.state.user.id,
+		//	})
+		//	}catch (error) {
+		//		this.error = error.response.data.error;
+		//		Swal.fire({
+		//			icon: "error",
+		//			title: "Error",
+		//			text: this.error,
+		//		});
+		//	}
 		//	const pythonScript = spawn('python', ['test.py']);//, 't', 8
 		////var retrievedData = 's';
 		//pythonScript.stdout.on('data', function(data) {

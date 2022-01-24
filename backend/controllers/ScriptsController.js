@@ -4,7 +4,7 @@ module.exports = {
   async bigFiveP (req, res) {
     console.log('We got to the backend')
     try {
-      const pythonScript = spawn('python', ['computeBigFiveFactors.py', 't', 8])
+      const pythonScript = spawn('python', ['computeBigFiveFactors.py', req.body.email, req.body.id])
       pythonScript.stderr.on('data', (data) => {
         console.error(`child stderr:\n${data}`)
       })

@@ -20,7 +20,7 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
 
-  app.get('/bigFiveP',
+  app.post('/bigFiveP',
     ScriptsController.bigFiveP)
 
   app.post('/bigFive',
