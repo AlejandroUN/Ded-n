@@ -4,5 +4,8 @@ module.exports = (sequelize, DataTypes) =>
       		type: DataTypes.STRING,
       		unique: true
     	},
-        personalidad: DataTypes.STRING
+        extroversion: DataTypes.FLOAT,
+		sensibilidad: DataTypes.FLOAT,
+		pensamiento: DataTypes.FLOAT,
+		juicio: DataTypes.FLOAT
   	})
