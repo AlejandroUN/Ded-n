@@ -9,7 +9,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Tengo poco que decir</b></h2></label>
+        <label><h2><b>26. Tengo poco que decir</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=5 v-model="resp.resp1">
@@ -43,7 +43,7 @@
 
    
         
-         <label><h2><b>Tengo un corazón tierno</b></h2></label>
+         <label><h2><b>27. Tengo un corazón tierno</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -73,7 +73,7 @@
 
     <div class="centerText " >
     
-        <label><h2><b>A menudo me olvido de poner las cosas en su lugar correcto</b></h2></label>
+        <label><h2><b>28. A menudo me olvido de poner las cosas en su lugar correcto</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=5 v-model="resp.resp3">
@@ -102,7 +102,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Me enojo fácilmente</b></h2></label>
+        <label><h2><b>29. Me enojo fácilmente</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -131,7 +131,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>No tengo buena imaginación</b></h2></label>
+        <label><h2><b>30. No tengo buena imaginación</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=5 v-model="resp.resp5">
@@ -159,7 +159,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

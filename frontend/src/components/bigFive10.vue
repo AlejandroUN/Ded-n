@@ -9,7 +9,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Estoy callado con los extraños</b></h2></label>
+        <label><h2><b>46. Estoy callado con los extraños</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=5 v-model="resp.resp1">
@@ -43,7 +43,7 @@
     
         <div class="centerText" >
         
-         <label><h2><b>Hago que la gente se sienta cómoda</b></h2></label>
+         <label><h2><b>47. Hago que la gente se sienta cómoda</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -73,7 +73,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Soy exigente en mi trabajo</b></h2></label>
+        <label><h2><b>48. Soy exigente en mi trabajo</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -100,7 +100,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>A menudo me siento triste</b></h2></label>
+        <label><h2><b>49. A menudo me siento triste</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -120,14 +120,14 @@
         </div>
     </div>
     <br>  
-     <div :class="resp.resp5 == 5? 'back-red rounded-3'  
-  : resp.resp5 == 4? 'back-orange rounded-3'
+     <div :class="resp.resp5 == 1? 'back-red rounded-3'  
+  : resp.resp5 == 2? 'back-orange rounded-3'
   : resp.resp5 == 3? 'back-yellow rounded-3'
-  : resp.resp5 == 2? 'back-yellowgreen rounded-3'
+  : resp.resp5 == 4? 'back-yellowgreen rounded-3'
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Estoy lleno de ideas</b></h2></label>
+        <label><h2><b>50. Estoy lleno de ideas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -153,7 +153,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Terminar</h7></button>
     </div>
 
    </div>

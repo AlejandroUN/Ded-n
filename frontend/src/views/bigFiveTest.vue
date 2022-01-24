@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div >
       <vista1 @getData="getData" v-if="numero==1" ></vista1>
       <vista2 @getData="getData" v-if="numero==2"></vista2>
       <vista3 @getData="getData" v-if="numero==3"></vista3>
@@ -11,23 +11,13 @@
       <vista9 @getData="getData" v-if="numero==9"></vista9>
       <vista10 @getData="getData" v-if="numero==10"></vista10>
     
-  <div class="container"> 
-      <button v-if="(numero<10)&&(resp.resp1!='')&&(resp.resp2!='')&&(resp.resp3!='')&&(resp.resp4!='')&&(resp.resp5!='') " 
-      class="mb-10 btn btn-sm rounded-4  floatr center color" 
-      v-on:click="swapComponent()" type="submit">Siguiente </button>
-
-
-
-      <button v-if="(numero==10 )&&(resp.resp1!='')&&(resp.resp2!='')&&(resp.resp3!='')&&(resp.resp4!='')&&(resp.resp5!='')" 
-      class="mb-10 btn btn-sm rounded-4  floatr center color" 
-      v-on:click="Terminar()" type="submit">Terminar Prueba</button>
-
-    </div>
-     
+      
 </div>
 </template>
+
 <script>
 
+import Swal from "sweetalert2";
 import BigFive from "@/components/bigFive";
 import BigFive2 from "@/components/bigFive2";
 import BigFive3 from "@/components/bigFive3";
@@ -120,6 +110,22 @@ export default ({
     methods: {
         getData(data) {
       this.resp = data;
+        if(this.numero<10){
+        Swal.fire({
+            icon: "success",
+            title: "",
+            text: "Continuando Test...",
+            });
+            this.swapComponent();}
+        else{
+            Swal.fire({
+            icon: "success",
+            title: "",
+            text: "Encuesta Terminada",
+            });
+            this.terminar();
+        }
+
         },
         swapComponent(){
         if(this.numero==1){
@@ -240,9 +246,10 @@ export default ({
             this.resp.resp4='';
             this.resp.resp5='';
         }
+        
       
     },
-    Terminar(){
+    terminar(){
         this.resp46=this.resp.resp1;
         this.resp47=this.resp.resp2;
         this.resp48=this.resp.resp3;
@@ -255,5 +262,7 @@ export default ({
 </script>
 
 <style>
-
+.centrar{
+    width: 50% !important;
+}
 </style>

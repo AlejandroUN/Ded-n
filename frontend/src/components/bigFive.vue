@@ -11,7 +11,7 @@
 
     <div class="centerText " >
       
-        <label ><h2><b>Soy el alma de la fiesta</b></h2></label>
+        <label ><h2><b>1. Soy el alma de la fiesta</b></h2></label>
 
             <hr class="blackLine">
             <br>
@@ -45,7 +45,7 @@
     
         <div class="centerText" >
           <div >
-         <label ><h2><b>Siento poca preocupación por los demás</b></h2></label>
+         <label ><h2><b>2. Siento poca preocupación por los demás</b></h2></label>
           </div>
          <hr class="blackLine">
          <br>
@@ -77,7 +77,7 @@
     
         <div class="centerText" >
           <div >
-         <label ><h2><b>Siempre estoy preparado</b></h2></label>
+         <label ><h2><b>3. Siempre estoy preparado</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -109,7 +109,7 @@
     
         <div class="centerText" >
     <div >
-        <label><h2><b>Me estreso muy facil</b></h2></label>
+        <label><h2><b>4. Me estreso muy facil</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -141,7 +141,7 @@
         <div class="centerText" >
     <div>
 
-        <label><h2><b>Tengo un vocabulario amplio</b></h2></label>
+        <label><h2><b>5. Tengo un vocabulario amplio</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -170,7 +170,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
              
 
         
@@ -331,6 +331,9 @@ hr.blackLine{
     position: relative;
     width: 20px;
     height: 20px;
+}
+.font-color-w{
+  color:white;
 }
 
 

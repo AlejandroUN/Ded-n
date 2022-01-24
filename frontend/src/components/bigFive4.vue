@@ -9,7 +9,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Me mantengo en segundo plano</b></h2></label>
+        <label><h2><b>16. Me mantengo en segundo plano</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=5 v-model="resp.resp1">
@@ -43,7 +43,7 @@
     
         <div class="centerText" >
         
-         <label><h2><b>Simpatizo con los sentimientos de los demás</b></h2></label>
+         <label><h2><b>17. Simpatizo con los sentimientos de los demás</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -73,7 +73,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Hago un lío con las cosas</b></h2></label>
+        <label><h2><b>18. Hago un lío con las cosas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=5 v-model="resp.resp3">
@@ -100,7 +100,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Rara vez me siento triste</b></h2></label>
+        <label><h2><b>19. Rara vez me siento triste</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=1 v-model="resp.resp4">
@@ -128,7 +128,7 @@
     
         <div class="centerText" >
 
-        <label><h2><b>No me interesan las ideas abstractas</b></h2></label>
+        <label><h2><b>20. No me interesan las ideas abstractas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=5 v-model="resp.resp5">
@@ -154,7 +154,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

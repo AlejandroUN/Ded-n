@@ -289,8 +289,7 @@ export default {
             icon: "success",
             title: "Creado",
             text: "El usuario ha sido registrado correctamente",
-            showCloseButton: true,
-            showCancelButton: true,
+           
           });
         } catch (error) {
           this.error = error.response.data.error;
