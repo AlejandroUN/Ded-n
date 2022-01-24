@@ -26,6 +26,11 @@
             >
             <a  class="nav-link px-2 text-muted">Sobre nosotros</a></router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/contactanos"
+            >
+            <a  class="nav-link px-2 text-muted">Contactanos</a></router-link>
+          </li>
         </ul>
         <p class="text-center text-muted">© 2021 Dedún, Inc</p>
       </footer>

@@ -24,10 +24,8 @@ import MBTI4 from '../views/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
+import cont2 from '../views/contactanos2.vue'
 import 'es6-promise/auto'
-//import Vue from 'vue'
-
-//Vue.use(router)
 
 
 const routes = [
@@ -142,9 +140,12 @@ const routes = [
   name: 'privacidad',
   component: privacidad
   },
-//  {path: '*',
-//	redirect: 'iniciarSesion'
-//  }
+
+  {path: '/contactanos',
+  name: 'contactanos',
+  component: cont2
+  },
+
 ]
 
 const router = createRouter({
