@@ -27,6 +27,7 @@ import MBTI4 from '../views/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
+import matches from '../views/matches.vue'
 
 
 const routes = [
@@ -34,6 +35,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/matches',
+    name: 'matches',
+    component: matches
   },
   {
     path: '/MBTI',
