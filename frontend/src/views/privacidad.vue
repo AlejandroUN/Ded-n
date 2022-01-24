@@ -1,7 +1,7 @@
 <template>
-   <div id="app" class="mto1 mt-1 ml-5">
-   <div class="container col-xl-10 col-xxl-8 px-4 py-5">   
-  <header class=" font">
+  <div id="app" class="mto1 mt-1 ml-5">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <header class="font">
         <router-link to="/"
           ><img src="../assets/logo.png" height="50"
         /></router-link>
@@ -16,10 +16,6 @@
             </button></router-link
           >
 
-            
-          
-   
-
           <router-link to="/contacta"
             ><button
               class="btn btn-lg btn-primary color_fuente color2"
@@ -27,82 +23,109 @@
             >
               ¡Dónanos!
             </button></router-link
-
           >
         </nav>
       </header>
-  
-    <hr>
-    <br>
-    <H1>Politicas de privacidad </H1>
-    <p>
-    
-    </p>
-    <p>
-      <ul>
 
-        <li> 1. Apertura a la experiencia
-            (segmentada en seis subfactores : i) imaginación activa, ii) sensibilidad estética,
-             iii) atención a los propios sentimientos, iv) gusto por la variedad, v) curiosidad intelectual 
-            y vi) desafío a la autoridad)</li>
-
-        <li> Escrupulosidad (segmentada en seis subfactores : i) competencia, ii) orden, iii) compromiso, 
-            iv) orientación por logros, v) autodisciplina y vi) deliberación)</li>
-
-        <li>Extroversión (segmentada en tres subfactores : i) asertividad, ii) energía y iii) gregarismo) </li>
-
-        <li>Amabilidad (segmentada en seis subfactores : i) confianza, ii) franqueza, iii) altruismo, iv) obediencia, v) modestia y vi) ternura)</li>
-
-        <li>Neuroticismo (segmentada en seis subfactores : i) tendencia a la ansiedad, ii) tendencia a la rabia, iii) tendencia al estrés,
-             iv) cohibición, v) vulnerabilidad, vi) volatilidad)</li>
-
-        
-
-    </ul>
-    </p>
-    <p>
-      Al interior de cada taxón hay taxonomías propias, extendiendo la taxonomía principal. Hay más divergencia, de investigación 
-      a investigación, en la extensión de la taxonomía que en la taxonomía principal. 
-    </p>
-    <p>
-    Entre las características psicológicas que han sido predecidas con éxito a partir de esta taxonomía está el estilo de aprendizaje, 
-    y eso hace que sea particularmente útil para asociar usuarios con maestros. Además, la asociación de carácteres parecidos en términos 
-    distintos al estilo de aprendizaje también es oportuna para la formación de asociaciones de aprendizaje, puesto que un estudiante se 
-    siente más afín a un maestro que expresa las virtudes (y no los vicios) en los espectros que lo caracterizan (por ejemplo, si en una persona
-     es prevalente la influencia que tiene la amabilidad, ella se sentirá más dada a imitar a otra que expresa ese mismo rasgo de una 
-     manera más virtuosa que ella : aprenderá de aquella otra, es decir, la verá como un maestro). 
-
-    </p>
-    <p>
-      Para realizar la clasificación necesaria para la asociación, utilizamos la siguiente prueba psicometrica:  
-
-     La prueba consta de cincuenta elementos que debe calificar según la veracidad que tienen sobre usted en una 
-     escala de cinco puntos donde debe 
-
-    </p>
-   
-    <br />
-    
-
+      <div class="margin justificar">
+        <h1>Política de privacidad de Dedún Inc</h1>
+        <p>
+          Esta Política de privacidad describe cómo se recopila, utiliza y
+          comparte su información personal cuando ingresa a
+          https://www.dedun.com.
+        </p>
+        <h5><b>INFORMACIÓN PERSONAL QUE RECOPILAMOS</b></h5>
+        <p>
+          Cuando visita el Sitio, recopilamos automáticamente cierta información
+          sobre su dispositivo, incluida información sobre su navegador web,
+          dirección IP, zona horaria y algunas de las cookies que están
+          instaladas en su dispositivo. Además, a medida que navega por el
+          Sitio, recopilamos información sobre las páginas web individuales que
+          ve, las páginas web o los términos de búsqueda que lo remitieron al
+          Sitio e información sobre cómo interactúa usted con el Sitio. Nos
+          referimos a esta información recopilada automáticamente como
+          “Información del dispositivo”.
+        </p>
+        <p>
+          Recopilamos Información del dispositivo mediante el uso de las
+          siguientes tecnologías:
+        </p>
+        <p>COOKIES</p>
+        <p>
+          Además, al momento de crear una cuenta dentro del sitio, se le pedirán
+          ciertos datos necesarios identificar su cuenta, estos datos incluyen
+          sus nombres y apellidos, correo eléctronico, fecha de nacimiento,
+          género y orientación sexual.
+        </p>
+        <p>
+          Finalmente, es necesario mencionar que las pruebas psicométricas a las
+          que se someterá para econtrar matches, pueden revelar datos bastante
+          sensibles y personales acerca de su personalidad, opiniones, ideas,
+          gustos y su vida privada.
+        </p>
+        <h5><b>¿CÓMO UTILIZAMOS SU INFORMACIÓN PERSONAL?</b></h5>
+        <p>
+          Utilizamos la Información del dispositivo que recopilamos para
+          ayudarnos a detectar posibles riesgos y fraudes (en particular, su
+          dirección IP) y, en general, para mejorar y optimizar nuestro Sitio.
+        </p>
+        <p>
+          Los datos derivados de la creación de la cuenta y la aplicación de los
+          test se usarán únicamente para la correcta aplicación del algoritmo al
+          sistema de matches, en ningún momento empleado alguno o persona
+          responsable del mantenimiento de Dedún tendrá acceso a las variables
+          almacenadas en la base de datos (Las cuales se ecnuentran
+          encriptadas), esta información es tan confidencial que ningún ser
+          humano involucrado en el modelo de negocios de la empresa podrá
+          acceder bajo ninguna circunstancia a estos datos.
+        </p>
+        <p>
+          Si tiene dudas sobre el marco legal con el que realizamos el
+          tratamiento de sus datos, puede comunicarse directamente con nosotros
+          en la opción de Contactanos ubicada en el footer del sitio web.
+        </p>
+        <h5><b>COMPARTIR SU INFORMACIÓN PERSONAL</b></h5>
+        <p>
+          Estamos en la facultad de compartir su Información personal (no
+          relacionada con la aplicación de los tests) para cumplir con las leyes
+          y regulaciones aplicables, para responder a una citación, orden de
+          registro u otra solicitud legal de información que recibamos, o para
+          proteger nuestros derechos.
+        </p>
+        <h5><b>SUS DERECHOS</b></h5>
+        <p>
+          Usted tiene derecho a acceder a la información personal que tenemos
+          sobre usted y a solicitar que su información personal sea corregida,
+          actualizada o eliminada. Si desea ejercer este derecho, comuníquese
+          con nosotros a través de la opción de Contactanos ubicada en el footer
+          del sitio web.
+        </p>
+        <h5><b>MENORES</b></h5>
+        <p>El sitio no está destinado a personas menores de 14 años.</p>
+        <h5><b>CAMBIOS</b></h5>
+        <p>
+          Podemos actualizar esta política de privacidad periódicamente para
+          reflejar, por ejemplo, cambios en nuestras prácticas o por otros
+          motivos operativos, legales o reglamentarios.
+        </p>
+      </div>
+    </div>
   </div>
-  </div>
-
 </template>
-    <script>
-        
-        export default {
-            data() {
-                return {
-                    email: "",
-                    password: "",                                       
-                }
-            },
-            methods: {
-                
-            }
-        }
-    </script>
+<script>
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {},
+};
+</script>
 
-    <style >
-  
-    </style>
+<style>
+ .justificar{
+   text-align: justify !important;
+ }
+</style>
