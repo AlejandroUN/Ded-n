@@ -46,11 +46,10 @@
             </div>
 
             <div class="modal-body p-5 pt-0 fondo3">
-                
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Cuando se trata del trabajo en equipo, tener razón es más importante que ser cooperativo
-                  </label>
+                  Normalmente no sueles iniciar las conversaciones</label
+                >
 
                 <div class="form-check">
                   <input
@@ -60,7 +59,7 @@
                     id="exampleRadios1"
                     value="0"
                     checked
-                    v-model="think_feel_1"
+                    v-model="resp.ext_intro_1"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -73,7 +72,7 @@
                     name="exampleRadios"
                     id="exampleRadios2"
                     value="1"
-                    v-model="think_feel_1"
+                    v-model="resp.ext_intro_1"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -83,9 +82,9 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Cuando hay un debate, te importa más ganarlo que 
-                  asegurarte de que nadie se sienta molesto
-                  </label>
+                  Para ti, un libro, película o videojuego interesante
+                  normalmente es mejor que un evento social</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -95,7 +94,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_2"
+                    v-model="resp.ext_intro_2"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -108,7 +107,7 @@
                     name="exampleRadios1"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_2"
+                    v-model="resp.ext_intro_2"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -118,9 +117,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  En una discusión o debate, debería ser más importante la verdad 
-                  que la susceptibilidad de la gente
-                  </label>
+                  Eres una persona relativamente reservada y callada.</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -130,7 +128,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_3"
+                    v-model="resp.ext_intro_3"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -143,7 +141,7 @@
                     name="exampleRadios2"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_3"
+                    v-model="resp.ext_intro_3"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -153,8 +151,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Con frecuencia te resulta difícil entender los sentimientos de otras personas
-                  </label>
+                  Los eventos sociales te resultan agotadores</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -164,7 +162,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_4"
+                    v-model="resp.ext_intro_4"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -177,7 +175,7 @@
                     name="exampleRadios3"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_4"
+                    v-model="resp.ext_intro_4"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -187,8 +185,9 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Muy raramente te preocupa cómo afectan tus acciones a otras personas
-                  </label>
+                  En general, te resulta difícil relajarte cuando hablas delante
+                  de muchas personas</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -198,7 +197,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_5"
+                    v-model="resp.ext_intro_5"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -211,7 +210,7 @@
                     name="exampleRadios5"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_5"
+                    v-model="resp.ext_intro_5"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -221,8 +220,9 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Como progenitor, preferirías que tu hijo fuera inteligente antes que amable
-                  </label>
+                  Si la sala está llena te quedas cerca de las paredes y evitas
+                  estar en el centro</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -232,7 +232,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_6"
+                    v-model="resp.ext_intro_6"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -245,7 +245,7 @@
                     name="exampleRadios6"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_6"
+                    v-model="resp.ext_intro_6"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -255,8 +255,9 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Controlas tus emociones más de lo que ellas a ti
-                  </label>
+                  No tomas la iniciativa frecuentemente en situaciones
+                  sociales</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -266,7 +267,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_7"
+                    v-model="resp.ext_intro_7"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -279,7 +280,7 @@
                     name="exampleRadios7"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_7"
+                    v-model="resp.ext_intro_7"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -289,9 +290,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Consideras que la lógica generalmente es más importante que el corazón 
-                  cuando se trata de tomar decisiones importantes
-                  </label>
+                  No sientes que necesitas la aprobación de otros</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -301,7 +301,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_8"
+                    v-model="resp.ext_intro_8"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -314,7 +314,7 @@
                     name="exampleRadios8"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_8"
+                    v-model="resp.ext_intro_8"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -324,9 +324,9 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Si tu amigo se siente triste por algo, es más probable que le 
-                  sugieras formas de tratar el problema a que le ofrezcas apoyo emocional
-                  </label>
+                  Se te hace raro que personas que no conoces bien sean muy
+                  amigables contigo</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -336,7 +336,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_9"
+                    v-model="resp.ext_intro_9"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -349,7 +349,7 @@
                     name="exampleRadios9"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_9"
+                    v-model="resp.ext_intro_9"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -359,8 +359,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  No buscarías justificar un crimen aunque creas que pudo hacerse por un buen motivo
-                  </label>
+                  Piensas bien lo que vas a decir antes de hablar</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -370,7 +370,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="think_feel_10"
+                    v-model="resp.ext_intro_10"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -383,7 +383,7 @@
                     name="exampleRadios10"
                     id="exampleRadios"
                     value="1"
-                    v-model="think_feel_10"
+                    v-model="resp.ext_intro_10"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -392,18 +392,14 @@
               </div>
 
               <br><br>
-
-              <router-link to="/MBTI4">
-              <button class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
+            
+              
+              <button v-on:click="setData" 
+              class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" t
+              ype="submit">
                 Siguiente
               </button>
-              </router-link>
-
-              <router-link to="/MBTI2">
-              <button class="mb-2 btn btn-md rounded-4 btn-primary floatl right color" type="submit">
-                Volver
-              </button>
-              </router-link>
+              
 
             </div>
           </div>
@@ -414,28 +410,33 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
-      think_feel_1: "",
-      think_feel_2: "",
-      think_feel_3: "",
-      think_feel_4: "",
-      think_feel_5: "",
-      think_feel_6: "",
-      think_feel_7: "",
-      think_feel_8: "",
-      think_feel_9: "",
-      think_feel_10: "",
-      
+      resp:{
+        ext_intro_1: "",
+        ext_intro_2: "",
+        ext_intro_3: "",
+        ext_intro_4: "",
+        ext_intro_5: "",
+        ext_intro_6: "",
+        ext_intro_7: "",
+        ext_intro_8: "",
+        ext_intro_9: "",
+        ext_intro_10: "",}
     };
   },
-  methods: {},
+  methods: {
+    setData(){
+      
+      this.$emit("getData", this.resp);
+    },
+  },
 };
 </script>
 
 <style>
-
 .questions {
   font-size: 150%;
 }
@@ -450,6 +451,8 @@ export default {
 }
 
 .cajitaMIBT {
+  padding-bottom: 70px;
+  padding-top: 70px;
   padding-left: 105px;
   padding-right: 105px;
 }

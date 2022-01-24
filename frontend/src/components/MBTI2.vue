@@ -39,8 +39,9 @@
         role="dialog"
         id="modalSignin"
       >
-        <div class="float-none cajitaMIBT" role="document">
+        <div class="float-none cajitaMIBT" role="document">          
           <div class="modal-content rounded-5 shadow">
+
             <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
               <h2 class="fw-bold mb-0">Test MBTI</h2>
             </div>
@@ -49,9 +50,8 @@
                 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Ser capaz de desarrollar un plan y adherirse a él es 
-                  la parte más importante de todo proyecto
-                  </label>
+                  Te consideras una persona más práctica que creativa</label
+                >
 
                 <div class="form-check">
                   <input
@@ -61,7 +61,7 @@
                     id="exampleRadios1"
                     value="0"
                     checked
-                    v-model="judg_pers_1"
+                    v-model="sens_int_1"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -74,7 +74,7 @@
                     name="exampleRadios"
                     id="exampleRadios2"
                     value="1"
-                    v-model="judg_pers_1"
+                    v-model="sens_int_1"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -84,9 +84,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Para ti es más importante ser organizado que ser 
-                  capaz de adaptarte a las circunstancias
-                  </label>
+                  Es muy raro que te dejes llevar por fantasías o ideas</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -96,7 +95,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_2"
+                    v-model="sens_int_2"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -109,7 +108,7 @@
                     name="exampleRadios1"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_2"
+                    v-model="sens_int_2"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -119,9 +118,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Tratas de responder a todos tus correos electrónicos lo más pronto 
-                  posible y no soportas una bandeja de entrada descuidada
-                  </label>
+                  Tus sueños tienden a concentrarse en el mundo real y sus acontecimientos</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -131,7 +129,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_3"
+                    v-model="sens_int_3"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -144,7 +142,7 @@
                     name="exampleRadios2"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_3"
+                    v-model="sens_int_3"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -154,8 +152,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Es muy raro que hagas algo simplemente por pura curiosidad
-                  </label>
+                  No sueles pensar en las razones de la existencia humana</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -165,7 +163,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_4"
+                    v-model="sens_int_4"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -178,7 +176,7 @@
                     name="exampleRadios3"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_4"
+                    v-model="sens_int_4"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -188,8 +186,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Tu casa y tu entorno de trabajo están muy ordenados
-                  </label>
+                  No sueles fantasear con planes e ideas nuevas</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -199,7 +197,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_5"
+                    v-model="sens_int_5"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -212,7 +210,7 @@
                     name="exampleRadios5"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_5"
+                    v-model="sens_int_5"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -222,8 +220,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Tus planes de viaje generalmente están bien pensados
-                  </label>
+                  No te consideras un soñador</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -233,7 +231,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_6"
+                    v-model="sens_int_6"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -246,7 +244,7 @@
                     name="exampleRadios6"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_6"
+                    v-model="sens_int_6"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -256,9 +254,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Tu estilo de trabajo se parece más a un enfoque metódico y 
-                  organizado que a rachas aleatorias de mucha energía
-                  </label>
+                  Por lo general confías más en tu experiencia que en tu imaginación</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -268,7 +265,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_7"
+                    v-model="sens_int_7"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -281,7 +278,7 @@
                     name="exampleRadios7"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_7"
+                    v-model="sens_int_7"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -291,8 +288,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Eres más un planificador cuidadoso que un improvisador natural
-                  </label>
+                  Normalmente no tienes varias cosas en la cabeza a la vez</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -302,7 +299,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_8"
+                    v-model="sens_int_8"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -315,7 +312,7 @@
                     name="exampleRadios8"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_8"
+                    v-model="sens_int_8"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -325,9 +322,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  Prefieres tener que dedicar tiempo a desarrollar un 
-                  plan detallado que improvisar
-                  </label>
+                  El futuro más que emocionarte, te preocupa</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -337,7 +333,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_9"
+                    v-model="sens_int_9"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -350,7 +346,7 @@
                     name="exampleRadios9"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_9"
+                    v-model="sens_int_9"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
@@ -360,9 +356,8 @@
 
               <div class="form-group mb-3">
                 <label class="custom-label col-md-12 questions">
-                  No tienes dificultades para diseñar una agenda personal de actividades y 
-                  adherirte a ella
-                  </label>
+                  Normalmente te interesa saber cómo funcionan las cosas</label
+                >
 
                 <div class="form-check col-9">
                   <input
@@ -372,7 +367,7 @@
                     id="exampleRadios"
                     value="0"
                     checked
-                    v-model="judg_pers_10"
+                    v-model="sens_int_10"
                   />
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
@@ -385,26 +380,27 @@
                     name="exampleRadios10"
                     id="exampleRadios"
                     value="1"
-                    v-model="judg_pers_10"
+                    v-model="sens_int_10"
                   />
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
                   </label>
                 </div>
               </div>
+
               <br><br>
 
-              <router-link to="/MBTI4">
-              <button class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
-                Terminar
-              </button>
-              </router-link>
-
-              <router-link to="/MBTI3">
+              <router-link to="/MBTI">
               <button class="mb-2 btn btn-md rounded-4 btn-primary floatl right color" type="submit">
                 Volver
               </button>
               </router-link>
+
+              
+              <button v-on:click="setData"  class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
+                Siguiente
+              </button>
+            
             </div>
           </div>
         </div>
@@ -417,20 +413,25 @@
 export default {
   data() {
     return {
-      judg_pers_1: "",
-      judg_pers_2: "",
-      judg_pers_3: "",
-      judg_pers_4: "",
-      judg_pers_5: "",
-      judg_pers_6: "",
-      judg_pers_7: "",
-      judg_pers_8: "",
-      judg_pers_9: "",
-      judg_pers_10: "",
+      sens_int_1: "",
+      sens_int_2: "",
+      sens_int_3: "",
+      sens_int_4: "",
+      sens_int_5: "",
+      sens_int_6: "",
+      sens_int_7: "",
+      sens_int_8: "",
+      sens_int_9: "",
+      sens_int_10: "",
       
     };
   },
-  methods: {},
+  methods: {
+    setData(){
+      
+      this.$emit("getData", this.resp);
+    },
+  },
 };
 </script>
 
