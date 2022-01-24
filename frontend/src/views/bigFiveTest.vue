@@ -1,5 +1,8 @@
 <template>
-  <div >
+  <div id="app" class="mto1 mt-1 ml-5">
+   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <h2><b>TEST BIG FIVE</b></h2>
+   </div>
       <vista1 @getData="getData" v-if="numero==1" ></vista1>
       <vista2 @getData="getData" v-if="numero==2"></vista2>
       <vista3 @getData="getData" v-if="numero==3"></vista3>
