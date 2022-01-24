@@ -22,7 +22,7 @@
             >
               ¡Dónanos!
             </button></router-link
-          >
+          >			
         </nav>
       </header>
 
@@ -43,18 +43,21 @@
 </template>
 
 <script>
-export default {
+console.log('Hola')
+
+export default {	
   data() {
     return {};
   },
   mounted() {},
-  methods: {},
+  methods: {
+  },
 };
 </script>
 
 <style>
 .fondo2 {
-  background-color: #008b8f !important;
+  background-color: #cff0f1 !important;
 }
 .font {
   font-family: AvantGarde !important;
