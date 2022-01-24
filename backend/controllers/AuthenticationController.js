@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const config = require('../config/config')
 
 function jwtSignUser (user) {
-	//This is the time the token for a given user we'll expire
+  // This is the time the token for a given user we'll expire
   const ONE_WEEK = 60 * 60 * 24 * 7
   return jwt.sign(user, config.authentication.jwtSecret, {
     expiresIn: ONE_WEEK
