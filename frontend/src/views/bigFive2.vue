@@ -138,7 +138,7 @@
     </div>
     </div>
     <div>   
-      <router-link to="/bigFive3"><button>Siguiente</button></router-link>
+      <button v-on:click="saveAns2">Siguiente</button>
     </div>
 
    </div>
@@ -147,6 +147,8 @@
 
 
 <script>
+import BfService from "@/services/BFService";
+
 export default {
   data() {
     return {
@@ -157,7 +159,22 @@ export default {
       resp5: "",
     };
   },
-  methods: {},
+  methods: {
+    async saveAns2() {
+      try {          
+          BfService.BigFive2({
+            res6: this.resp1,
+            res7: this.resp2,
+            res8: this.resp3,
+            res9: this.resp4,
+            res10: this.resp5,      
+        }); 
+        this.$router.push({ path: "/bigFive3" });                
+      } catch (error) {
+        this.error = error.response.data.error;        
+      }
+    }
+  },
 };
 </script>
 

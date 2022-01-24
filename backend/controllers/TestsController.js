@@ -17,30 +17,48 @@ module.exports = {
 	},
 	
 	async BigFive2 (req, res) {
-		try {
-			const {email} = "Predeterminado"	
-			const test = req.body
-			const testJson = test.toJSON()
-			const user = await BancoDeRespuestasBF.findOne({
-				where: {
-				  email: email
-				}
-			})			
-			if (!user) {
-				return res.status(403).send({
-				  error: 'Usuario no encontrado'
-				})
-			}
-			else{
+		// try {
+		// 	const {email} = "Predeterminado"				
+		// 	const user = await BancoDeRespuestasBF.findOne({
+		// 		where: {
+		// 		  email: email
+		// 		}
+		// 	})	
+		// 	const test = await user.update(req.body)
+		// 	const testJson = test.toJSON()					
+		// 	res.send({
+		// 		test: testJson
+		// 	})
+			try {
+				const result = await Project.update(
+					{ res6: 4 },
+					{ where: { email: Predeterminado } }
+				)
 				res.send({
-					user: testJson,
+					test: result
 				})
-			}		  
-		} catch (err) {
-		  res.status(400).send({
-			error: 'Problem saving the Big Five test 2'
-		  })
-		}
+				//handleResult(result)
+				} catch (err) {
+				handleError(err)
+			}
+
+			// if (!user) {
+			// 	return res.status(403).send({
+			// 	  error: 'Usuario no encontrado'
+			// 	})
+			// }
+			// else{
+			// 	console.log("Usuario encontrado")
+			// 	res.send({
+			// 		user: testJson,
+			// 	})
+			// }	
+			
+		// } catch (err) {
+		//   res.status(400).send({
+		// 	error: 'Problem saving the Big Five test 2'
+		//   })
+		// }
 	},
 	
 	// async login (req, res) {
