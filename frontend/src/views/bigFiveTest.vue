@@ -28,7 +28,7 @@ import BigFive7 from "@/components/bigFive7";
 import BigFive8 from "@/components/bigFive8";
 import BigFive9 from "@/components/bigFive9";
 import BigFive10 from "@/components/bigFive10";
-const {spawn} = require('child_process');
+import pythonScriptsService from "@/services/pythonScriptsService";
 export default ({
     components: { 
         vista1:BigFive,
@@ -249,7 +249,7 @@ export default ({
         
       
     },
-    terminar(){
+     terminar(){
         this.resp46=this.resp.resp1;
         this.resp47=this.resp.resp2;
         this.resp48=this.resp.resp3;
@@ -258,8 +258,8 @@ export default ({
 
         try {  
               
-          BfService.BigFive({          
-            email: "Predeterminado4",
+           BfService.BigFive({          
+			email: this.$store.state.user.email,
             res1: this.resp1,
             res2: this.resp2,
             res3: this.resp3,
@@ -313,13 +313,29 @@ export default ({
         });       
                 
         } catch (error) {
-        this.error = error.resp.response.data.error;
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text:"server error"+ this.error,
-        });
-      } 
+			this.error = error.resp.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text:"server error"+ this.error,
+			});
+		}
+		// Once the answers are saved, do the calculations with them
+		try{
+			console.log(this.$store.state.user.email)
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.bigFiveP({
+				email: this.$store.state.user.email, 
+				id: this.$store.state.user.id,
+			})
+		}catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
 
     }
   },    

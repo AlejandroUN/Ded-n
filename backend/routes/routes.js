@@ -20,18 +20,17 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
 
-  app.get('/bigFiveP',
+  app.post('/bigFiveP',
     ScriptsController.bigFiveP)
 
   app.post('/bigFive',
     TestsController.BigFive)
 
-  app.post('/bigFive2',
-    TestsController.BigFive2)
+  //app.post('/bigFive2',
+    //TestsController.BigFive2)
 
-  app.post('/bigFiveTest', 
+  app.post('/bigFiveTest',
     TestsController.BigFive)
-
 
   app.post('/TestEmpresarial',
     TestsController.saveTestEmpresarial)
