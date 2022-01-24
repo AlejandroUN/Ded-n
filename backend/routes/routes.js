@@ -1,9 +1,10 @@
 const AuthenticationController = require('../controllers/AuthenticationController')
 const TestsController = require('../controllers/TestsController')
+const ScriptsController = require('../controllers/ScriptsController')
 // const AuthenticationControllerPolicy = require('../policies/AuthenticationControllerPolicy')
 
 // The purpose of this file is to do somehting when
-// a page aka endpoint is loaded
+// a page aka endpoint is loaded/required
 
 module.exports = (app) => {
   // Post Request
@@ -19,12 +20,15 @@ module.exports = (app) => {
   app.post('/login',
     AuthenticationController.login)
 
-  app.post('/bigFive', 
+  app.get('/bigFiveP',
+    ScriptsController.bigFiveP)
+
+  app.post('/bigFive',
     TestsController.BigFive)
 
-  app.post('/bigFive2', 
+  app.post('/bigFive2',
     TestsController.BigFive2)
 
   app.post('/TestEmpresarial',
-  	TestsController.saveTestEmpresarial)
+    TestsController.saveTestEmpresarial)
 }

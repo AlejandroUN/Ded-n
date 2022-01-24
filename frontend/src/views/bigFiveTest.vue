@@ -28,6 +28,7 @@ import BigFive7 from "@/components/bigFive7";
 import BigFive8 from "@/components/bigFive8";
 import BigFive9 from "@/components/bigFive9";
 import BigFive10 from "@/components/bigFive10";
+const {spawn} = require('child_process');
 export default ({
     components: { 
         vista1:BigFive,
@@ -255,6 +256,18 @@ export default ({
         this.resp48=this.resp.resp3;
         this.resp49=this.resp.resp4;
         this.resp50=this.resp.resp5;
+
+		//Juan David guarda las respuestas
+
+		//Script
+		const pythonScript = spawn('python', ['test.py']);//, 't', 8
+		//var retrievedData = 's';
+		pythonScript.stdout.on('data', function(data) {
+			alert(data.toString());
+		});
+		//pythonScript.on('close', (code) => {
+		//	alert(this.retrievedData);  		  
+		//});
     }
     },
     

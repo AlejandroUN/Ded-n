@@ -23,8 +23,7 @@
           >
             Perfiles
           </button></router-link
-        >
-        
+        >		
       </nav>
     </header>
     <hr>

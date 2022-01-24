@@ -184,7 +184,9 @@
 
 <script>
 import BfService from "@/services/BFService";
+import pythonScriptsService from "@/services/pythonScriptsService";
 import Swal from "sweetalert2";
+//const {spawn} = require('child_process');
 
 export default {
   
@@ -204,7 +206,7 @@ export default {
   },
   methods: {
 
-    setData() {
+    async setData() {
        if ((this.resp.resp1=="")||(this.resp.resp2=="")||(this.resp.resp3=="")||(this.resp.resp4=="")||(this.resp.resp5=="")){
          Swal.fire({
           icon: "error",
@@ -212,8 +214,23 @@ export default {
           text: "Contestar todas las preguntas para guardar respuestas",
         });
        }
-       else{
-
+       else{	
+			try{
+			await pythonScriptsService.bigFiveP({})
+			}catch (error) {
+				this.error = error.response.data.error;
+				Swal.fire({
+					icon: "error",
+					title: "Error",
+					text: this.error,
+				});
+			}
+		//	const pythonScript = spawn('python', ['test.py']);//, 't', 8
+		////var retrievedData = 's';
+		//pythonScript.stdout.on('data', function(data) {
+		//	alert("Guardado");
+		//	alert(data.toString());
+		//});
       this.$emit("getData", this.resp);}
     },
 
