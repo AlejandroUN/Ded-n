@@ -167,10 +167,7 @@
      </div>
     </div>
     <div>   
-      <button v-on:click="saveAns"
-              class="mb-10 btn btn-sm rounded-4  floatr center color"
-              type="submit">Siguiente</button>
-      
+      <button v-on:click="saveAns2">Siguiente</button>
     </div>
 
 
@@ -181,7 +178,7 @@
 
 <script>
 import BfService from "@/services/BFService";
-import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
@@ -193,62 +190,18 @@ export default {
     };
   },
   methods: {
-    async saveAns() {
-      if (this.resp1=="") {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Contestar todas las preguntas para seguir",
-        });
-      }
-      else if (this.resp2=="") {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Contestar todas las preguntas para seguir",
-        });
-      }
-      else if (this.resp3=="") {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Contestar todas las preguntas para seguir",
-        });
-      }
-      else if (this.resp4=="") {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Contestar todas las preguntas para seguir",
-        });
-      }
-      else if (this.resp5=="") {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Contestar todas las preguntas para seguir",
-        });
-      }
-      else {
-        try {          
-          BfService.BigFive({          
-            email: "Predeterminado",
-            res1: this.resp1,
-            res2: this.resp2,
-            res3: this.resp3,
-            res4: this.resp4,
-            res5: this.resp5,      
+    async saveAns2() {
+      try {          
+          BfService.BigFive2({
+            res6: this.resp1,
+            res7: this.resp2,
+            res8: this.resp3,
+            res9: this.resp4,
+            res10: this.resp5,      
         }); 
-        this.$router.push({ path: "/bigFive2" });
-                
+        this.$router.push({ path: "/bigFive3" });                
       } catch (error) {
-        this.error = error.response.data.error;
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text:"server error"+ this.error,
-        });
-      }
+        this.error = error.response.data.error;        
       }
     }
   },
