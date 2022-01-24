@@ -9,7 +9,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>No me gusta llamar la atención sobre mí</b></h2></label>
+        <label><h2><b>36. No me gusta llamar la atención sobre mí</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=5 v-model="resp.resp1">
@@ -42,7 +42,7 @@
     
         <div class="centerText" >
         
-         <label><h2><b>Me tomo un tiempo para los demás</b></h2></label>
+         <label><h2><b>37. Me tomo un tiempo para los demás</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -71,7 +71,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Evito mis deberes</b></h2></label>
+        <label><h2><b>38. Evito mis deberes</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=5 v-model="resp.resp3">
@@ -98,7 +98,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Tengo frecuentes cambios de humor</b></h2></label>
+        <label><h2><b>39. Tengo frecuentes cambios de humor</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -127,7 +127,7 @@
         <div class="centerText" >
     
 
-        <label><h2><b>Uso palabras difíciles</b></h2></label>
+        <label><h2><b>40. Uso palabras difíciles</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -154,7 +154,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

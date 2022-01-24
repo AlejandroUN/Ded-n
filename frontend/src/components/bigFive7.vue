@@ -9,7 +9,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Hablo con mucha gente diferente en las fiestas</b></h2></label>
+        <label><h2><b>31. Hablo con mucha gente diferente en las fiestas</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=1 v-model="resp.resp1">
@@ -41,7 +41,7 @@
     
         <div class="centerText" >
         
-         <label><h2><b>No estoy realmente interesado en los demás</b></h2></label>
+         <label><h2><b>32. No estoy realmente interesado en los demás</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=5 v-model="resp.resp2">
@@ -71,7 +71,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Me gusta el orden</b></h2></label>
+        <label><h2><b>33. Me gusta el orden</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -99,7 +99,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Cambio demasiado mi ánimo</b></h2></label>
+        <label><h2><b>34. Cambio demasiado mi ánimo</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -127,7 +127,7 @@
     
         <div class="centerText" >
 
-        <label><h2><b>Soy rápido para entender las cosas</b></h2></label>
+        <label><h2><b>35. Soy rápido para entender las cosas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -153,7 +153,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>
