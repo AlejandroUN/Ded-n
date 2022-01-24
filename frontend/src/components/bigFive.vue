@@ -281,13 +281,8 @@ export default {
             res2: this.resp.resp2,
             res3: this.resp.resp3,
             res4: this.resp.resp4,
-            res5: this.resp.resp5, 
-            
-        });
-  
-        
-        
-                
+            res5: this.resp.resp5,             
+        });                
       } catch (error) {
         this.error = error.resp.response.data.error;
         Swal.fire({

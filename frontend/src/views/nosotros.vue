@@ -14,6 +14,14 @@
               Inicio
             </button></router-link
           >
+          <router-link to="/contacta"
+            ><button
+              class="btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              ¡Dónanos!
+            </button></router-link
+          >
         </nav>
       </header>
 
@@ -27,60 +35,88 @@
           <div class="modal-content rounded-5 shadow">
             <div class="fondo3">
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">
-                  Es un abogado, empresario y político colombiano. Actualmente
-                  se desempeña como alcalde de Soacha para el periodo 2020 –
-                  2023.
-                </p>
+                <div class="p_right">
+                  <center><h1>Daniel Arthuro Quevedo Ayala</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería en sistemas y computación de Novena
+                    matrícula, oriundo de Soacha-Cundinamarca, experto en diseño
+                    de interfaces gráficas, se desempeña como consultor y
+                    gerente del departamento de diseño dentro de Dedún.
+                  </p>
+                </div>
                 <img src="../assets/nosotros/Arturo.png" height="300" />
               </div>
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/cristian.png" height="300" />
-                <p class="fuente_tamano font">
-                  Es un político, revolucionario y dictador soviético,
-                  secretario general del Comité Central del Partido Comunista de
-                  la Unión Soviética entre 1922 y 1952, y presidente del Consejo
-                  de Ministros de la Unión Soviética entre 1941 y 1953. Aunque
-                  inicialmente presidía un liderazgo colectivo como primero
-                  entre iguales con Lev Kámenev y Grigori Zinóviev, a los que
-                  ejecutó posteriormente, hacia los años 30 ya se había
-                  convertido en dictador de facto de la Unión Soviética.
-                </p>
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">
-                  Es el actual rey de España, título por el que ostenta la
-                  jefatura del Estado y el mando supremo de las Fuerzas Armadas.
-                </p>
-                <img src="../assets/nosotros/daniel.png" height="300" />
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/david.png" height="300" />
-                <p class="fuente_tamano font">
-                  Es un docente, rondero, dirigente sindical y político peruano.
-                  Es el presidente de la República del Perú desde el 28 de julio
-                  de 2021
-                </p>
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">
-                  Es un escritor, ensayista y filósofo francés, autor de
-                  numerosas obras de diversos géneros que lo convirtieron en uno
-                  de los mayores y más crudos literatos de la literatura
-                  universal. Entre sus obras están Los crímenes del amor, Aline
-                  y Valcour y numerosas obras de diversos géneros. También le
-                  son atribuidas Justine o los infortunios de la virtud,
-                  Juliette o las prosperidades del vicio y La filosofía en el
-                  tocador, entre otras.
-                </p>
                 <img src="../assets/nosotros/gabriel.png" height="300" />
+                <div class="p_left">
+                  <center><h1>Gabriel Enrique Ramirez León</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería en sistemas y computación de Décima
+                    matricula, oriundo de Bogotá DC., conocedor de diversas
+                    herramientas y lenguajes de programación entre los que
+                    destacan node.js y Python, amplia experiencia y
+                    conocimientos como desarrollador Backend, se desempeña como
+                    Scrum Master del equipo de desarrolladores Backend de Dedún.
+                  </p>
+                </div>
+              </div>
+              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
+                <div class="p_right">
+                  <center><h1>Cristian Alejandro Chavez Becerra</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería en sistemas y computación de Décima
+                    matricula, oriundo de Duitama-Boyacá, con grandes dotes en
+                    diseño, desarrollo, implementación y análisis de bases de
+                    datos, tanto relacionales como no relacionales, se desempeña
+                    presidente del departamento de análisis de datos de Dedún.
+                  </p>
+                </div>
+                <img src="../assets/nosotros/cristian.png" height="300" />
+              </div>
+              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
+                <img src="../assets/nosotros/daniel.png" height="300" />
+                <div class="p_left">
+                  <center><h1>Daniel Armando Zuñiga Espinosa</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería en sistemas y computación de Décima
+                    matricula, oriundo de Neiva-Huila, conocedor de diversas
+                    herramientas y lenguajes de programación entre los que
+                    destacan el framework de Vue y Java, amplia experiencia y
+                    conocimientos como desarrollador Frontend, se desempeña como
+                    Scrum Master del equipo de desarrolladores Frontend de
+                    Dedún.
+                  </p>
+                </div>
+              </div>
+              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
+                <div class="p_right">
+                  <center><h1>Juan David González Muñoz</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería de sistemas y computación de Octava
+                    matrícula, oriundo de Bogotá DC., experto en marketing
+                    empresarial y campañas publicitarias, amplia experiencia en
+                    el área desarrollada tras un largo y prominente historial,
+                    cuenta con múltiples habilidades sociales y comunicativas y
+                    una excelente visión de negocios, se desempeña como
+                    presidente del área de marketing y relaciones comerciales de
+                    Dedún.
+                  </p>
+                </div>
+                <img src="../assets/nosotros/david.png" height="300" />
               </div>
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
                 <img src="../assets/nosotros/ivan.png" height="300" />
-                <p class="fuente_tamano font">
-                  Es un político francés, vigesimoquinto presidente de la
-                  República Francesa y copríncipe de Andorra desde 2017
-                </p>
+                <div class="p_left">
+                  <center><h1>Iván Alejandro Cruz Tole</h1></center>
+                  <p class="fuente_tamano">
+                    Estudiante de ingeniería en sistemas y computación de
+                    Septima matrícula, oriundo de Bogotá DC., posee amplia
+                    experiencia como emprendedor de compañías Tech con presencia
+                    en Norte América y Europa, genio empresarial extrovertido y
+                    entusiasta, se desempeña como CEO de Dedún y rostro visible
+                    de la empresa.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -101,4 +137,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.p_left {
+  padding-left: 5% !important;
+}
+.p_right {
+  padding-right: 5% !important;
+}
+</style>
