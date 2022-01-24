@@ -14,6 +14,14 @@
               Inicio
             </button></router-link
           >
+          <router-link to="/contacta"
+            ><button
+              class="btn btn-lg btn-primary color_fuente color2"
+              type="submit"
+            >
+              ¡Dónanos!
+            </button></router-link
+          >
         </nav>
       </header>
 
@@ -40,8 +48,10 @@
               <div class="row">
                 <!--Grid column-->
                 <div class="col-md-9 mb-md-0 mb-5">
-                  <form action="https://formsubmit.co/1danielarmando.1999@gmail.com" method="POST">
-
+                  <form
+                    action="https://formsubmit.co/1danielarmando.1999@gmail.com"
+                    method="POST"
+                  >
                     <div class="row">
                       <div class="col-md-6">
                         <div class="md-form mb-0">
@@ -102,25 +112,11 @@
                     </div>
 
                     <div class="text-center text-md-left">
-                      <button class="btn btn-primary color6" type="submit">Send</button>
+                      <button class="btn btn-primary color6" type="submit">
+                        Send
+                      </button>
                     </div>
                   </form>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-md-3 text-center">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <i class="fas fa-map-marker-alt fa-2x"></i>
-                      <p>Bogotá, Carrera 45 # 26-85, Bogotá</p>
-                    </li>
-
-                    <li>
-                      <i class="fas fa-phone mt-4 fa-2x"></i>
-                      <p>4°38′08″N 74°04′58″O</p>
-                    </li>
-                  </ul>
                 </div>
                 <!--Grid column-->
               </div>
