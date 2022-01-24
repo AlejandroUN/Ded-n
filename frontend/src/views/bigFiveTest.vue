@@ -16,7 +16,7 @@
 </template>
 
 <script>
-
+import BfService from "@/services/BFService";
 import Swal from "sweetalert2";
 import BigFive from "@/components/bigFive";
 import BigFive2 from "@/components/bigFive2";
@@ -139,8 +139,7 @@ export default ({
             this.resp.resp2='';
             this.resp.resp3='';
             this.resp.resp4='';
-            this.resp.resp5='';
-            
+            this.resp.resp5='';        
         }
         else if(this.numero==2){
             this.numero= 3;
@@ -255,9 +254,73 @@ export default ({
         this.resp48=this.resp.resp3;
         this.resp49=this.resp.resp4;
         this.resp50=this.resp.resp5;
+
+        try {  
+              
+          BfService.BigFive({          
+            email: "Predeterminado4",
+            res1: this.resp1,
+            res2: this.resp2,
+            res3: this.resp3,
+            res4: this.resp4,
+            res5: this.resp5, 
+            res6: this.resp6,
+            res7: this.resp7,
+            res8: this.resp8,
+            res9: this.resp9,
+            res10: this.resp10,
+            res11: this.resp11,
+            res12: this.resp12,
+            res13: this.resp13,
+            res14: this.resp14,
+            res15: this.resp15,
+            res16: this.resp16,
+            res17: this.resp17,
+            res18: this.resp18,
+            res19: this.resp19,
+            res20: this.resp20,
+            res21: this.resp21,
+            res22: this.resp22,
+            res23: this.resp23,
+            res24: this.resp24,
+            res25: this.resp25, 
+            res26: this.resp26,
+            res27: this.resp27,
+            res28: this.resp28,
+            res29: this.resp29,
+            res30: this.resp30,
+            res31: this.resp31,
+            res32: this.resp32,
+            res33: this.resp33,
+            res34: this.resp34,
+            res35: this.resp35, 
+            res36: this.resp36,
+            res37: this.resp37,
+            res38: this.resp38,
+            res39: this.resp39,
+            res40: this.resp40,
+            res41: this.resp41,
+            res42: this.resp42,
+            res43: this.resp43,
+            res44: this.resp44,
+            res45: this.resp45, 
+            res46: this.resp46,
+            res47: this.resp47,
+            res48: this.resp48,
+            res49: this.resp49,
+            res50: this.resp50,            
+        });       
+                
+        } catch (error) {
+        this.error = error.resp.response.data.error;
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text:"server error"+ this.error,
+        });
+      } 
     }
-    },
-    
+  },    
 })
 </script>
 

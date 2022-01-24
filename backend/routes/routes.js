@@ -22,8 +22,8 @@ module.exports = (app) => {
   app.post('/bigFive', 
     TestsController.BigFive)
 
-  app.post('/bigFive2', 
-    TestsController.BigFive2)
+  app.post('/bigFiveTest', 
+    TestsController.BigFive)
 
   app.post('/TestEmpresarial',
   	TestsController.saveTestEmpresarial)
