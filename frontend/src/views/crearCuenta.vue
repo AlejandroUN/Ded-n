@@ -241,9 +241,7 @@ export default {
           title: "Error",
           text: "El correo indicado no es gmail",
         });
-      } else if (this.password.length < 8) {      
-        alert("La contraseña debe tener más de 8 caracteres");
-
+      } else if (this.password.length < 8) {
         Swal.fire({
           icon: "error",
           title: "Error",
@@ -267,7 +265,8 @@ export default {
         });
       } else {
         try {
-          await AuthenticationService.register({
+            //We keep track of the backend response
+            const response = await AuthenticationService.register({
             // eslint-disable-line no-mixed-spaces-and-tabs
             name: this.nombres,
             email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
@@ -279,8 +278,13 @@ export default {
             newgender: this.nuevoGenero,
             neworientation: this.nuevaOrientacion,
           }); // eslint-disable-line no-mixed-spaces-and-tabs
-          //this.$router.push({ path: "/entrarPerfil" });
-          this.$router.push({ name: 'entrarPerfil' })
+		//This is going to call our method setToken in the store file
+		//which is gonna call our mutation setToken
+		//which is gonna update our state to token
+			this.$store.dispatch('setToken', response.data.token)
+		//And the same with token
+			this.$store.dispatch('setUser', response.data.user)
+          this.$router.push({ path: "/entrarPerfil" });
           Swal.fire({
             icon: "success",
             title: "Creado",

@@ -1,25 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
+//import routerv from 'vue-router'
 import Home from '../views/Home.vue'
 import crearCuenta from '../views/crearCuenta.vue'
-import encuestaPsicometrica from '../views/encuestaPsicometrica.vue'
 import entrarPerfil from '../views/entrarPerfil.vue'
 import recuperarContrasena from '../views/recuperarContrasena.vue'
-import allport from '../views/allport.vue'
-import kostick from '../views/kostick.vue'
-import encProf from '../views/encuestaContProfesionales.vue'
 import introBigFive from '../views/introBigFive.vue'
 import iniciarSesion from '../views/iniciarSesion.vue'
 import contactanos from '../views/contactanos.vue'
-import bigFive from '../views/bigFive.vue'
-import bigFive10 from '../views/bigFive10.vue'
-import bigFive2 from '../views/bigFive2.vue'
-import bigFive3 from '../views/bigFive3.vue'
-import bigFive4 from '../views/bigFive4.vue'
-import bigFive5 from '../views/bigFive5.vue'
-import bigFive6 from '../views/bigFive6.vue'
-import bigFive7 from '../views/bigFive7.vue'
-import bigFive8 from '../views/bigFive8.vue'
-import bigFive9 from '../views/bigFive9.vue'
+import bigFive from '../components/bigFive.vue'
+import bigFive10 from '../components/bigFive10.vue'
+import bigFive2 from '../components/bigFive2.vue'
+import bigFive3 from '../components/bigFive3.vue'
+import bigFive4 from '../components/bigFive4.vue'
+import bigFive5 from '../components/bigFive5.vue'
+import bigFive6 from '../components/bigFive6.vue'
+import bigFive7 from '../components/bigFive7.vue'
+import bigFive8 from '../components/bigFive8.vue'
+import bigFive9 from '../components/bigFive9.vue'
+import bigFiveTest from'../views/bigFiveTest.vue'
 import MBTI from '../views/MBTI.vue'
 import MBTI2 from '../views/MBTI2.vue'
 import MBTI3 from '../views/MBTI3.vue'
@@ -28,6 +26,8 @@ import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
 import matches from '../views/matches.vue'
+import cont2 from '../views/contactanos2.vue'
+import 'es6-promise/auto'
 
 
 const routes = [
@@ -72,41 +72,20 @@ const routes = [
     component: iniciarSesion
   },
   {
-    path: '/encuestaPsicometrica',
-    name: 'encuestaPsicometrica',
-    component: encuestaPsicometrica
-  },
-  {
     path: '/entrarPerfil',
     name: 'entrarPerfil',
     component: entrarPerfil
   },
   {
     path: '/recuperarContrasena',
-    name: 'recuperarContrasena',
+    name: 'rec}uperarContrasena',
     component: recuperarContrasena
   },
-  {
-    path: '/allport',
-    name: 'TestAllport',
-    component: allport
-  },
-  {
-    path: '/kostick',
-    name: 'TestKostick',
-    component: kostick
-  },
-
+  
   {
     path: '/introBigFive',
     name: 'introBigFive',
     component: introBigFive
-  },
-
-  {
-    path: '/testProfesionales',
-    name: 'testProfesionales',
-    component: encProf
   },
   {path: '/contacta',
     name: 'contacta',
@@ -156,6 +135,10 @@ const routes = [
   name: 'bigFive10',
   component: bigFive10
   },
+  {path: '/bigFiveTest',
+  name: 'bigFiveTest',
+  component: bigFiveTest
+  },
   {path: '/ayuda',
   name: 'ayuda',
   component: ayuda
@@ -169,6 +152,10 @@ const routes = [
   component: privacidad
   },
 
+  {path: '/contactanos',
+  name: 'contactanos',
+  component: cont2
+  },
 
 ]
 

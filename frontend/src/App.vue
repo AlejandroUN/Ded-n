@@ -1,5 +1,5 @@
 <template>
-  <div class="fondo">
+  <div id = "app" class="fondo">
     <!--<div id="nav">
 
     <router-link to="/"> Inicio</router-link> |
@@ -11,16 +11,25 @@
       <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">English</a>
+            <a class="nav-link px-2 text-muted">English</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Ayuda</a>
+          <router-link to="/ayuda"
+            ><a class="nav-link px-2 text-muted">Ayuda</a></router-link>          </li>
+          <li class="nav-item">
+            <router-link to="/privacidad"
+            >
+            <a  class="nav-link px-2 text-muted">Políticas de privacidad</a></router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Políticas de privacidad</a>
+            <router-link to="/nosotros"
+            >
+            <a  class="nav-link px-2 text-muted">Sobre nosotros</a></router-link>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Sobre nosotros</a>
+            <router-link to="/contactanos"
+            >
+            <a  class="nav-link px-2 text-muted">Contactanos</a></router-link>
           </li>
         </ul>
         <p class="text-center text-muted">© 2021 Dedún, Inc</p>
@@ -28,6 +37,16 @@
     </div>
   </div>
 </template>
+
+<script>
+
+export default {
+  name: 'app',
+  components: {
+    
+  }
+}
+</script>
 
 <style>
 html {
