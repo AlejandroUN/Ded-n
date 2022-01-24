@@ -6,16 +6,17 @@ import recuperarContrasena from '../views/recuperarContrasena.vue'
 import introBigFive from '../views/introBigFive.vue'
 import iniciarSesion from '../views/iniciarSesion.vue'
 import contactanos from '../views/contactanos.vue'
-import bigFive from '../views/bigFive.vue'
-import bigFive10 from '../views/bigFive10.vue'
-import bigFive2 from '../views/bigFive2.vue'
-import bigFive3 from '../views/bigFive3.vue'
-import bigFive4 from '../views/bigFive4.vue'
-import bigFive5 from '../views/bigFive5.vue'
-import bigFive6 from '../views/bigFive6.vue'
-import bigFive7 from '../views/bigFive7.vue'
-import bigFive8 from '../views/bigFive8.vue'
-import bigFive9 from '../views/bigFive9.vue'
+import bigFive from '../components/bigFive.vue'
+import bigFive10 from '../components/bigFive10.vue'
+import bigFive2 from '../components/bigFive2.vue'
+import bigFive3 from '../components/bigFive3.vue'
+import bigFive4 from '../components/bigFive4.vue'
+import bigFive5 from '../components/bigFive5.vue'
+import bigFive6 from '../components/bigFive6.vue'
+import bigFive7 from '../components/bigFive7.vue'
+import bigFive8 from '../components/bigFive8.vue'
+import bigFive9 from '../components/bigFive9.vue'
+import bigFiveTest from'../views/bigFiveTest.vue'
 import MBTI from '../views/MBTI.vue'
 import MBTI2 from '../views/MBTI2.vue'
 import MBTI3 from '../views/MBTI3.vue'
@@ -124,6 +125,10 @@ const routes = [
   {path: '/bigFive10',
   name: 'bigFive10',
   component: bigFive10
+  },
+  {path: '/bigFiveTest',
+  name: 'bigFiveTest',
+  component: bigFiveTest
   },
   {path: '/ayuda',
   name: 'ayuda',
