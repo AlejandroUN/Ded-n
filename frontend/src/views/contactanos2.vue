@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container col-xl-12 col-xxl-8 py-3">
-      <header class="margin font">
+      <header class="margin">
         <router-link to="/">
           <img src="../assets/logo.png" height="50" />
         </router-link>
@@ -24,38 +24,107 @@
         id="modalSignin"
       >
         <div>
-          <div class="modal-content rounded-5 shadow">
-            
+          <div class="modal-content rounded-5 shadow fondo2">
+            <section class="mb-4 margen2 fondo2">
+              <!--Section heading-->
+              <h2 class="h1-responsive font-weight-bold text-center my-4">
+                Contactanos
+              </h2>
+              <!--Section description-->
+              <p class="text-center w-responsive mx-auto mb-5">
+                ¿Tienes alguna pregunta? Por favor, no dudes en contactarnos
+                directamente. Nuestro equipo se comunicará contigo en cuestión
+                de horas para ayudarte.
+              </p>
 
-            <div class="fondo3">
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">Es un abogado, empresario y político colombiano. Actualmente se desempeña como alcalde de Soacha para el periodo 2020 – 2023.</p>
-                <img src="../assets/nosotros/Arturo.png" height="300" />
-                
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                  <form action="https://formsubmit.co/1danielarmando.1999@gmail.com" method="POST">
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input
+                            type="text"
+                            id="name"
+                            name="Nombre"
+                            class="form-control"
+                            required
+                          />
+                          <label for="name" class="">Tu nombre</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="md-form mb-0">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            required
+                          />
+                          <label for="email" class="">Tu email</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form mb-0">
+                          <input
+                            type="text"
+                            id="subject"
+                            name="Asunto"
+                            class="form-control"
+                            required
+                          />
+                          <label for="subject" class="">Asunto</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="md-form">
+                          <textarea
+                            type="text"
+                            id="message"
+                            name="Mensaje"
+                            rows="2"
+                            class="form-control md-textarea"
+                            required
+                          ></textarea>
+                          <label for="message">Tu mensaje</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="text-center text-md-left">
+                      <button class="btn btn-primary color6" type="submit">Send</button>
+                    </div>
+                  </form>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-3 text-center">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <i class="fas fa-map-marker-alt fa-2x"></i>
+                      <p>Bogotá, Carrera 45 # 26-85, Bogotá</p>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-phone mt-4 fa-2x"></i>
+                      <p>4°38′08″N 74°04′58″O</p>
+                    </li>
+                  </ul>
+                </div>
+                <!--Grid column-->
               </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/cristian.png" height="300" />
-                <p class="fuente_tamano font">Es un político, revolucionario y dictador soviético, secretario general del Comité Central del Partido Comunista de la Unión Soviética entre 1922 y 1952, y presidente del Consejo de Ministros de la Unión Soviética entre 1941 y 1953. Aunque inicialmente presidía un liderazgo colectivo como primero entre iguales con Lev Kámenev y Grigori Zinóviev, a los que ejecutó posteriormente, hacia los años 30 ya se había convertido en dictador de facto de la Unión Soviética.</p>
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">Es el actual rey de España, título por el que ostenta la jefatura del Estado y el mando supremo de las Fuerzas Armadas.</p>
-                <img src="../assets/nosotros/daniel.png" height="300" />
-                
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/david.png" height="300" />
-                <p class="fuente_tamano font">Es un docente, rondero, dirigente sindical y político peruano. Es el presidente de la República del Perú desde el 28 de julio de 2021</p>
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <p class="fuente_tamano font">Es un escritor, ensayista y filósofo francés, autor de numerosas obras de diversos géneros que lo convirtieron en uno de los mayores y más crudos literatos de la literatura universal. Entre sus obras están Los crímenes del amor, Aline y Valcour y numerosas obras de diversos géneros. También le son atribuidas Justine o los infortunios de la virtud, Juliette o las prosperidades del vicio y La filosofía en el tocador, entre otras.</p>
-                <img src="../assets/nosotros/gabriel.png" height="300" />
-                
-              </div>
-              <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/ivan.png" height="300" />
-                <p class="fuente_tamano font">Es un político francés, vigesimoquinto presidente de la República Francesa y copríncipe de Andorra desde 2017</p>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
@@ -65,13 +134,60 @@
 <script>
 export default {
   data() {
-    return {
-      email: "",
-      password: "",
-    };
+    return {};
   },
-  methods: {},
 };
 </script>
 
-<style></style>
+<style>
+.fuente_tamano {
+  font-size: 180% !important;
+  padding-top: 3% !important;
+}
+
+.margen {
+  padding-left: 20% !important;
+  padding-right: 20% !important;
+}
+
+.margen2 {
+  padding: 2% !important;
+}
+
+.margen3 {
+  padding-left: 4% !important;
+  padding-right: 3% !important;
+  text-align: justify;
+}
+
+.margen4 {
+  padding-left: 28% !important;
+  padding-right: 20% !important;
+}
+
+.margen5 {
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
+  padding-left: 32% !important;
+  padding-right: 20% !important;
+}
+
+.color6 {
+  background-color: #008b8f !important;
+  border-color: #008b8f !important;
+}
+
+.color6:hover {
+  background-color: #f08240 !important;
+  border-color: #f08240 !important;
+}
+
+* {
+  font-family: AvGard;
+}
+
+@font-face {
+  font-family: AvGard;
+  src: url(AVGARDN_2.TTF);
+}
+</style>
