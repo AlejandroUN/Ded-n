@@ -28,6 +28,7 @@ import BigFive7 from "@/components/bigFive7";
 import BigFive8 from "@/components/bigFive8";
 import BigFive9 from "@/components/bigFive9";
 import BigFive10 from "@/components/bigFive10";
+const {spawn} = require('child_process');
 export default ({
     components: { 
         vista1:BigFive,
@@ -319,6 +320,7 @@ export default ({
           text:"server error"+ this.error,
         });
       } 
+
     }
   },    
 })

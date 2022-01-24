@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 // Allow any host or client to access
 app.use(cors())
 
+// It uses routes and passes it the app
 require('./routes/routes')(app)
 
 // Connect sequelize to whatever database is set
