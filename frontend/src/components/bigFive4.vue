@@ -93,10 +93,10 @@
         </div>
     </div>
     <br>  
-     <div :class="resp.resp2 == 1? 'back-red rounded-3'  
-  : resp.resp2 == 2? 'back-orange rounded-3'
-  : resp.resp2 == 3? 'back-yellow rounded-3'
-  : resp.resp2 == 4? 'back-yellowgreen rounded-3'
+     <div :class="resp.resp4 == 1? 'back-red rounded-3'  
+  : resp.resp4 == 2? 'back-orange rounded-3'
+  : resp.resp4 == 3? 'back-yellow rounded-3'
+  : resp.resp4 == 4? 'back-yellowgreen rounded-3'
   :'back-green  rounded-3'">
     
         <div class="centerText" >
@@ -120,10 +120,10 @@
         </div>
     </div>
     <br>  
-     <div :class="resp.resp2 == 1? 'back-red rounded-3'  
-  : resp.resp2 == 2? 'back-orange rounded-3'
-  : resp.resp2 == 3? 'back-yellow rounded-3'
-  : resp.resp2 == 4? 'back-yellowgreen rounded-3'
+     <div :class="resp.resp5 == 5? 'back-red rounded-3'  
+  : resp.resp5 == 4? 'back-orange rounded-3'
+  : resp.resp5 == 3? 'back-yellow rounded-3'
+  : resp.resp5 == 2? 'back-yellowgreen rounded-3'
   :'back-green  rounded-3'">
     
         <div class="centerText" >

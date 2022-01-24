@@ -85,7 +85,7 @@
    
     <br />
     <div>
-      <router-link to="/bigFive"><button class="mb-10 btn btn-sm rounded-4  floatr center color">Empezar prueba</button></router-link>
+      <router-link to="/bigFiveTest"><button class="mb-10 btn btn-sm rounded-4  floatr center color">Empezar prueba</button></router-link>
     </div>
 
   </div>

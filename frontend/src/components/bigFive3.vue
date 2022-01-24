@@ -114,7 +114,7 @@
             <label class="one" for="Tres4"> <FONT SIZE=5>Neutro</FONT></label>
             <br>
             <input class="regular-radio" type="radio" id="Cuarto4" value=2 v-model="resp.resp4">
-            <label for="Cuarto4"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
+            <label class="one" for="Cuarto4"> <FONT SIZE=5>Moderadamente en acuerdo</FONT></label>
             <br>
             <input class="regular-radio" type="radio" id="Cinco4" value=1 v-model="resp.resp4">
             <label class="one" for="Cinco4"><FONT SIZE=5> Muy de acuerdo</FONT></label>
