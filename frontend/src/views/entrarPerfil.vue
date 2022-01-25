@@ -33,17 +33,8 @@
         /></button>
         </router-link>
         <router-link to="/matches">
-          <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
-
-        <router-link to="">
-          <button v-on:click="personal" class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
-        /></button>
-        </router-link>
-        <router-link to="">
-          <button v-on:click="profesional" class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
-
-        /></button>
-        </router-link>
+          <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"></button>
+        </router-link>  
       </div>
 
 
