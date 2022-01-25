@@ -23,7 +23,7 @@ dbConnection = mysql.connector.connect(**dbCredentials)
 
 cursor = dbConnection.cursor()
 cursor.execute(retrieveAnswers, userEmail)
-answers = cursor.fetchall()[0][:-4]
+answers = [value for index, value in enumerate(cursor.fetchall()[0]) if index not in (0, 1, 52, 53)]
 factorsOfPersonality = [sum(answers[i] for i in groupsOfAnswers[j]) / 50 for j in range(5)]
 insertionValues = userId + userEmail + factorsOfPersonality + 2 * [datetime.now()]
 cursor.execute(insertFactorsOfPersonality, insertionValues)

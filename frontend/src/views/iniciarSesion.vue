@@ -107,10 +107,11 @@ export default {
     async login() {
       try {
 		//We keep track of the backend response
-        const response = await AuthenticationService.login({
-          // eslint-disable-line no-mixed-spaces-and-tabs
-          email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
-          password: this.password, // eslint-disable-line no-mixed-spaces-and-tabs
+			const response = await AuthenticationService.login({
+          // eslint-disable-line no-mixed-spaces-and-tabs          
+			email: this.email,          
+			password: this.password
+
         }); // eslint-disable-line no-mixed-spaces-and-tabs
 		//This is going to call our method setToken in the store file
 		//which is gonna call our mutation setToken
@@ -121,7 +122,16 @@ export default {
 		//console.log(response.data.token)
 		//And the same with token
 		this.$store.dispatch('setUser', response.data.user)
-        this.$router.push({ path: "/introBigFive" });
+
+    
+        
+
+    if(response.data.isAnswered=="false"){
+      this.$router.push({ path: "/introBigFive" });
+    }
+    else{
+      this.$router.push({ path: "/entrarPerfil" });
+    }
         Swal.fire({
           icon: "success",
           title: "Login",

@@ -7,7 +7,7 @@ export default {
          return Api().post('register', credentials)
     },
     login(credentials){        
-        console.log('Yolo a Api')
+        console.log('Yolo a Api login')
         return Api().post('login', credentials)
     }
 }

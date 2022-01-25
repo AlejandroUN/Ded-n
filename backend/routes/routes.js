@@ -23,6 +23,9 @@ module.exports = (app) => {
   app.post('/bigFiveP',
     ScriptsController.bigFiveP)
 
+  app.post('/matchesForLove',
+    ScriptsController.matchesForLove)
+
   app.post('/bigFive',
     TestsController.BigFive)
 
@@ -35,4 +38,6 @@ module.exports = (app) => {
   app.get('/getMatches',
     TestsController.getMatches)
 
+  app.post('/TestEmpresarial',
+    TestsController.saveTestEmpresarial)
 }
