@@ -14,8 +14,7 @@
             <a class="nav-link px-2 text-muted">English</a>
           </li>
           <li class="nav-item">
-          <router-link to="/ayuda"
-            ><a class="nav-link px-2 text-muted">Ayuda</a></router-link>          </li>
+          <a href="https://www.flipsnack.com/BCD6A7CC5A8/dedun-manual.html" class="nav-link px-2 text-muted">Ayuda</a>          </li>
           <li class="nav-item">
             <router-link to="/privacidad"
             >
