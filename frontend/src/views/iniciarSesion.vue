@@ -122,6 +122,7 @@ export default {
 		//And the same with token
 		this.$store.dispatch('setUser', response.data.user)
         this.$router.push({ path: "/introBigFive" });
+		console.log(response.data.isAnswered)
         Swal.fire({
           icon: "success",
           title: "Login",
