@@ -1,12 +1,16 @@
 module.exports = (sequelize, DataTypes) =>
 	sequelize.define('Asociaciones', {
-	    id1: {
+	    idPrimerAsociado: {
             primaryKey: true,
       		type: DataTypes.INTEGER,      		
     	},
-        id2: {
+        emailPrimerAsociado: DataTypes.INTEGER,
+        afinidadEscrupulosidad: DataTypes.INTEGER,
+        afinidadExtroversion: DataTypes.INTEGER,
+        afinidadAmabilidad: DataTypes.INTEGER,
+        afinidadNeuroticismo: DataTypes.INTEGER,
+        idSegundoAsociado: {
             primaryKey: true,
-            type: DataTypes.INTEGER,
-            
+            type: DataTypes.INTEGER,         
         }
   	})
