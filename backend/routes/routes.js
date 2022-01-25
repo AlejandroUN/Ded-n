@@ -27,4 +27,8 @@ module.exports = (app) => {
 
   app.post('/TestEmpresarial',
   	TestsController.saveTestEmpresarial)
+  
+  app.get('/getMatches',
+    TestsController.getMatches)
+
 }
