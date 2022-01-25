@@ -115,11 +115,6 @@ export default ({
         getData(data) {
       this.resp = data;
         if(this.numero<10){
-        Swal.fire({
-            icon: "success",
-            title: "",
-            text: "Continuando Test...",
-            });
             this.swapComponent();}
         else{
             Swal.fire({
