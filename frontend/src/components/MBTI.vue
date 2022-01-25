@@ -54,13 +54,11 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
+                    type="radio"                    
                     id="exampleRadios1"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_1"
-                  />
+                    value=0                    
+                    v-model="resp.resp1"
+                  >
                   <label class="form-check-label" for="exampleRadios1">
                     De acuerdo
                   </label>
@@ -68,12 +66,11 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
+                    type="radio"                    
                     id="exampleRadios2"
-                    value="1"
-                    v-model="resp.ext_intro_1"
-                  />
+                    value=1
+                    v-model="resp.resp1"
+                  >
                   <label class="form-check-label" for="exampleRadios2">
                     En desacuerdo
                   </label>
@@ -89,27 +86,24 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios1"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_2"
+                    type="radio"                    
+                    id="exampleRadios3"
+                    value=0                    
+                    v-model="resp.resp2"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios3">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios1"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_2"
+                    type="radio"                    
+                    id="exampleRadios4"
+                    value=1
+                    v-model="resp.resp2"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios4">
                     En desacuerdo
                   </label>
                 </div>
@@ -123,27 +117,24 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios2"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_3"
+                    type="radio"                    
+                    id="exampleRadios5"
+                    value=0                    
+                    v-model="resp.resp3"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios5">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios2"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_3"
+                    type="radio"                    
+                    id="exampleRadios6"
+                    value=1
+                    v-model="resp.resp3"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios6">
                     En desacuerdo
                   </label>
                 </div>
@@ -157,27 +148,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios3"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_4"
+                    type="radio"                    
+                    id="exampleRadios7"
+                    value=0
+                    
+                    v-model="resp.resp4"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios7">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios3"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_4"
+                    type="radio"                    
+                    id="exampleRadios8"
+                    value=1
+                    v-model="resp.resp4"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios8">
                     En desacuerdo
                   </label>
                 </div>
@@ -192,27 +181,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios5"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_5"
+                    type="radio"                    
+                    id="exampleRadios9"
+                    value=0
+                    
+                    v-model="resp.resp5"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios9">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios5"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_5"
+                    type="radio"                    
+                    id="exampleRadios10"
+                    value=1
+                    v-model="resp.resp5"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios10">
                     En desacuerdo
                   </label>
                 </div>
@@ -227,27 +214,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios6"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_6"
+                    type="radio"                    
+                    id="exampleRadios11"
+                    value=0
+                    
+                    v-model="resp.resp6"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios11">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios6"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_6"
+                    type="radio"                    
+                    id="exampleRadios12"
+                    value=1
+                    v-model="resp.resp6"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios12">
                     En desacuerdo
                   </label>
                 </div>
@@ -262,27 +247,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios7"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_7"
+                    type="radio"                    
+                    id="exampleRadios13"
+                    value=0
+                    
+                    v-model="resp.resp7"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios13">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios7"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_7"
+                    type="radio"                    
+                    id="exampleRadios14"
+                    value=1
+                    v-model="resp.resp7"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios14">
                     En desacuerdo
                   </label>
                 </div>
@@ -296,27 +279,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios8"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_8"
+                    type="radio"                    
+                    id="exampleRadios15"
+                    value=0
+                    
+                    v-model="resp.resp8"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios15">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios8"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_8"
+                    type="radio"                    
+                    id="exampleRadios16"
+                    value=1
+                    v-model="resp.resp8"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios16">
                     En desacuerdo
                   </label>
                 </div>
@@ -331,27 +312,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios9"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_9"
+                    type="radio"                    
+                    id="exampleRadios17"
+                    value=0
+                    
+                    v-model="resp.resp9"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios17">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios9"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_9"
+                    type="radio"                    
+                    id="exampleRadios18"
+                    value=1
+                    v-model="resp.resp9"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios18">
                     En desacuerdo
                   </label>
                 </div>
@@ -365,27 +344,25 @@
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios10"
-                    id="exampleRadios"
-                    value="0"
-                    checked
-                    v-model="resp.ext_intro_10"
+                    type="radio"                    
+                    id="exampleRadios19"
+                    value=0
+                    
+                    v-model="resp.resp10"
                   />
-                  <label class="form-check-label" for="exampleRadios1">
+                  <label class="form-check-label" for="exampleRadios19">
                     De acuerdo
                   </label>
                 </div>
                 <div class="form-check col-9">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios10"
-                    id="exampleRadios"
-                    value="1"
-                    v-model="resp.ext_intro_10"
+                    type="radio"                    
+                    id="exampleRadios20"
+                    value=1
+                    v-model="resp.resp10"
                   />
-                  <label class="form-check-label" for="exampleRadios2">
+                  <label class="form-check-label" for="exampleRadios20">
                     En desacuerdo
                   </label>
                 </div>
@@ -415,24 +392,25 @@ export default {
   data() {
     return {
       resp:{
-        ext_intro_1: "",
-        ext_intro_2: "",
-        ext_intro_3: "",
-        ext_intro_4: "",
-        ext_intro_5: "",
-        ext_intro_6: "",
-        ext_intro_7: "",
-        ext_intro_8: "",
-        ext_intro_9: "",
-        ext_intro_10: "",}
+        resp1: "",
+        resp2: "",
+        resp3: "",
+        resp4: "",
+        resp5: "",
+        resp6: "",
+        resp7: "",
+        resp8: "",
+        resp9: "",
+        resp10: "",
+        }
     };
   },
   methods: {
-    setData(){
-      
+    async setData(){
+      console.log(this.resp);    
       this.$emit("getData", this.resp);
     },
-  },
+  }
 };
 </script>
 

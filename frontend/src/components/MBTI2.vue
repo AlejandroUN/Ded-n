@@ -56,11 +56,9 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
+                    type="radio"                    
                     id="exampleRadios1"
-                    value="0"
-                    checked
+                    value="0"                    
                     v-model="sens_int_1"
                   />
                   <label class="form-check-label" for="exampleRadios1">
@@ -70,8 +68,7 @@
                 <div class="form-check">
                   <input
                     class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
+                    type="radio"                    
                     id="exampleRadios2"
                     value="1"
                     v-model="sens_int_1"
@@ -413,17 +410,18 @@
 export default {
   data() {
     return {
-      sens_int_1: "",
-      sens_int_2: "",
-      sens_int_3: "",
-      sens_int_4: "",
-      sens_int_5: "",
-      sens_int_6: "",
-      sens_int_7: "",
-      sens_int_8: "",
-      sens_int_9: "",
-      sens_int_10: "",
-      
+      resp:{
+        resp1: "",
+        resp2: "",
+        resp3: "",
+        resp4: "",
+        resp5: "",
+        resp6: "",
+        resp7: "",
+        resp8: "",
+        resp9: "",
+        resp10: "",
+        }      
     };
   },
   methods: {
