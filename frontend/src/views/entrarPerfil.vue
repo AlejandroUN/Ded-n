@@ -27,12 +27,21 @@
       </header>
 
       <div class="padding_top row margin_left">
+
         <router-link to="/matches">
           <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
         /></button>
         </router-link>
         <router-link to="/matches">
           <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
+
+        <router-link to="">
+          <button v-on:click="personal" class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
+        /></button>
+        </router-link>
+        <router-link to="">
+          <button v-on:click="profesional" class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
+
         /></button>
         </router-link>
       </div>
@@ -43,6 +52,8 @@
 </template>
 
 <script>
+import pythonScriptsService from "@/services/pythonScriptsService";
+import Swal from "sweetalert2";
 console.log('Hola')
 
 export default {	
@@ -51,6 +62,38 @@ export default {
   },
   mounted() {},
   methods: {
+	personal () {
+		console.log("working button")
+		try{			
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.matchesForLove({				 
+				id: this.$store.state.user.id,
+			})
+		} catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
+	}, 
+	profesional (){
+		console.log("working button profesional")
+		try{			
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.matchesForLove({				 
+				id: this.$store.state.user.id,
+			})
+		} catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
+	}
   },
 };
 </script>

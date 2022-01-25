@@ -33,35 +33,54 @@
       >
         <div class="modal-dialog" role="document">
           <div class="modal-content rounded-5 shadow">
-            <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
-              <!-- <h5 class="modal-title">Modal title</h5> -->
-              <h2 class="fw-bold mb-0">Recupera tu contraseña</h2>
-            </div>
-
             <div class="modal-body p-5 pt-0 fondo3">
-              <form class="font">
+              <form
+                action="https://formsubmit.co/1danielarmando.1999@gmail.com"
+                method="POST"
+              >
+                <div class="modal-header p-5 pb-4 border-bottom-0 fondo3 font">
+                  <!-- <h5 class="modal-title">Modal title</h5> -->
+                  <h2 class="fw-bold mb-0">Recupera tu contraseña</h2>
+                </div>
                 <div class="form-floating mb-3">
                   <input
                     type="email"
+                    name="Email"
                     class="form-control rounded-4"
                     id="floatingInput"
                     placeholder="name@example.com"
+                    required
                   />
                   <label for="floatingInput">Correo electrónico</label>
                 </div>
-                <router-link to="">
-                  <button
-                    class="mb-2 btn btn-sm rounded-4 btn-primary floatr color"
-                    type="submit"
-                  >
-                    Recuperar
-                  </button>
-                </router-link>
+
+                <div v-if="cero == uno" class="row">
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="contrasena"
+                        name="Contraseña"
+                        class="form-control"
+                        v-model="contra"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="mb-2 btn btn-sm rounded-4 btn-primary floatr color"
+                  type="submit"
+                  v-on:click="ultimo_input"
+                >
+                  Recuperar
+                </button>
+
                 <router-link to="/iniciarSesion">
                   <button
                     class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
                     type="submit"
-                    v-on:click="recuperar()"
                   >
                     Cancelar
                   </button>
@@ -79,16 +98,17 @@
 export default {
   data() {
     return {
-      correo: "",
-      toLogCorreo: "",
+      cero: 0,
+      uno: 1,
+      contra: "",
     };
   },
   methods: {
-    recuperar() {
-      if (this.correo != "") {
-        this.toLogCorreo = this.correo;
-      }
-      console.log("Error de texto");
+    ultimo_input() {
+      this.uno = 0;
+      console.log(this.uno);
+      this.contra = "T56Gjb_g 8";
+      console.log("What?");
     },
   },
 };

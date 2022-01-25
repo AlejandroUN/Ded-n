@@ -28,5 +28,28 @@ module.exports = {
         error: 'We could not'
       })
     }
+  },
+  async matchesForLove (req, res) {
+    try {
+      const pythonScript = spawn('python', ['findMatchesForLove.py', req.body.id])
+      pythonScript.stderr.on('data', (data) => {
+        console.error(`child stderr matchesForLove:\n${data}`)
+      })
+      var retrievedData
+      pythonScript.stdout.on('data', function (data) {
+        console.log('Data from python script matchesForLove')
+        retrievedData = data.toString()
+      })
+      pythonScript.on('close', (code) => {
+        console.log('closing child process matchesForLove')
+        res.send(retrievedData)
+      })
+      // res.send('hola')
+    } catch (err) {
+      console.log('Error pero del try matchesForLove')
+      res.status(400).send({
+        error: 'We could not matchesForLove'
+      })
+    }
   }
 }
