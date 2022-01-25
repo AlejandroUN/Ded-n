@@ -11,7 +11,7 @@
 
     <div class="centerText " >
       
-        <label ><h2><b>Soy el alma de la fiesta</b></h2></label>
+        <label ><h2><b>1. Soy el alma de la fiesta</b></h2></label>
 
             <hr class="blackLine">
             <br>
@@ -45,7 +45,7 @@
     
         <div class="centerText" >
           <div >
-         <label ><h2><b>Siento poca preocupación por los demás</b></h2></label>
+         <label ><h2><b>2. Siento poca preocupación por los demás</b></h2></label>
           </div>
          <hr class="blackLine">
          <br>
@@ -77,7 +77,7 @@
     
         <div class="centerText" >
           <div >
-         <label ><h2><b>Siempre estoy preparado</b></h2></label>
+         <label ><h2><b>3. Siempre estoy preparado</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -109,7 +109,7 @@
     
         <div class="centerText" >
     <div >
-        <label><h2><b>Me estreso muy facil</b></h2></label>
+        <label><h2><b>4. Me estreso muy facil</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -141,7 +141,7 @@
         <div class="centerText" >
     <div>
 
-        <label><h2><b>Tengo un vocabulario amplio</b></h2></label>
+        <label><h2><b>5. Tengo un vocabulario amplio</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -170,7 +170,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
              
 
         
@@ -184,14 +184,17 @@
 
 <script>
 import BfService from "@/services/BFService";
+//import pythonScriptsService from "@/services/pythonScriptsService";
 import Swal from "sweetalert2";
+//const {spawn} = require('child_process');
 
 export default {
   
   data() {
     
     return {
-      
+      email: "",
+      id: "",
       resp:{
         resp1: "",
         resp2: "",
@@ -204,7 +207,7 @@ export default {
   },
   methods: {
 
-    setData() {
+    async setData() {
        if ((this.resp.resp1=="")||(this.resp.resp2=="")||(this.resp.resp3=="")||(this.resp.resp4=="")||(this.resp.resp5=="")){
          Swal.fire({
           icon: "error",
@@ -212,8 +215,28 @@ export default {
           text: "Contestar todas las preguntas para guardar respuestas",
         });
        }
-       else{
-
+       else{	
+		//	try{
+		//		console.log(this.$store.state.user.email)
+		//		console.log(this.$store.state.user.id)
+		//	await pythonScriptsService.bigFiveP({
+		//		email: this.$store.state.user.email, 
+		//		id: this.$store.state.user.id,
+		//	})
+		//	}catch (error) {
+		//		this.error = error.response.data.error;
+		//		Swal.fire({
+		//			icon: "error",
+		//			title: "Error",
+		//			text: this.error,
+		//		});
+		//	}
+		//	const pythonScript = spawn('python', ['test.py']);//, 't', 8
+		////var retrievedData = 's';
+		//pythonScript.stdout.on('data', function(data) {
+		//	alert("Guardado");
+		//	alert(data.toString());
+		//});
       this.$emit("getData", this.resp);}
     },
 
@@ -264,13 +287,8 @@ export default {
             res2: this.resp.resp2,
             res3: this.resp.resp3,
             res4: this.resp.resp4,
-            res5: this.resp.resp5, 
-            
-        });
-  
-        
-        
-                
+            res5: this.resp.resp5,             
+        });                
       } catch (error) {
         this.error = error.resp.response.data.error;
         Swal.fire({
@@ -331,6 +349,9 @@ hr.blackLine{
     position: relative;
     width: 20px;
     height: 20px;
+}
+.font-color-w{
+  color:white;
 }
 
 

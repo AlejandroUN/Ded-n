@@ -1,212 +1,194 @@
 <template>
-  <div class="container">
-    <main>
-      <div class="row align-items-center g-lg-5">
-        <header class="font">
-          <router-link to="/">
-            <img class="float-md-start" src="../assets/logo.png" height="50" />
-          </router-link>
-
-          <nav class="nav justify-content-center float-md-end">
-            <a
-              href="https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator"
-              class="margen_izquierda"
-              ><button
-                class="
-                  w-100
-                  btn btn-lg btn-primary
-                  color_fuente
-                  color2
-                  margen_izquierda
-                "
-                type="submit"
-              >
-                Test MBTI
-              </button></a
+  <div class="container col-xl-12 col-xxl-8 py-3">
+    <div class="row align-items-center g-lg-5">
+      <header class="font abajo">
+        <router-link to="/"
+          ><img src="../assets/logo.png" height="50"
+        /></router-link>
+        <!--<img src="../assets/logo.png" height="50"/>-->
+        <nav class="nav justify-content-center float-md-end right">
+          <router-link to="/"
+            ><button
+              class="w-100 btn btn-lg btn-primary color_fuente color2"
+              type="submit"
             >
+              Inicio
+            </button></router-link
+          >
 
-            <a
-              href="https://es.wikipedia.org/wiki/Modelo_de_los_cinco_grandes"
-              class="margen_izquierda"
+          <router-link to="/contacta"
+            ><button
+              class="btn btn-lg btn-primary color_fuente color2"
+              type="submit"
             >
-              <button
-                class="w-100 btn btn-lg btn-primary color_fuente color2"
-                type="submit"
-              >
-                Test Big Five
-              </button></a
-            >
-
-            <router-link to=""
-              ><button
-                class="w-100 btn btn-lg btn-primary color_fuente color2"
-                type="submit"
-              >
-                Dónanos
-              </button></router-link
-            >
-          </nav>
-        </header>
-      </div>
-
-      <div class="row g-5 contenedor">
-        <div class="col-md-7 col-lg-6 offset-md-3">
-          <br />
-          <br />
-          <h4 class="mb-3">Crear cuenta</h4>
-          
-            <div class="row g-3">
-              <div class="col-sm-12">
-                <label class="form-label">Nombres y Apellidos</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="nombres"
-                  v-model="nombres"
-                  maxlength="50"
-                  placeholder="Nombres y Apellidos"
-                />
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Nombre de Usuario </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="new_user"
-                  v-model="new_user"
-                  placeholder="Nombre de Usuario"
-                />
-              </div>
-
-              <div class="col-12">
-                <label class="form-label">Email </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  v-model="email"
-                  placeholder="you@example.com"
-                />
-              </div>
-
-              <div class="form-group col-12">
-                <label class="custom-label col-md-3 display" for="password"
-                  >Contrase&ntilde;a</label
-                >
-                <input
-                  class="form-control col-12 col-sm-10 col-md-7"
-                  type="password"
-                  name="password"
-                  v-model="password"
-                  placeholder="Contraseña"
-                  minlength="8"
-                  maxlength="20"
-                  v-on:keypress="isImprimible(event)"
-                />
-              </div>
-              
+              ¡Dónanos!
+            </button></router-link
+          >
+        </nav>
+      </header>
+    </div>
 
 
-              <div class="form-group col-12">
-                <label class="custom-label col-md-6 display">
-                  Confirmar Contrase&ntilde;a
-                  </label>
-                <input                  
-                  class="form-control col-12 col-sm-10 col-md-7"
-                  type="password"
-                  name="cpassword"
-                  placeholder="Confirmar Contraseña"
-                  v-model="cPassword"
-                  v-on:keypress="isImprimible(event)"
-                  required
-                  :class="{
-                    'is-invalid': cPassword !== '' && cPassword !== password,
-                    'is-valid': cPassword !== '' && cPassword === password,
-                  }"
-                />
-              </div>
-              
+    <div
+      class="modal modal-signin position-static d-block bg margen2"
+      tabindex="-1"
+      role="dialog"
+      id="modalSignin"
+    >
+      <div>
+        <div class="modal-content rounded-5 shadow">
+          <main class="fondo3 abajo">
+            <div class="row g-5 contenedor">
+              <div class="col-md-7 col-lg-6 offset-md-3 ">
+                <br />
+                <br />
+                <h4 class="mb-3">Crear cuenta</h4>
 
-              <div>
-                <form>
-                  <div><label>Fecha de nacimiento:</label></div>
-                  <div><input type="date" :max="today" v-model="born" /></div>
-                </form>
-              </div>
+                <div class="row g-3">
+                  <div class="col-sm-12">
+                    <label class="form-label">Nombres y Apellidos</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="nombres"
+                      v-model="nombres"
+                      maxlength="50"
+                      placeholder="Nombres y Apellidos"
+                    />
+                  </div>
 
-              <div class="col-md-6">
-                <label class="form-label">Genero</label>
-                <select class="form-select" v-model="gender">
-                  
-                  <option>Hombre</option>
-                  <option>Mujer</option>
-                  <option>Otro</option>
-                </select>
+                  <div class="col-12">
+                    <label class="form-label">Nombre de Usuario </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="new_user"
+                      v-model="new_user"
+                      placeholder="Nombre de Usuario"
+                    />
+                  </div>
 
-                <div class="form-group col-6" v-show="otroGenero()">
-                  <label class="custom-label col-md-12 display"
-                    >¿Que otro?</label
+                  <div class="col-12">
+                    <label class="form-label">Email </label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      v-model="email"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+
+                  <div class="form-group col-12">
+                    <label class="custom-label col-md-3 display" for="password"
+                      >Contrase&ntilde;a</label
+                    >
+                    <input
+                      class="form-control col-12 col-sm-10 col-md-7"
+                      type="password"
+                      name="password"
+                      v-model="password"
+                      placeholder="Contraseña"
+                      minlength="8"
+                      maxlength="20"
+                      v-on:keypress="isImprimible(event)"
+                    />
+                  </div>
+
+                  <div class="form-group col-12">
+                    <label class="custom-label col-md-6 display">
+                      Confirmar Contrase&ntilde;a
+                    </label>
+                    <input
+                      class="form-control col-12 col-sm-10 col-md-7"
+                      type="password"
+                      name="cpassword"
+                      placeholder="Confirmar Contraseña"
+                      v-model="cPassword"
+                      v-on:keypress="isImprimible(event)"
+                      required
+                      :class="{
+                        'is-invalid':
+                          cPassword !== '' && cPassword !== password,
+                        'is-valid': cPassword !== '' && cPassword === password,
+                      }"
+                    />
+                  </div>
+
+                  <div>
+                    <form>
+                      <div><label>Fecha de nacimiento:</label></div>
+                      <div>
+                        <input type="date" :max="today" v-model="born" />
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Genero</label>
+                    <select class="form-select" v-model="gender">
+                      <option>Hombre</option>
+                      <option>Mujer</option>
+                      <option>Otro</option>
+                    </select>
+
+                    <div class="form-group col-6" v-show="otroGenero()">
+                      <label class="custom-label col-md-12 display"
+                        >¿Que otro?</label
+                      >
+                      <input
+                        class="form-control col-12 col-sm-10 col-md-7"
+                        type="text"
+                        v-model="nuevoGenero"
+                        placeholder="Ingrese genero"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Orientación sexual</label>
+                    <select class="form-select" v-model="orientacion">
+                      <option>Heterosexual</option>
+                      <option>Homosexual</option>
+                      <option>Bisexual</option>
+                      <option>Otro</option>
+                    </select>
+
+                    <div class="form-group col-6" v-show="otraOrientacion()">
+                      <label class="custom-label col-md-12 display"
+                        >¿Cual?</label
+                      >
+                      <input
+                        class="form-control col-12 col-sm-10 col-md-7 display"
+                        type="text"
+                        v-model="nuevaOrientacion"
+                        placeholder="Ingrese orientación"
+                      />
+                    </div>
+                  </div>
+                  <hr class="my-4" />
+
+                  <button
+                    class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
+                    type="submit"
+                    v-on:click="checked"
                   >
-                  <input
-                    class="form-control col-12 col-sm-10 col-md-7"
-                    type="text"
-                    v-model="nuevoGenero"
-                    placeholder="Ingrese genero"
-                  />
+                    Crear
+                  </button>
                 </div>
               </div>
-
-              <div class="col-md-6">
-                <label class="form-label">Orientación sexual</label>
-                <select class="form-select" v-model="orientacion">
-                  
-                  <option>Heterosexual</option>
-                  <option>Homosexual</option>
-                  <option>Bisexual</option>
-                  <option>Otro</option>
-                </select>
-
-                <div class="form-group col-6" v-show="otraOrientacion()">
-                  <label class="custom-label col-md-12 display">¿Cual?</label>
-                  <input
-                    class="form-control col-12 col-sm-10 col-md-7 display"
-                    type="text"
-                    v-model="nuevaOrientacion"
-                    placeholder="Ingrese orientación"
-                  />
-                </div>
-              </div>
-              <hr class="my-4" />
-
-              <button
-                class="mb-2 btn btn-sm rounded-4 btn-primary floatr right color"
-                type="submit"
-                v-on:click="checked"
-              >
-              Crear
-              </button>
-
             </div>
-          
+          </main>
         </div>
       </div>
-    </main>
+    </div>
+
     <!--
     <div>
       {{ nombres }} - {{ email }} - {{ new_user }} - {{ password }} -
       {{ born }} - {{ gender }} - {{ orientacion }} - {{ today }}
     </div>
       //-->
-
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">© 2017–2021 Company Name</p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Privacy</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Support</a></li>
-      </ul>
-    </footer>
   </div>
 </template>
 
@@ -247,17 +229,13 @@ export default {
           title: "Error",
           text: "La contraseña debe tener más de 8 caracteres",
         });
-      } 
-
-      else if (this.password !== this.cPassword) {
+      } else if (this.password !== this.cPassword) {
         Swal.fire({
           icon: "error",
           title: "Error",
           text: "Las contraseñas no coinciden",
-        });        
-      }
-      
-      else if (dateMax < dateBorn) {
+        });
+      } else if (dateMax < dateBorn) {
         Swal.fire({
           icon: "error",
           title: "Error",
@@ -265,8 +243,8 @@ export default {
         });
       } else {
         try {
-            //We keep track of the backend response
-            const response = await AuthenticationService.register({
+          //We keep track of the backend response
+          const response = await AuthenticationService.register({
             // eslint-disable-line no-mixed-spaces-and-tabs
             name: this.nombres,
             email: this.email, // eslint-disable-line no-mixed-spaces-and-tabs
@@ -278,19 +256,17 @@ export default {
             newgender: this.nuevoGenero,
             neworientation: this.nuevaOrientacion,
           }); // eslint-disable-line no-mixed-spaces-and-tabs
-		//This is going to call our method setToken in the store file
-		//which is gonna call our mutation setToken
-		//which is gonna update our state to token
-			this.$store.dispatch('setToken', response.data.token)
-		//And the same with token
-			this.$store.dispatch('setUser', response.data.user)
+          //This is going to call our method setToken in the store file
+          //which is gonna call our mutation setToken
+          //which is gonna update our state to token
+          this.$store.dispatch("setToken", response.data.token);
+          //And the same with token
+          this.$store.dispatch("setUser", response.data.user);
           this.$router.push({ path: "/entrarPerfil" });
           Swal.fire({
             icon: "success",
             title: "Creado",
             text: "El usuario ha sido registrado correctamente",
-            showCloseButton: true,
-            showCancelButton: true,
           });
         } catch (error) {
           this.error = error.response.data.error;
@@ -343,6 +319,10 @@ export default {
 .botoncito {
   background-color: #f08240;
   border-color: aliceblue;
+}
+
+.abajo{
+  padding-bottom: 4% !important;
 }
 
 @font-face {

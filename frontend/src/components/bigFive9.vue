@@ -11,7 +11,7 @@
 
     <div class="centerText " >
 
-        <label><h2><b>No me importa ser el centro de atención</b></h2></label>
+        <label><h2><b>41. No me importa ser el centro de atención</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=1 v-model="resp.resp1">
@@ -44,7 +44,7 @@
 
    
         
-         <label><h2><b>Siento las emociones de los demás</b></h2></label>
+         <label><h2><b>42. Siento las emociones de los demás</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -75,7 +75,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Sigo un horario</b></h2></label>
+        <label><h2><b>43. Sigo un horario</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -102,7 +102,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Me irrito fácilmente</b></h2></label>
+        <label><h2><b>44. Me irrito fácilmente</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -130,7 +130,7 @@
     
         <div class="centerText" >
 
-        <label><h2><b>Dedico tiempo a reflexionar sobre las cosas</b></h2></label>
+        <label><h2><b>45. Dedico tiempo a reflexionar sobre las cosas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -156,7 +156,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

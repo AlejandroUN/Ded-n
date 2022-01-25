@@ -10,7 +10,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Me siento cómodo con la gente</b></h2></label>
+        <label><h2><b>11. Me siento cómodo con la gente</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=1 v-model="resp.resp1">
@@ -41,7 +41,7 @@
 
     <div class="centerText " >
         
-         <label><h2><b>Insulto a la gente</b></h2></label>
+         <label><h2><b>12. Insulto a la gente</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=5 v-model="resp.resp2">
@@ -72,7 +72,7 @@
 
     <div class="centerText " >
     
-        <label><h2><b>Presto atención a los detalles</b></h2></label>
+        <label><h2><b>13. Presto atención a los detalles</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -101,7 +101,7 @@
   :'back-green  rounded-3'">
 
     <div class="centerText " >
-        <label><h2><b>Me preocupo por las cosas</b></h2></label>
+        <label><h2><b>14. Me preocupo por las cosas</b></h2></label>
         <br>
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -130,7 +130,7 @@
 
     <div class="centerText " >
 
-        <label><h2><b>Tengo una imaginación viva</b></h2></label>
+        <label><h2><b>15. Tengo una imaginación viva</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -157,7 +157,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

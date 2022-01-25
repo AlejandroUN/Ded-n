@@ -34,7 +34,7 @@
   
     <hr>
     <br>
-    <H1>Como utilizar la plataforma Dedún: </H1>
+    <H1>Manual de uso plataforma Dedún:  </H1>
     <br>
     <p>
      1. Pantalla principal:

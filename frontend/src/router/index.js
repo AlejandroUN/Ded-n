@@ -18,10 +18,11 @@ import bigFive7 from '../components/bigFive7.vue'
 import bigFive8 from '../components/bigFive8.vue'
 import bigFive9 from '../components/bigFive9.vue'
 import bigFiveTest from'../views/bigFiveTest.vue'
-import MBTI from '../views/MBTI.vue'
-import MBTI2 from '../views/MBTI2.vue'
-import MBTI3 from '../views/MBTI3.vue'
-import MBTI4 from '../views/MBTI4.vue'
+import MBTITest from '../views/MBTITest.vue'
+import MBTI from '../components/MBTI.vue'
+import MBTI2 from '../components/MBTI2.vue'
+import MBTI3 from '../components/MBTI3.vue'
+import MBTI4 from '../components/MBTI4.vue'
 import ayuda from '../views/ayuda.vue'
 import privacidad from '../views/privacidad.vue'
 import nosotros from '../views/nosotros.vue'
@@ -60,6 +61,11 @@ const routes = [
     path: '/MBTI4',
     name: 'MBTI4',
     component: MBTI4
+  },
+  { 
+    path:'/MBTITest',
+    name:'MBTITest',
+    component: MBTITest
   },
   {
     path: '/crearCuenta',

@@ -1,5 +1,8 @@
 <template>
-  <div class="row">
+  <div id="app" class="mto1 mt-1 ml-5">
+   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <h2><b>TEST BIG FIVE</b></h2>
+   </div>
       <vista1 @getData="getData" v-if="numero==1" ></vista1>
       <vista2 @getData="getData" v-if="numero==2"></vista2>
       <vista3 @getData="getData" v-if="numero==3"></vista3>
@@ -11,23 +14,13 @@
       <vista9 @getData="getData" v-if="numero==9"></vista9>
       <vista10 @getData="getData" v-if="numero==10"></vista10>
     
-  <div class="container"> 
-      <button v-if="(numero<10)&&(resp.resp1!='')&&(resp.resp2!='')&&(resp.resp3!='')&&(resp.resp4!='')&&(resp.resp5!='') " 
-      class="mb-10 btn btn-sm rounded-4  floatr center color" 
-      v-on:click="swapComponent()" type="submit">Siguiente </button>
-
-
-
-      <button v-if="(numero==10 )&&(resp.resp1!='')&&(resp.resp2!='')&&(resp.resp3!='')&&(resp.resp4!='')&&(resp.resp5!='')" 
-      class="mb-10 btn btn-sm rounded-4  floatr center color" 
-      v-on:click="Terminar()" type="submit">Terminar Prueba</button>
-
-    </div>
-     
+      
 </div>
 </template>
-<script>
 
+<script>
+import BfService from "@/services/BFService";
+import Swal from "sweetalert2";
 import BigFive from "@/components/bigFive";
 import BigFive2 from "@/components/bigFive2";
 import BigFive3 from "@/components/bigFive3";
@@ -38,6 +31,7 @@ import BigFive7 from "@/components/bigFive7";
 import BigFive8 from "@/components/bigFive8";
 import BigFive9 from "@/components/bigFive9";
 import BigFive10 from "@/components/bigFive10";
+import pythonScriptsService from "@/services/pythonScriptsService";
 export default ({
     components: { 
         vista1:BigFive,
@@ -120,6 +114,22 @@ export default ({
     methods: {
         getData(data) {
       this.resp = data;
+        if(this.numero<10){
+        Swal.fire({
+            icon: "success",
+            title: "",
+            text: "Continuando Test...",
+            });
+            this.swapComponent();}
+        else{
+            Swal.fire({
+            icon: "success",
+            title: "",
+            text: "Encuesta Terminada",
+            });
+            this.terminar();
+        }
+
         },
         swapComponent(){
         if(this.numero==1){
@@ -133,8 +143,7 @@ export default ({
             this.resp.resp2='';
             this.resp.resp3='';
             this.resp.resp4='';
-            this.resp.resp5='';
-            
+            this.resp.resp5='';        
         }
         else if(this.numero==2){
             this.numero= 3;
@@ -240,20 +249,104 @@ export default ({
             this.resp.resp4='';
             this.resp.resp5='';
         }
+        
       
     },
-    Terminar(){
+     terminar(){
         this.resp46=this.resp.resp1;
         this.resp47=this.resp.resp2;
         this.resp48=this.resp.resp3;
         this.resp49=this.resp.resp4;
         this.resp50=this.resp.resp5;
+
+        try {  
+              
+           BfService.BigFive({          
+			email: this.$store.state.user.email,
+            res1: this.resp1,
+            res2: this.resp2,
+            res3: this.resp3,
+            res4: this.resp4,
+            res5: this.resp5, 
+            res6: this.resp6,
+            res7: this.resp7,
+            res8: this.resp8,
+            res9: this.resp9,
+            res10: this.resp10,
+            res11: this.resp11,
+            res12: this.resp12,
+            res13: this.resp13,
+            res14: this.resp14,
+            res15: this.resp15,
+            res16: this.resp16,
+            res17: this.resp17,
+            res18: this.resp18,
+            res19: this.resp19,
+            res20: this.resp20,
+            res21: this.resp21,
+            res22: this.resp22,
+            res23: this.resp23,
+            res24: this.resp24,
+            res25: this.resp25, 
+            res26: this.resp26,
+            res27: this.resp27,
+            res28: this.resp28,
+            res29: this.resp29,
+            res30: this.resp30,
+            res31: this.resp31,
+            res32: this.resp32,
+            res33: this.resp33,
+            res34: this.resp34,
+            res35: this.resp35, 
+            res36: this.resp36,
+            res37: this.resp37,
+            res38: this.resp38,
+            res39: this.resp39,
+            res40: this.resp40,
+            res41: this.resp41,
+            res42: this.resp42,
+            res43: this.resp43,
+            res44: this.resp44,
+            res45: this.resp45, 
+            res46: this.resp46,
+            res47: this.resp47,
+            res48: this.resp48,
+            res49: this.resp49,
+            res50: this.resp50,            
+        });       
+                
+        } catch (error) {
+			this.error = error.resp.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text:"server error"+ this.error,
+			});
+		}
+		// Once the answers are saved, do the calculations with them
+		try{
+			console.log(this.$store.state.user.email)
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.bigFiveP({
+				email: this.$store.state.user.email, 
+				id: this.$store.state.user.id,
+			})
+		}catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
+
     }
-    },
-    
+  },    
 })
 </script>
 
 <style>
-
+.centrar{
+    width: 50% !important;
+}
 </style>

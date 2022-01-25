@@ -8,7 +8,7 @@
   : resp.resp1 == 4? 'back-yellowgreen rounded-3'
   :'back-green  rounded-3'">
   <div class="centerText " >
-        <label><h2><b>Empiezo conversaciones</b></h2></label>
+        <label><h2><b>21. Empiezo conversaciones</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=1 v-model="resp.resp1">
@@ -42,7 +42,7 @@
     
         <div class="centerText" >
         
-         <label><h2><b>No me interesan los problemas de otras personas</b></h2></label>
+         <label><h2><b>22. No me interesan los problemas de otras personas</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=5 v-model="resp.resp2">
@@ -72,7 +72,7 @@
     
         <div class="centerText" >
     
-        <label><h2><b>Tengo tareas hechas de inmediato</b></h2></label>
+        <label><h2><b>23. Tengo tareas hechas de inmediato</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno3" value=1 v-model="resp.resp3">
@@ -99,7 +99,7 @@
   :'back-green  rounded-3'">
     
         <div class="centerText" >
-        <label><h2><b>Me siento molesto facilmente</b></h2></label>
+        <label><h2><b>24. Me siento molesto facilmente</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=5 v-model="resp.resp4">
@@ -128,7 +128,7 @@
     
         <div class="centerText" >
 
-        <label><h2><b>Tengo excelentes ideas</b></h2></label>
+        <label><h2><b>25. Tengo excelentes ideas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=1 v-model="resp.resp5">
@@ -154,7 +154,7 @@
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
    </div>

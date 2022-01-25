@@ -15,7 +15,7 @@
               Inicio
             </button></router-link
           >
-          <router-link to=""
+          <router-link to="/contacta"
             ><button
               class="btn btn-lg btn-primary color_fuente color2"
               type="submit"

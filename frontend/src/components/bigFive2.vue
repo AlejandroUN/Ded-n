@@ -10,7 +10,7 @@
 
     <div class="centerText " >
 
-        <label><h2><b>No hablo mucho</b></h2></label>
+        <label><h2><b>6. No hablo mucho</b></h2></label>
             <hr class="blackLine">
             <br>
             <input class="regular-radio" type="radio" id="Uno1" value=5 v-model="resp.resp1">
@@ -46,7 +46,7 @@
     <div>
       
         
-         <label><h2><b>Me interesan las personas</b></h2></label>
+         <label><h2><b>7. Me interesan las personas</b></h2></label>
          <hr class="blackLine">
          <br>
             <input class="regular-radio" type="radio" id="Uno2" value=1 v-model="resp.resp2">
@@ -79,7 +79,7 @@
         <div class="centerText" >
     <div>
     
-        <label><h2><b>Dejo mis pertenencias por ahí</b></h2></label>
+        <label><h2><b>8. Dejo mis pertenencias por ahí</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio"  type="radio" id="Uno3" value=5 v-model="resp.resp3">
@@ -110,7 +110,7 @@
     
         <div class="centerText" >
     <div>
-        <label><h2><b>Soy muy relajado todo el tiempo</b></h2></label>
+        <label><h2><b>9. Soy muy relajado todo el tiempo</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno4" value=1 v-model="resp.resp4">
@@ -143,7 +143,7 @@
         <div class="centerText" >
     <div>
 
-        <label><h2><b>Tengo dificultad para comprender ideas abstractas</b></h2></label>
+        <label><h2><b>10. Tengo dificultad para comprender ideas abstractas</b></h2></label>
         <hr class="blackLine">
         <br>
             <input class="regular-radio" type="radio" id="Uno5" value=5 v-model="resp.resp5">
@@ -160,18 +160,18 @@
             <br>
             <input class="regular-radio" type="radio" id="Cinco5" value=1 v-model="resp.resp5">
             <label class="one" for="Cinco5"><FONT SIZE=5> Muy de acuerdo</FONT></label>
-            <br>
-            <br>
+            
     </div>
         </div>
      </div>
     </div>
-    <div>   
+    <div>  
+      <br> 
       <button v-on:click="setData"
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
-             >Guardar Datos</button>
+             ><h7 class="font-color-w">Siguiente</h7></button>
     </div>
 
 
