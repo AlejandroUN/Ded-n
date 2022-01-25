@@ -111,9 +111,11 @@
                       </div>
                     </div>
 
+                    
+
                     <div class="text-center text-md-left">
-                      <button class="btn btn-primary color6" type="submit">
-                        Send
+                      <button  class="btn btn-primary color6" type="submit">
+                        Enviar
                       </button>
                     </div>
                   </form>
@@ -130,8 +132,11 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+     
+    };
   },
+  
 };
 </script>
 
