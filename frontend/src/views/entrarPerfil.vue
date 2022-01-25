@@ -27,11 +27,11 @@
       </header>
 
       <div class="padding_top row margin_left">
-        <router-link to="">
+        <router-link to="/matches">
           <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
         /></button>
         </router-link>
-        <router-link to="">
+        <router-link to="/matches">
           <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
         /></button>
         </router-link>

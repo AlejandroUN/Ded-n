@@ -394,10 +394,11 @@
               </div>
               <br><br>
 
-              
+              <router-link to="/entrarPerfil">
               <button v-on:click="setData" class="mb-2 btn btn-md rounded-4 btn-primary floatr right color" type="submit">
                 Terminar
               </button>
+              </router-link>
               
 
               <router-link to="/MBTI3">

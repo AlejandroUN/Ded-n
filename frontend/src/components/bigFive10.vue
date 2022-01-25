@@ -148,12 +148,14 @@
     </div>
     </div>
     <div>   
-      <br>  
+      <br>
+      <router-link to="/MBTITest">  
       <button v-on:click="setData"
               class="mb-10 btn btn-sm rounded-4  floatr center color"
               type="submit"
             
              ><h7 class="font-color-w">Terminar</h7></button>
+             </router-link>
     </div>
 
    </div>
