@@ -262,7 +262,7 @@ export default {
           this.$store.dispatch("setToken", response.data.token);
           //And the same with token
           this.$store.dispatch("setUser", response.data.user);
-          this.$router.push({ path: "/entrarPerfil" });
+          this.$router.push({ path: "/" });
           Swal.fire({
             icon: "success",
             title: "Creado",

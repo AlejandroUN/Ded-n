@@ -1,7 +1,6 @@
 const { User } = require('../models')
 const { BancoDeRespuestasBF } = require('../models')
 const { TestEmpresarial } = require('../models')
-const { User } = require('../models')
 
 module.exports = {
 
