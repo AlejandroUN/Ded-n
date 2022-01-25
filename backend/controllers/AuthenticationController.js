@@ -1,4 +1,5 @@
 const { User } = require('../models')
+const { BancoDeRespuestasBF } = require('../models')
 const jwt = require('jsonwebtoken')
 const config = require('../config/config')
 
@@ -48,10 +49,27 @@ module.exports = {
       }
 
       const userJson = user.toJSON()
-      res.send({
-        user: userJson,
-        token: jwtSignUser(userJson)
+
+      const answerBF = await BancoDeRespuestasBF.findOne({
+        where: {
+          email: email
+        }
       })
+
+      if (!answerBF) {
+        res.send({
+          user: userJson,
+          token: jwtSignUser(userJson),
+          isAnswered: 'false'
+        })
+      // eslint-disable-next-line no-empty
+      } else {
+        res.send({
+          user: userJson,
+          token: jwtSignUser(userJson),
+          isAnswered: 'true'
+        })
+      }
     } catch (err) {
       res.status(500).send({
         error: 'Error al iniciar sesión'
