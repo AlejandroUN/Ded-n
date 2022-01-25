@@ -23,6 +23,9 @@ module.exports = (app) => {
   app.post('/bigFiveP',
     ScriptsController.bigFiveP)
 
+  app.post('/matchesForLove',
+    ScriptsController.matchesForLove)
+
   app.post('/bigFive',
     TestsController.BigFive)
 

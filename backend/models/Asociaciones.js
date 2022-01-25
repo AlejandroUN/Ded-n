@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) =>
 	    idPrimerAsociado: {
             primaryKey: true,
       		type: DataTypes.INTEGER,      		
-    	},
-        emailPrimerAsociado: DataTypes.INTEGER,
+    	}, 
+		afinidadApertura: DataTypes.INTEGER, 
         afinidadEscrupulosidad: DataTypes.INTEGER,
         afinidadExtroversion: DataTypes.INTEGER,
         afinidadAmabilidad: DataTypes.INTEGER,

@@ -28,11 +28,11 @@
 
       <div class="padding_top row margin_left">
         <router-link to="">
-          <button class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
+          <button v-on:click="personal" class="w-50 general_padding color4"><img src="../assets/corazon.png" height="90"
         /></button>
         </router-link>
         <router-link to="">
-          <button class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
+          <button v-on:click="profesional" class="w-50 general_padding color5 "><img src="../assets/llave.png" height="100"
         /></button>
         </router-link>
       </div>
@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import pythonScriptsService from "@/services/pythonScriptsService";
+import Swal from "sweetalert2";
 console.log('Hola')
 
 export default {	
@@ -51,6 +53,22 @@ export default {
   },
   mounted() {},
   methods: {
+	personal () {
+		console.log("working button")
+		try{			
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.matchesForLove({				 
+				id: this.$store.state.user.id,
+			})
+		} catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
+	}
   },
 };
 </script>
