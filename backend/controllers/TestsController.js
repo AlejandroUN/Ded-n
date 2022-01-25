@@ -14,7 +14,22 @@ module.exports = {
 		  error: 'Problem saving the Big Five test'
 		})
 	  }
+
+	},
+  
+	
+	async getMatches(req,res){
+		try{
+			const user = await User.findAll({ limit: 6 });
+		}
+		catch(err){
+			res.status(500).send({
+				error:'Hubo un error en la petición'
+			})
+		}
+
 	},	
+
 
 	async saveTestEmpresarial (req, res) {		
 		try {

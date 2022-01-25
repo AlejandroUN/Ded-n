@@ -30,5 +30,10 @@ module.exports = (app) => {
     TestsController.BigFive)
 
   app.post('/TestEmpresarial',
-    TestsController.saveTestEmpresarial)
+
+  	TestsController.saveTestEmpresarial)
+  
+  app.get('/getMatches',
+    TestsController.getMatches)
+
 }
