@@ -237,7 +237,9 @@ export default {
 		//	alert("Guardado");
 		//	alert(data.toString());
 		//});
-      this.$emit("getData", this.resp);}
+      console.log(this.resp);
+      this.$emit("getData", this.resp);      
+      }
     },
 
     
