@@ -68,6 +68,22 @@ export default {
 				text: this.error,
 			});
 		}
+	}, 
+	profesional (){
+		console.log("working button profesional")
+		try{			
+			console.log(this.$store.state.user.id)
+			pythonScriptsService.matchesForLove({				 
+				id: this.$store.state.user.id,
+			})
+		} catch (error) {
+			this.error = error.response.data.error;
+			Swal.fire({
+				icon: "error",
+				title: "Error",
+				text: this.error,
+			});
+		}
 	}
   },
 };
