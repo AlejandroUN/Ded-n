@@ -44,7 +44,15 @@
                 <img src="../assets/rappi.png" height="100" />
                 <p class="fuente_tamano font">3224591233</p>
               </div>
+              
+              <div class=" powr-paypal-button" id="a6e58d51_1644093723"></div>
+
+
+              <br>
+              <br>
+              <br>
               <div class="margen4"><img src="../assets/logo_copia.png" height="100" /></div>
+              
               <div class="margen5"><h1>¡GRACIAS!</h1></div>
               
             </div>
@@ -59,6 +67,7 @@
   </div>
 </template>
 <script>
+
 import AuthenticationService from "@/services/AuthenticationService";
 import Swal from "sweetalert2";
 export default {
@@ -68,6 +77,11 @@ export default {
       password: "",
     };
   },
+   mounted() {
+      let powrioScript = document.createElement('script')
+      powrioScript.setAttribute('src', 'https://www.powr.io/powr.js?platform=html')
+      document.head.appendChild(powrioScript)
+    },
   methods: {
     async login() {
       try {
