@@ -35,8 +35,11 @@ module.exports = (app) => {
   app.post('/TestEmpresarial',
   	TestsController.saveTestEmpresarial)
   
-  app.get('/getMatches',
+  app.get('/getMatches/:email',
     TestsController.getMatches)
+
+  app.get('/getRightMatches',
+    TestsController.getRightMatches)
 
   app.post('/TestEmpresarial',
     TestsController.saveTestEmpresarial)
