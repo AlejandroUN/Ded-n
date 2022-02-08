@@ -44,10 +44,10 @@
                     gerente del departamento de diseño dentro de Dedún.
                   </p>
                 </div>
-                <img src="../assets/nosotros/Arturo.png" height="300" />
+                <img src="../assets/nosotros/Arturo.jpeg" height="300" />
               </div>
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/gabriel.png" height="300" />
+                <img src="../assets/nosotros/gabriel.jpeg" height="300" />
                 <div class="p_left">
                   <center><h1>Gabriel Enrique Ramirez León</h1></center>
                   <p class="fuente_tamano">
@@ -71,10 +71,10 @@
                     presidente del departamento de análisis de datos de Dedún.
                   </p>
                 </div>
-                <img src="../assets/nosotros/cristian.png" height="300" />
+                <img src="../assets/nosotros/cristian.jpeg" height="300" />
               </div>
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/daniel.png" height="300" />
+                <img src="../assets/nosotros/daniel.jpeg" height="300" />
                 <div class="p_left">
                   <center><h1>Daniel Armando Zuñiga Espinosa</h1></center>
                   <p class="fuente_tamano">
@@ -102,10 +102,10 @@
                     Dedún.
                   </p>
                 </div>
-                <img src="../assets/nosotros/david.png" height="300" />
+                <img src="../assets/nosotros/david.jpeg" height="300" />
               </div>
               <div class="modal-header p-5 pb-4 border-bottom-0 fondo3">
-                <img src="../assets/nosotros/ivan.png" height="300" />
+                <img src="../assets/nosotros/ivan.jpeg" height="300" />
                 <div class="p_left">
                   <center><h1>Iván Alejandro Cruz Tole</h1></center>
                   <p class="fuente_tamano">
