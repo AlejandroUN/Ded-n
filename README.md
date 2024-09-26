@@ -2,6 +2,11 @@
 
 Welcome to the **Dedún** project! This platform aims to create meaningful connections between people in various aspects of life, from interpersonal relationships to professional contacts, personal improvement, and education.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AlejandroUN/alejandroun.github.io/refs/heads/main/images/sp.jpg" alt="image"/>
+</p>
+
+
 ## Table of Contents
 - [Overview](#overview)
 - [Key Features](#key-features)
